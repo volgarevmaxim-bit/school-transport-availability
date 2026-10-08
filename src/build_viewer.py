@@ -99,7 +99,7 @@ function showSchoolList(q){
   const query = (q || '').trim().toLowerCase();
   schoolList.innerHTML = '';
   let shown = 0;
-  [['all', '— все школы —'], ...Object.entries(SCHOOLS)].forEach(([sid, name]) => {
+  [['all', '— все школы —'], ...Object.entries(SCHOOLS).map(([sid, s]) => [sid, s.name])].forEach(([sid, name]) => {
     if (query && !name.toLowerCase().includes(query)) return;
     const d = document.createElement('div');
     d.className = 'sitem';
