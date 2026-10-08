@@ -29,8 +29,11 @@ with open(ROOT / "config" / "schools.csv", encoding="utf-8-sig") as f:
             schools[r["entity_id"]] = (r["name"], float(r["lat"]), float(r["lon"]))
 
 IDS = ["лицей-вторая-школа-в-ф-овчинникова", "школа-1532", "школа-2007-фмш"]
-TRANSPORTS = ["metro", "bus", "trolleybus", "tram"]  # проба: принимает ли pt/2.0 metro в списке
+TRANSPORTS = ["metro", "bus", "trolleybus", "tram"]  # metro — ПРОВЕРИТЬ первым запросом дня
 ARRIVAL = "08:30"
+# Сокращение владельца (08.10): 3 школы × 6 точек = 18 точек × 2 = 36 pt + 1 проба = 37 ≤ 50/день
+ANGLES_20 = [0, 90, 180, 270]   # 4 точки на 20-мин зоне (кардинальные азимуты)
+ANGLES_40 = [0, 180]            # 2 точки на 40-мин зоне
 
 
 def log_probe(school, hyp, t):
@@ -92,8 +95,7 @@ for sid in IDS:
     spt = Point(lon, lat)
     print(f"\n=== {name[:36]} ===")
     z20, z40 = pt_zones(lat, lon)
-    for zone, minutes, angles in ((z20, 20, [i * 36 for i in range(10)]),
-                                  (z40, 40, [i * 72 for i in range(5)])):
+    for zone, minutes, angles in ((z20, 20, ANGLES_20), (z40, 40, ANGLES_40)):
         pts = boundary_by_azimuth(zone, spt, angles)
         for a, p in pts.items():
             if p is None:
