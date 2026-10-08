@@ -119,8 +119,14 @@ def _check_budget(service: str) -> int:
     return remaining
 
 
+_last_call: dict[str, float] = {}
+_PACING = {"routing": 1.3, "public_transport": 1.3, "distance_matrix": 1.3,
+           "isochrone": 0.3, "geocoder": 0.15, "static_maps": 0.3}
+# Лимит демо-ключа: ~50 запросов/мин на routing-семейство (поймано 429 после 50, 08.10) — пейсинг обязателен.
+
+
 def _request(service: str, url_no_key: str, body_no_key: str = "", binary: bool = False, timeout: int = 60):
-    """GET (body пуст) или POST (body задан) с кэшем, учётом бюджета и сохранением сырого ответа."""
+    """GET (body пуст) или POST (body задан) с кэшем, учётом бюджета, пейсингом и ретраем 429."""
     if service not in SERVICES:
         raise ValueError(f"Неизвестный сервис {service}")
     h = hashlib.sha1(_canonical(service, url_no_key, body_no_key).encode("utf-8")).hexdigest()
@@ -138,17 +144,34 @@ def _request(service: str, url_no_key: str, body_no_key: str = "", binary: bool 
     sep = "&" if "?" in url_no_key else "?"
     url = f"{url_no_key}{sep}key={urllib.parse.quote(key)}"
 
+    # пейсинг (лимит ~50/мин)
+    import time as _time
+    wait = _PACING.get(service, 0.2) - (_time.time() - _last_call.get(service, 0))
+    if wait > 0:
+        _time.sleep(wait)
+    _last_call[service] = _time.time()
+
     headers = {"User-Agent": "school-transport/0.1"}
     if body_no_key:
         headers["Content-Type"] = "application/json"
     req = urllib.request.Request(url, data=body_no_key.encode("utf-8") if body_no_key else None, headers=headers)
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            status, payload = r.status, r.read()
-    except urllib.error.HTTPError as e:
-        status, payload = e.code, e.read()
-    except Exception as e:  # сетевые сбои — тоже сохраняем
-        status, payload = "ERR", f"{type(e).__name__}: {e}".encode("utf-8")
+
+    attempt, status, payload = 0, None, b""
+    while attempt < 4:
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                status, payload = r.status, r.read()
+            break
+        except urllib.error.HTTPError as e:
+            status, payload = e.code, e.read()
+            if e.code == 429 and attempt < 3:
+                attempt += 1
+                _time.sleep(3 * attempt)
+                continue
+            break
+        except Exception as e:  # сетевые сбои — тоже сохраняем
+            status, payload = "ERR", f"{type(e).__name__}: {e}".encode("utf-8")
+            break
 
     RAW.joinpath(service).mkdir(parents=True, exist_ok=True)
     meta = {"service": service, "request_no_key": url_no_key, "body_no_key": body_no_key,
