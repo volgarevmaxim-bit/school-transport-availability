@@ -22,11 +22,36 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 DB_PATH = ROOT / "data" / "db" / "experiments.sqlite"
+CONFIG_PATH = ROOT / "config" / "experiment.yaml"
 
 SERVICES = ("geocoder", "routing", "public_transport", "distance_matrix", "isochrone", "static_maps")
 BUDGET_LIMIT = 1000
 RESERVE = 100
 METHOD_VERSION = "v1"
+
+# Суточные лимиты демо-ключа (решение владельца 08.10). Группы: routing+public_transport делят
+# счётчик «Routing API» (50/день по Platform Manager); matrix/изохроны — отдельные счётчики.
+# Сброс считаем по UTC-суткам. Значения переопределяются в config/experiment.yaml (daily_limits).
+DEFAULT_DAILY_LIMITS = {
+    "routing_api": {"limit": 50, "reserve": 5},  # routing + public_transport
+    "matrix": {"limit": 50, "reserve": 5},       # distance_matrix (отдельный счётчик — предположение)
+    "isochrone": {"limit": 50, "reserve": 5},    # лимит не подтверждён, запас обязателен
+    "geocoder": {"limit": 50, "reserve": 5},
+    "static_maps": {"limit": 50, "reserve": 5},
+}
+SERVICE_GROUPS = {
+    "routing": "routing_api", "public_transport": "routing_api",
+    "distance_matrix": "matrix", "isochrone": "isochrone",
+    "geocoder": "geocoder", "static_maps": "static_maps",
+}
+
+
+class BudgetReserveError(RuntimeError):
+    pass
+
+
+class QuotaExhaustedError(RuntimeError):
+    """Суточный лимит сервиса исчерпан (429 «too many requests» или счётчик). Работа останавливается без повторов."""
 
 # Эндпоинты подтверждены Context7 (/2gis/docs-mirror) 08.10; спорные — помечены, проверка экспериментом.
 BASE_URLS = {
@@ -110,6 +135,44 @@ def _spent(service: str) -> int:
     return n
 
 
+def _daily_config() -> dict:
+    try:
+        import yaml
+        cfg = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8"))
+        return {**DEFAULT_DAILY_LIMITS, **cfg.get("daily_limits", {})}
+    except Exception:
+        return dict(DEFAULT_DAILY_LIMITS)
+
+
+def _group_services(group: str) -> list[str]:
+    return [s for s, g in SERVICE_GROUPS.items() if g == group] or [group]
+
+
+def _daily_spent(group: str) -> int:
+    services = _group_services(group)
+    day_start = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
+    ph = ",".join("?" * len(services))
+    con = _db()
+    n = con.execute(
+        f"SELECT COUNT(*) FROM requests WHERE service IN ({ph}) AND cached=0 AND status='200' AND utc_time>=?",
+        (*services, day_start)).fetchone()[0]
+    con.close()
+    return n
+
+
+def _check_daily(service: str) -> None:
+    """Остановка заранее: если следующий запрос превысит лимит минус резерв — исключение."""
+    group = SERVICE_GROUPS.get(service, service)
+    cfg = _daily_config().get(group, {"limit": 50, "reserve": 5})
+    spent = _daily_spent(group)
+    if spent + 1 > cfg["limit"] - cfg["reserve"]:
+        raise QuotaExhaustedError(
+            f"Суточный лимит {group}: использовано {spent} из {cfg['limit']}, резерв {cfg['reserve']} — "
+            f"следующий запрос остановлен заранее. Продолжить в следующие UTC-сутки."
+        )
+    return spent
+
+
 def _check_budget(service: str) -> int:
     remaining = BUDGET_LIMIT - _spent(service)
     if remaining - 1 < RESERVE:
@@ -141,11 +204,12 @@ def _request(service: str, url_no_key: str, body_no_key: str = "", binary: bool 
             return {"cached": True, "status": meta["status"], "data": meta["response"], "meta": meta}
 
     remaining = _check_budget(service)
+    _check_daily(service)  # суточный лимит: стоп заранее, до 429
     key = get_key()
     sep = "&" if "?" in url_no_key else "?"
     url = f"{url_no_key}{sep}key={urllib.parse.quote(key)}"
 
-    # пейсинг (лимит ~50/мин)
+    # пейсинг (защита от burst-лимитов)
     import time as _time
     wait = _PACING.get(service, 0.2) - (_time.time() - _last_call.get(service, 0))
     if wait > 0:
@@ -157,22 +221,14 @@ def _request(service: str, url_no_key: str, body_no_key: str = "", binary: bool 
         headers["Content-Type"] = "application/json"
     req = urllib.request.Request(url, data=body_no_key.encode("utf-8") if body_no_key else None, headers=headers)
 
-    attempt, status, payload = 0, None, b""
-    while attempt < 4:
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as r:
-                status, payload = r.status, r.read()
-            break
-        except urllib.error.HTTPError as e:
-            status, payload = e.code, e.read()
-            if e.code == 429 and attempt < 3:
-                attempt += 1
-                _time.sleep(3 * attempt)
-                continue
-            break
-        except Exception as e:  # сетевые сбои — тоже сохраняем
-            status, payload = "ERR", f"{type(e).__name__}: {e}".encode("utf-8")
-            break
+    # БЕЗ повторов (решение владельца 08.10): ошибка лимита сохраняется как есть и останавливает работу
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            status, payload = r.status, r.read()
+    except urllib.error.HTTPError as e:
+        status, payload = e.code, e.read()
+    except Exception as e:  # сетевые сбои — тоже сохраняем
+        status, payload = "ERR", f"{type(e).__name__}: {e}".encode("utf-8")
 
     RAW.joinpath(service).mkdir(parents=True, exist_ok=True)
     meta = {"service": service, "request_no_key": url_no_key, "body_no_key": body_no_key,
@@ -191,6 +247,11 @@ def _request(service: str, url_no_key: str, body_no_key: str = "", binary: bool 
         cp.write_text(json.dumps({**meta, "response": parsed}, ensure_ascii=False, indent=2), encoding="utf-8")
 
     _log_request(service, h, url_no_key, status, cached=False)
+    if status == 429:
+        raise QuotaExhaustedError(
+            f"HTTP 429 «too many requests» по сервису {service} (группа {SERVICE_GROUPS.get(service, service)}). "
+            f"Ответ сохранён в data/raw. Работа остановлена без повторов — продолжить в следующие UTC-сутки."
+        )
     return {"cached": False, "status": status, "data": payload if binary else parsed, "meta": meta,
             "request_hash": h, "remaining_before": remaining}
 

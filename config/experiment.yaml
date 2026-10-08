@@ -14,11 +14,25 @@ pt:
 durations_sec: [1200, 2400]        # лимит API: до 5 значений, каждое ≤ 3600 с
 
 budget:
-  limit_per_service: 1000          # демо-ключ: на КАЖДЫЙ сервис отдельный счётчик
-  reserve: 100                     # стоп при остатке < 100
+  limit_per_service: 1000          # общий запас демо-ключа (не приоритетен; реальные лимиты ниже)
+  reserve: 100
+
+# Суточные лимиты демо-ключа (решение владельца 08.10; сброс — по UTC-суткам, Platform Manager).
+# routing_api: маршруты + ОТ делят ОДИН счётчик «Routing API» (подтверждено: 50/день).
+# matrix/изохроны/геокодер/static — отдельные счётчики (50/день — предположение для matrix/iso,
+# запас обязателен). Клиент останавливается заранее (лимит − reserve) и без повторов на 429.
+daily_limits:
+  routing_api: {limit: 50, reserve: 5}
+  matrix:      {limit: 50, reserve: 5}
+  isochrone:   {limit: 50, reserve: 5}
+  geocoder:    {limit: 50, reserve: 5}
+  static_maps: {limit: 50, reserve: 5}
 
 lobes:                              # параметры детекции лепестков (Стадия 6, подбор)
   k_mad: 3
+  smooth_w: 3                       # сглаживание профиля скользящим средним по секторам
+  min_sectors: 2                    # минимум секторов (×5°) в лепестке
+  gap_sectors: 1                    # допуск разрыва между секторами лепестка
   buffer_d_m: null
   sector_deg: 5
 
