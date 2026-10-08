@@ -46,12 +46,19 @@ border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.35);font-size:13px;max-width:
 #bar select{padding:2px 4px;margin-right:10px}
 #bar label{margin-right:12px;white-space:nowrap}
 #info{color:#555}
+#schoolWrap{position:relative;display:inline-block;vertical-align:middle}
+#school{width:250px;padding:3px 6px;border:1px solid #999;border-radius:4px;font-size:13px}
+#schoolList{position:absolute;top:100%;left:0;right:0;margin-top:2px;background:#fff;
+border:1px solid #ccc;border-radius:4px;max-height:260px;overflow:auto;z-index:1100;
+box-shadow:0 2px 8px rgba(0,0,0,.25);display:none}
+.sitem{padding:4px 8px;cursor:pointer;font-size:13px;white-space:nowrap}
+.sitem:hover{background:#eef3fb}
 .legend{position:absolute;bottom:20px;right:10px;z-index:1000;background:#fff;padding:6px 9px;
 border-radius:6px;box-shadow:0 1px 5px rgba(0,0,0,.3);font-size:12px;line-height:1.6}
 .sw{display:inline-block;width:14px;height:10px;border:1px solid #999;margin-right:5px}
 </style></head><body>
 <div id="bar">
-Школа <select id="school"></select>
+Школа <span id="schoolWrap"><input id="school" placeholder="все школы — начните набирать" autocomplete="off"><div id="schoolList"></div></span>
 Время <select id="minutes">
 <option value="20">20 мин</option><option value="40" selected>40 мин</option>
 <option value="both">20 и 40</option></select>
@@ -77,11 +84,44 @@ const map = L.map('map').setView([55.69, 37.53], 10);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
   {maxZoom: 17, attribution: '&copy; OpenStreetMap'}).addTo(map);
 
-const schoolSel = document.getElementById('school');
-Object.keys(SCHOOLS).forEach(sid => {
-  const o = document.createElement('option');
-  o.value = sid; o.textContent = SCHOOLS[sid].name;
-  schoolSel.appendChild(o);
+let currentSchool = 'all';
+const schoolInput = document.getElementById('school');
+const schoolList = document.getElementById('schoolList');
+
+function selectSchool(sid){
+  currentSchool = sid;
+  schoolInput.value = sid === 'all' ? '' : SCHOOLS[sid].name;
+  schoolList.style.display = 'none';
+  render();
+}
+
+function showSchoolList(q){
+  const query = (q || '').trim().toLowerCase();
+  schoolList.innerHTML = '';
+  let shown = 0;
+  [['all', '— все школы —'], ...Object.entries(SCHOOLS)].forEach(([sid, name]) => {
+    if (query && !name.toLowerCase().includes(query)) return;
+    const d = document.createElement('div');
+    d.className = 'sitem';
+    d.textContent = name;
+    d.addEventListener('mousedown', e => { e.preventDefault(); selectSchool(sid); });
+    schoolList.appendChild(d);
+    shown++;
+  });
+  schoolList.style.display = shown ? 'block' : 'none';
+}
+
+schoolInput.addEventListener('input', () => showSchoolList(schoolInput.value));
+schoolInput.addEventListener('focus', () => showSchoolList(schoolInput.value));
+schoolInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const first = schoolList.querySelector('.sitem');
+    if (first) first.dispatchEvent(new MouseEvent('mousedown', {bubbles: true}));
+  }
+  if (e.key === 'Escape') schoolList.style.display = 'none';
+});
+document.addEventListener('mousedown', e => {
+  if (e.target !== schoolInput && !schoolList.contains(e.target)) schoolList.style.display = 'none';
 });
 
 const schoolLayer = L.layerGroup().addTo(map);
@@ -96,7 +136,7 @@ const lobeLayer = L.layerGroup().addTo(map);
 function esc(s){return String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 
 function render(){
-  const sid = schoolSel.value, mins = document.getElementById('minutes').value;
+  const sid = currentSchool, mins = document.getElementById('minutes').value;
   const mode = document.getElementById('mode').value, showLobes = document.getElementById('showLobes').checked;
   zoneLayer.clearLayers(); lobeLayer.clearLayers();
   let zc = 0, lc = 0; const bounds = L.latLngBounds();
@@ -133,15 +173,9 @@ function render(){
   document.getElementById('info').textContent = `зон: ${zc}, лепестков: ${lc}`;
 }
 
-schoolSel.addEventListener('change', render);
 document.getElementById('minutes').addEventListener('change', render);
 document.getElementById('mode').addEventListener('change', render);
 document.getElementById('showLobes').addEventListener('change', render);
-
-// вариант «все школы» в начало списка
-const o = document.createElement('option');
-o.value = 'all'; o.textContent = '— все школы —';
-schoolSel.insertBefore(o, schoolSel.firstChild);
 render();
 </script></body></html>
 """
