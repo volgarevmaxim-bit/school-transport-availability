@@ -120,7 +120,7 @@ def _check_budget(service: str) -> int:
 
 
 _last_call: dict[str, float] = {}
-_PACING = {"routing": 1.3, "public_transport": 1.3, "distance_matrix": 1.3,
+_PACING = {"routing": 1.5, "public_transport": 1.5, "distance_matrix": 1.5,
            "isochrone": 0.3, "geocoder": 0.15, "static_maps": 0.3}
 # Лимит демо-ключа: ~50 запросов/мин на routing-семейство (поймано 429 после 50, 08.10) — пейсинг обязателен.
 
@@ -132,12 +132,13 @@ def _request(service: str, url_no_key: str, body_no_key: str = "", binary: bool 
     h = hashlib.sha1(_canonical(service, url_no_key, body_no_key).encode("utf-8")).hexdigest()
     cp = _cache_path(service, h, binary)
     if cp.exists():
-        _log_request(service, h, url_no_key, "cache", cached=True)
-        if binary:
-            meta = json.loads(cp.with_suffix(".json").read_text(encoding="utf-8"))
-            return {"cached": True, "status": meta["status"], "data": cp.read_bytes(), "meta": meta}
-        meta = json.loads(cp.read_text(encoding="utf-8"))
-        return {"cached": True, "status": meta["status"], "data": meta["response"], "meta": meta}
+        meta = json.loads(cp.with_suffix(".json").read_text(encoding="utf-8")) if binary else json.loads(cp.read_text(encoding="utf-8"))
+        # кэш переиспользуем ТОЛЬКО для успешных ответов: ошибки (429/400/ERR) ретраятся вживую
+        if meta.get("status") == 200:
+            _log_request(service, h, url_no_key, "cache", cached=True)
+            if binary:
+                return {"cached": True, "status": meta["status"], "data": cp.read_bytes(), "meta": meta}
+            return {"cached": True, "status": meta["status"], "data": meta["response"], "meta": meta}
 
     remaining = _check_budget(service)
     key = get_key()
