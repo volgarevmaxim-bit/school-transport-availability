@@ -1,0 +1,3822 @@
+{
+  "_meta": {
+    "description": "Канонический реестр школ/садов schools-map-mathex. Источник истины; places.json и schools_normalized.csv генерируются build_all.py.",
+    "created": "2026-09-25",
+    "snapshot": "@830f792",
+    "migration": "scripts/migrate_to_entities.py",
+    "kind_review": "2026-09-25: REVIEW_KIND.md закрыт владельцем (веб-проверки + overrides в скрипте миграции)",
+    "counts": {
+      "entities": 133,
+      "csv_rows": 69,
+      "points": 95
+    },
+    "kind_sync": "2026-10-08 (дополнение): 46 заглушек-муниципалов → blue (территориальный приём в 1 класс, решение владельца); 4 вузовских остаются red (набора с 1 класса нет)"
+  },
+  "place_order": [
+    "school-школа-57",
+    "school-московская-гимназия-на-юго-западе-1543-им-ю-в-завельского",
+    "school-школа-1514",
+    "school-курчатовская-школа",
+    "school-лицей-вторая-школа-им-в-ф-овчинникова",
+    "school-школа-179",
+    "school-бауманская-инженерная-школа-1580",
+    "school-школа-центра-педагогического-мастерства-цпм",
+    "school-школа-1535",
+    "school-школа-548-царицыно",
+    "school-лицей-ниу-вшэ",
+    "school-сунц-мгу",
+    "school-школа-интеллектуал",
+    "school-школа-президент",
+    "school-brookes-moscow-international-school",
+    "school-cambridge-international-school",
+    "school-mcs-school-magic-castle-school",
+    "school-европейская-гимназия",
+    "school-школа-интеграция-xxi-век",
+    "school-новая-школа",
+    "school-школа-золотое-сечение",
+    "school-wunderpark-international-school",
+    "school-тор-it-school",
+    "school-павловская-гимназия",
+    "school-французский-лицей-имени-а-дюма-при-посольстве-франции-в-москве-lyc-e-fran-ais-alexandre-dumas",
+    "kindergarten-brookes-moscow-early-years-pre-nursery-и-nursery",
+    "kindergarten-дошкольные-группы-cambridge-international-school",
+    "kindergarten-английский-детский-сад-mcs-school",
+    "kindergarten-детский-сад-европейской-гимназии-в-сокольниках",
+    "kindergarten-дошкольное-отделение-новой-школы",
+    "kindergarten-детский-сад-и-начальная-школа-радуга-при-золотом-сечении",
+    "kindergarten-детский-сад-при-французском-лицее-имени-а-дюма",
+    "school-lit-1533-lomonosovsky",
+    "school-lit-1533-profsoyuznaya",
+    "school-lit-1533-krzhizhanovskogo",
+    "school-хорошкола-прогимназия",
+    "school-хорошкола-гимназия",
+    "kindergarten-хорошкола",
+    "school-ломоносовская-начальная-москва",
+    "school-ломоносовская-аминьевское",
+    "school-ломоносовская-кременчугская",
+    "school-mcs-polyanka",
+    "kindergarten-летово-кидс",
+    "school-летово-джуниор",
+    "school-летово-пансион",
+    "school-школа-67",
+    "school-школа-109",
+    "school-школа-152",
+    "school-школа-171",
+    "school-школа-192",
+    "school-школа-218",
+    "school-школа-1158",
+    "school-школа-1194",
+    "school-школа-1252-имени-сервантеса",
+    "school-школа-1298",
+    "school-школа-1317",
+    "school-школа-1329",
+    "school-школа-1359-имени-авиаконструктора-м-л-миля",
+    "school-школа-1363",
+    "school-школа-1448-шуваловская-школа-1448",
+    "school-школа-1449-имени-героя-советского-союза-м-в-водопьянова",
+    "school-школа-1474",
+    "school-школа-1504",
+    "school-школа-1517",
+    "school-школа-1518",
+    "school-школа-1529-имени-а-с-грибоедова",
+    "school-школа-1532",
+    "school-школа-1534-академическая-школа-1534",
+    "school-школа-1537",
+    "school-школа-1538",
+    "school-школа-1542",
+    "school-школа-1547",
+    "school-школа-1557-имени-петра-леонидовича-капицы",
+    "school-школа-1558-имени-росалии-де-кастро",
+    "school-школа-1571",
+    "school-школа-1575",
+    "school-школа-1980",
+    "school-школа-2007-фмш",
+    "school-школа-2048",
+    "school-школа-2083",
+    "school-школа-2098-имени-героя-советского-союза-л-м-доватора",
+    "school-школа-2107",
+    "school-школа-2123-имени-мигеля-эрнандеса",
+    "school-школа-2127",
+    "school-школа-воробьевы-горы",
+    "school-школа-марьина-роща-имени-в-ф-орлова",
+    "school-предуниверситарий-нияу-мифи",
+    "school-пансион-воспитанниц-мо-рф",
+    "school-школа-покровский-квартал",
+    "school-школа-на-проспекте-вернадского",
+    "school-образовательный-центр-протон",
+    "school-школа-технологии-обучения",
+    "school-университетская-гимназия-мгу",
+    "school-финансовый-университет-при-правительстве-рф",
+    "school-школа-на-юго-востоке-имени-маршала-в-и-чуйкова"
+  ],
+  "csv_order": [
+    "mathex-1533-lit",
+    "mathex-1580-2",
+    "mathex-intellektual",
+    "mathex-letovo",
+    "mathex-shkola-1535",
+    "mathex-shkola-1543",
+    "mathex-skola-179",
+    "mathex-skola-2007",
+    "mathex-skola-57",
+    "mathex-skola-cpm",
+    "mathex-vorobgory",
+    "mathex-vtoraya-shkola",
+    "mathex-univ-gymnasium-msu",
+    "mathex-school-1568",
+    "mathex-school-1534",
+    "mathex-school-1514",
+    "mathex-kurchatov-school",
+    "mathex-silaedr",
+    "forbes-low-01",
+    "forbes-low-02",
+    "forbes-low-03",
+    "forbes-low-04",
+    "forbes-low-05",
+    "forbes-low-06",
+    "forbes-low-07",
+    "forbes-low-08",
+    "forbes-low-09",
+    "forbes-mid-01",
+    "forbes-mid-02",
+    "forbes-mid-03",
+    "forbes-mid-04",
+    "forbes-mid-05",
+    "forbes-mid-06",
+    "forbes-mid-07",
+    "forbes-mid-08",
+    "forbes-mid-09",
+    "forbes-mid-10",
+    "forbes-mid-11",
+    "forbes-mid-12",
+    "forbes-mid-13",
+    "forbes-mid-14",
+    "forbes-mid-15",
+    "forbes-mid-16",
+    "forbes-mid-17",
+    "forbes-mid-18",
+    "forbes-mid-19",
+    "forbes-mid-20",
+    "forbes-mid-21",
+    "forbes-mid-22",
+    "forbes-mid-23",
+    "forbes-high-01",
+    "forbes-high-02",
+    "forbes-high-04",
+    "forbes-high-05",
+    "forbes-high-06",
+    "forbes-high-07",
+    "forbes-high-08",
+    "forbes-high-09",
+    "forbes-high-10",
+    "forbes-high-11",
+    "forbes-high-12",
+    "forbes-high-13",
+    "forbes-high-14",
+    "forbes-high-15",
+    "forbes-high-16",
+    "forbes-high-17",
+    "forbes-high-18",
+    "forbes-high-19",
+    "forbes-high-20"
+  ],
+  "entities": [
+    {
+      "id": "лицей-1533-лит",
+      "name": "Лицей №1533 (ЛИТ)",
+      "name_normalized": "лицей no 1533 лит",
+      "address_normalized": "ломоносовский пр 16",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [
+        {
+          "id": "school-lit-1533-lomonosovsky",
+          "name": "Лицей №1533 (информационных технологий) — главное здание",
+          "entity": "school",
+          "kind": "red",
+          "address": "Москва, Ломоносовский проспект, 16",
+          "lat": 55.6923,
+          "lon": 37.5437,
+          "website": "https://www.lit.msu.ru/",
+          "group": "Лицей №1533 (ЛИТ)"
+        },
+        {
+          "id": "school-lit-1533-profsoyuznaya",
+          "name": "Лицей №1533 (информационных технологий) — здание 5–8 классов",
+          "entity": "school",
+          "kind": "red",
+          "address": "Москва, Профсоюзная улица, 24к4",
+          "lat": 55.6908,
+          "lon": 37.5584,
+          "website": "https://www.lit.msu.ru/",
+          "group": "Лицей №1533 (ЛИТ)"
+        },
+        {
+          "id": "school-lit-1533-krzhizhanovskogo",
+          "name": "Лицей №1533 (информационных технологий) — здание 3–4 классов",
+          "entity": "school",
+          "kind": "red",
+          "address": "Москва, улица Кржижановского, 4А",
+          "lat": 55.68145,
+          "lon": 37.56054,
+          "website": "https://www.lit.msu.ru/",
+          "group": "Лицей №1533 (ЛИТ)"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-1533-lit",
+          "name": "Школа 1533 ЛИТ",
+          "address": "ул. Кржижановского, 4А, Москва",
+          "lat": "55.681453",
+          "lon": "37.560538",
+          "mathex_url": "https://mathex.ru/shkoly/1533-lit/",
+          "source": "mathex",
+          "label": "1533 ЛИТ",
+          "description": "Школа 1533 ЛИТ\n\nул. Кржижановского, 4А, Москва\nСайт: <a href=\"https://www.lit.msu.ru/\">www.lit.msu.ru</a>\n<a href=\"https://mathex.ru/shkoly/1533-lit/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/1533-lit/"
+    },
+    {
+      "id": "бауманская-инженерная-школа-1580",
+      "name": "Бауманская инженерная школа №1580",
+      "name_normalized": "бауманская инженерная школа no 1580",
+      "address_normalized": "балаклавский просп 6а",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Бауманская инженерная школа №1580 in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): school-бауманская-инженерная-школа-1580=red; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-бауманская-инженерная-школа-1580",
+          "name": "Бауманская инженерная школа №1580",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Балаклавский просп., 6А, Москва",
+          "lat": 55.64153,
+          "lon": 37.61307,
+          "group": "Бауманская инженерная школа №1580"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-1580-2",
+          "name": "Школа 1580",
+          "address": "Балаклавский просп., 6А, Москва",
+          "lat": "55.641534",
+          "lon": "37.613072",
+          "mathex_url": "https://mathex.ru/shkoly/1580-2/",
+          "source": "mathex",
+          "label": "1580",
+          "description": "Школа 1580\n\nБалаклавский просп., 6А, Москва\nСайт: <a href=\"https://sch1580.mskobr.ru/\">sch1580.mskobr.ru</a>\n<a href=\"https://mathex.ru/shkoly/1580-2/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/1580-2/"
+    },
+    {
+      "id": "школа-интеллектуал",
+      "name": "Школа «Интеллектуал»",
+      "name_normalized": "школа интеллектуал",
+      "address_normalized": "кременчугская ул 11 стр 4",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [
+        {
+          "id": "school-школа-интеллектуал",
+          "name": "Школа «Интеллектуал»",
+          "entity": "school",
+          "kind": "red",
+          "address": "Кременчугская ул., 11, стр. 4, Москва",
+          "lat": 55.71817,
+          "lon": 37.46446,
+          "group": "Школа «Интеллектуал»"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-intellektual",
+          "name": "Школа Интеллектуал",
+          "address": "Кременчугская ул., 11, стр. 4, Москва",
+          "lat": "55.718172",
+          "lon": "37.464464",
+          "mathex_url": "https://mathex.ru/shkoly/intellektual/",
+          "source": "mathex",
+          "label": "Интел.",
+          "description": "Школа Интеллектуал\n\nКременчугская ул., 11, стр. 4, Москва\nСайт: <a href=\"https://sch-int.ru/\">sch-int.ru</a>\n<a href=\"https://mathex.ru/shkoly/intellektual/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/intellektual/"
+    },
+    {
+      "id": "детский-сад-летово-кидс",
+      "name": "Детский сад «Летово Кидс»",
+      "name_normalized": "детский сад летово кидс",
+      "address_normalized": "ул дубининская 59а",
+      "kind": "green",
+      "kind_source": "kindergarten program (places.json @830f792)",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "kindergarten-летово-кидс",
+          "name": "Детский сад «Летово Кидс»",
+          "entity": "kindergarten",
+          "kind": "green",
+          "address": "Москва, улица Дубининская, 59А",
+          "lat": 55.7182811,
+          "lon": 37.6360254,
+          "associated_school": "Школа-пансион «Летово»",
+          "group": "Летово",
+          "source": "https://letovo.ru/o-shkole/svedenia-ob-obrazovatelnoy-organizacii"
+        }
+      ],
+      "parent_id": "летово"
+    },
+    {
+      "id": "летово",
+      "name": "Летово",
+      "name_normalized": "летово",
+      "address_normalized": "раменский бул 1а стр 1",
+      "kind": "blue",
+      "kind_source": "manual review 2026-09-25: letovojunior.ru/t.me — приём заявок в 1 класс (2025/26 закрыт)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): kindergarten-летово-кидс=green, school-летово-джуниор=green; kind сущности — метка для радара",
+        "override: manual review 2026-09-25 (владелец)"
+      ],
+      "points": [
+        {
+          "id": "school-летово-джуниор",
+          "name": "«Летово Джуниор»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, Раменский бульвар, 1А, стр. 1",
+          "lat": 55.69795,
+          "lon": 37.5078,
+          "associated_school": "Школа-пансион «Летово»",
+          "group": "Летово",
+          "source": "https://letovo.ru/o-shkole/svedenia-ob-obrazovatelnoy-organizacii"
+        },
+        {
+          "id": "school-летово-пансион",
+          "name": "Школа-пансион «Летово» — основная школа",
+          "entity": "school",
+          "kind": "red",
+          "address": "Москва, район Коммунарка, улица Зимёнковская, 3",
+          "lat": 55.5574146,
+          "lon": 37.4222813,
+          "group": "Летово",
+          "source": "https://letovo.ru/o-shkole/svedenia-ob-obrazovatelnoy-organizacii"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-letovo",
+          "name": "Летово",
+          "address": "Москва, Новомосковский административный округ, район Коммунарка, Зимёнковская улица, 3",
+          "lat": "55.557541",
+          "lon": "37.422674",
+          "mathex_url": "https://mathex.ru/shkoly/letovo/",
+          "source": "mathex",
+          "label": "Летово",
+          "description": "Летово\n\nМосква, Новомосковский административный округ, район Коммунарка, Зимёнковская улица, 3\nСайт: <a href=\"https://letovo.ru/\">letovo.ru</a>\n<a href=\"https://mathex.ru/shkoly/letovo/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/letovo/"
+    },
+    {
+      "id": "школа-1535",
+      "name": "Школа №1535",
+      "name_normalized": "школа no 1535",
+      "address_normalized": "усачева ул 50",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Школа №1535 in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): school-школа-1535=red; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-школа-1535",
+          "name": "Школа №1535",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Усачёва ул., 50, Москва",
+          "lat": 55.72581,
+          "lon": 37.56494,
+          "group": "Школа №1535"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-shkola-1535",
+          "name": "Школа 1535",
+          "address": "Усачёва ул., 50, Москва",
+          "lat": "55.725808",
+          "lon": "37.56494",
+          "mathex_url": "https://mathex.ru/shkoly/shkola-1535/",
+          "source": "mathex",
+          "label": "1535",
+          "description": "Школа 1535\n\nУсачёва ул., 50, Москва\nСайт: <a href=\"https://sch1535.mskobr.ru/\">sch1535.mskobr.ru</a>\n<a href=\"https://mathex.ru/shkoly/shkola-1535/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/shkola-1535/"
+    },
+    {
+      "id": "московская-гимназия-на-юго-западе-1543-ю-в-завельского",
+      "name": "Московская гимназия на Юго-Западе №1543 им. Ю. В. Завельского",
+      "name_normalized": "московская гимназия на юго западе no 1543 ю в завельского",
+      "address_normalized": "ул 26 бакинских комиссаров 3к 5",
+      "kind": "red",
+      "kind_source": "08.10.26: blue→red по справке портала — «Начальной школы в гимназии нет, обучение только с 5 по 11 класс» (владелец: фильтр «приём с 1 класса» должен быть честным)",
+      "points": [
+        {
+          "id": "school-московская-гимназия-на-юго-западе-1543-им-ю-в-завельского",
+          "name": "Московская гимназия на Юго-Западе №1543 им. Ю. В. Завельского",
+          "entity": "school",
+          "kind": "red",
+          "address": "ул. 26 Бакинских Комиссаров, 3, корп. 5, Москва",
+          "lat": 55.65606,
+          "lon": 37.48618,
+          "group": "Московская гимназия на Юго-Западе №1543 им. Ю. В. Завельского"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-shkola-1543",
+          "name": "Школа 1543",
+          "address": "ул. 26 Бакинских Комиссаров, 3, корп. 5, Москва",
+          "lat": "55.656057",
+          "lon": "37.486176",
+          "mathex_url": "https://mathex.ru/shkoly/shkola-1543/",
+          "source": "mathex",
+          "label": "1543",
+          "description": "Школа 1543\n\nул. 26 Бакинских Комиссаров, 3, корп. 5, Москва\nСайт: <a href=\"http://www.1543.ru/\">www.1543.ru</a>\n<a href=\"https://mathex.ru/shkoly/shkola-1543/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/shkola-1543/",
+      "kind_review": [
+        "override: manual review 2026-09-25 (владелец)"
+      ]
+    },
+    {
+      "id": "школа-179",
+      "name": "Школа №179",
+      "name_normalized": "школа no 179",
+      "address_normalized": "ул большая дмитровка 5/6с7",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [
+        {
+          "id": "school-школа-179",
+          "name": "Школа №179",
+          "entity": "school",
+          "kind": "red",
+          "address": "ул. Большая Дмитровка, 5/6с7, Москва",
+          "lat": 55.75965,
+          "lon": 37.61473,
+          "group": "Школа №179"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-skola-179",
+          "name": "Школа 179",
+          "address": "ул. Большая Дмитровка, 5/6с7, Москва",
+          "lat": "55.759653",
+          "lon": "37.614734",
+          "mathex_url": "https://mathex.ru/shkoly/skola-179/",
+          "source": "mathex",
+          "label": "179",
+          "description": "Школа 179\n\nул. Большая Дмитровка, 5/6с7, Москва\nСайт: <a href=\"https://www.179.ru/\">www.179.ru</a>\n<a href=\"https://mathex.ru/shkoly/skola-179/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/skola-179/"
+    },
+    {
+      "id": "школа-2007",
+      "name": "Школа 2007",
+      "name_normalized": "школа 2007",
+      "address_normalized": "ул горчакова 9к 1",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "mathex-skola-2007",
+          "name": "Школа 2007",
+          "address": "ул. Горчакова, 9, корп. 1, Москва",
+          "lat": "55.544754",
+          "lon": "37.53278",
+          "mathex_url": "https://mathex.ru/shkoly/skola-2007/",
+          "source": "mathex",
+          "label": "2007",
+          "description": "Школа 2007\n\nул. Горчакова, 9, корп. 1, Москва\nСайт: <a href=\"http://www.fmsh2007.ru/\">www.fmsh2007.ru</a>\n<a href=\"https://mathex.ru/shkoly/skola-2007/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/skola-2007/"
+    },
+    {
+      "id": "школа-57",
+      "name": "Школа №57",
+      "name_normalized": "школа no 57",
+      "address_normalized": "малый знаменский пер 7/10с5",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Школа №57 in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): school-школа-57=red; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-школа-57",
+          "name": "Школа №57",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Малый Знаменский пер., 7/10с5, Москва",
+          "lat": 55.74862,
+          "lon": 37.60499,
+          "group": "Школа №57"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-skola-57",
+          "name": "Школа 57",
+          "address": "Малый Знаменский пер., 7/10с5, Москва",
+          "lat": "55.74862",
+          "lon": "37.604987",
+          "mathex_url": "https://mathex.ru/shkoly/skola-57/",
+          "source": "mathex",
+          "label": "57",
+          "description": "Школа 57\n\nМалый Знаменский пер., 7/10с5, Москва\nСайт: <a href=\"https://www.sch57.ru/\">www.sch57.ru</a>\n<a href=\"https://mathex.ru/shkoly/skola-57/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/skola-57/"
+    },
+    {
+      "id": "школа-центра-педагогического-мастерства-цпм",
+      "name": "Школа Центра педагогического мастерства (ЦПМ)",
+      "name_normalized": "школа центра педагогического мастерства цпм",
+      "address_normalized": "олимпийский пр 11с1",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [
+        {
+          "id": "school-школа-центра-педагогического-мастерства-цпм",
+          "name": "Школа Центра педагогического мастерства (ЦПМ)",
+          "entity": "school",
+          "kind": "red",
+          "address": "Москва, Олимпийский проспект, 11с1",
+          "lat": 55.78949,
+          "lon": 37.62188,
+          "group": "Школа Центра педагогического мастерства (ЦПМ)"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-skola-cpm",
+          "name": "ЦПМ",
+          "address": "Олимпийский просп., 11, стр. 1, Москва",
+          "lat": "55.789492",
+          "lon": "37.621875",
+          "mathex_url": "https://mathex.ru/shkoly/skola-cpm/",
+          "source": "mathex",
+          "label": "ЦПМ",
+          "description": "ЦПМ\n\nОлимпийский просп., 11, стр. 1, Москва\nСайт: <a href=\"https://xn----7sb3aehik9cm.xn--p1ai/\">xn----7sb3aehik9cm.xn--p1ai</a>\n<a href=\"https://mathex.ru/shkoly/skola-cpm/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        },
+        {
+          "id": "forbes-mid-23",
+          "name": "Школа ЦПМ",
+          "address": "Москва, Олимпийский проспект, 11с1",
+          "lat": "55.789492",
+          "lon": "37.621875",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "ЦПМ",
+          "description": "Школа ЦПМ\n\nМосква, Олимпийский проспект, 11с1\n577 800 — 652 500 руб/год\nСайт: <a href=\"https://sckool-cpm.ru/\">sckool-cpm.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 2019, price 577 800 — 652 500"
+        }
+      ],
+      "source": "both",
+      "mathex_url": "https://mathex.ru/shkoly/skola-cpm/"
+    },
+    {
+      "id": "лицей-воробьевы-горы",
+      "name": "Лицей Воробьевы Горы",
+      "name_normalized": "лицей воробьевы горы",
+      "address_normalized": "донская ул 37",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "mathex-vorobgory",
+          "name": "Лицей Воробьевы Горы",
+          "address": "Донская ул., 37, Москва",
+          "lat": "55.718922",
+          "lon": "37.605149",
+          "mathex_url": "https://mathex.ru/shkoly/vorobgory/",
+          "source": "mathex",
+          "label": "Воробёвы",
+          "description": "Лицей Воробьевы Горы\n\nДонская ул., 37, Москва\nСайт: <a href=\"https://vorobyevy-gory.mskobr.ru/\">vorobyevy-gory.mskobr.ru</a>\n<a href=\"https://mathex.ru/shkoly/vorobgory/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/vorobgory/"
+    },
+    {
+      "id": "лицей-вторая-школа-в-ф-овчинникова",
+      "name": "Лицей «Вторая школа» им. В. Ф. Овчинникова",
+      "name_normalized": "лицей вторая школа в ф овчинникова",
+      "address_normalized": "ул фотиевой 18",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [
+        {
+          "id": "school-лицей-вторая-школа-им-в-ф-овчинникова",
+          "name": "Лицей «Вторая школа» им. В. Ф. Овчинникова",
+          "entity": "school",
+          "kind": "red",
+          "address": "ул. Фотиевой, 18, Москва",
+          "lat": 55.69799,
+          "lon": 37.55644,
+          "group": "Лицей «Вторая школа» им. В. Ф. Овчинникова"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-vtoraya-shkola",
+          "name": "Лицей Вторая школа",
+          "address": "ул. Фотиевой, 18, Москва",
+          "lat": "55.697985",
+          "lon": "37.556442",
+          "mathex_url": "https://mathex.ru/shkoly/vtoraya-shkola/",
+          "source": "mathex",
+          "label": "Л2Ш",
+          "description": "Лицей Вторая школа\n\nул. Фотиевой, 18, Москва\nСайт: <a href=\"https://sch2.ru/\">sch2.ru</a>\n<a href=\"https://mathex.ru/shkoly/vtoraya-shkola/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "coords from Yandex Geocoder, address from Yandex Maps org card"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/vtoraya-shkola/"
+    },
+    {
+      "id": "университетская-гимназия-мгу",
+      "name": "Университетская гимназия МГУ",
+      "name_normalized": "университетская гимназия мгу",
+      "address_normalized": "ломоносовский пр 27к 7",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [
+        {
+          "id": "school-университетская-гимназия-мгу",
+          "name": "Университетская гимназия МГУ",
+          "entity": "school",
+          "kind": "red",
+          "address": "Ломоносовский проспект, 27, корпус 7",
+          "lat": 55.700603,
+          "lon": 37.519501,
+          "website": "",
+          "group": "Университетская гимназия МГУ"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-univ-gymnasium-msu",
+          "name": "Университетская гимназия МГУ",
+          "address": "Ломоносовский проспект, 27, корп. 7",
+          "lat": "55.694814",
+          "lon": "37.524875",
+          "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/",
+          "source": "mathex",
+          "label": "УГ МГУ",
+          "description": "Университетская гимназия МГУ\n\nЛомоносовский проспект, 27, корп. 7\n<a href=\"https://mathex.ru/shkoly/drugie-top-school/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "from Mathex drugie-top-school page; coords from Yandex Geocoder; org_id from Yandex Maps"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/"
+    },
+    {
+      "id": "школа-1568-пабло-неруды",
+      "name": "Школа 1568 имени Пабло Неруды",
+      "name_normalized": "школа 1568 пабло неруды",
+      "address_normalized": "пр шокальского 7к 2",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "mathex-school-1568",
+          "name": "Школа 1568 имени Пабло Неруды",
+          "address": "проспект Шокальского, 7, корп. 2",
+          "lat": "55.874521",
+          "lon": "37.642887",
+          "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/",
+          "source": "mathex",
+          "label": "1568",
+          "description": "Школа 1568 имени Пабло Неруды\n\nпроспект Шокальского, 7, корп. 2\nСайт: <a href=\"https://sch1568.mskobr.ru/\">sch1568.mskobr.ru</a>\n<a href=\"https://mathex.ru/shkoly/drugie-top-school/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "from Mathex drugie-top-school page; coords from Yandex Geocoder; org_id from Yandex Maps"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/"
+    },
+    {
+      "id": "школа-1534",
+      "name": "Школа 1534",
+      "name_normalized": "школа 1534",
+      "address_normalized": "ул кедрова 11а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "mathex-school-1534",
+          "name": "Школа 1534",
+          "address": "улица Кедрова, 11А",
+          "lat": "55.684726",
+          "lon": "37.57413",
+          "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/",
+          "source": "mathex",
+          "label": "1534",
+          "description": "Школа 1534\n\nулица Кедрова, 11А\nСайт: <a href=\"https://sch1534.mskobr.ru/\">sch1534.mskobr.ru</a>\n<a href=\"https://mathex.ru/shkoly/drugie-top-school/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "from Mathex drugie-top-school page; coords from Yandex Geocoder; org_id from Yandex Maps"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/"
+    },
+    {
+      "id": "школа-1514",
+      "name": "Школа №1514",
+      "name_normalized": "школа no 1514",
+      "address_normalized": "ул академика челомея 6а",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Школа №1514 in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): school-школа-1514=red; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-школа-1514",
+          "name": "Школа №1514",
+          "entity": "school",
+          "kind": "blue",
+          "address": "улица Академика Челомея, 6А",
+          "lat": 55.66314,
+          "lon": 37.53269,
+          "group": "Школа №1514"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-school-1514",
+          "name": "Школа 1514",
+          "address": "улица Академика Челомея, 6А",
+          "lat": "55.663141",
+          "lon": "37.532691",
+          "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/",
+          "source": "mathex",
+          "label": "1514",
+          "description": "Школа 1514\n\nулица Академика Челомея, 6А\nСайт: <a href=\"https://sch1514.mskobr.ru/\">sch1514.mskobr.ru</a>\n<a href=\"https://mathex.ru/shkoly/drugie-top-school/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "from Mathex drugie-top-school page; coords from Yandex Geocoder; org_id from Yandex Maps"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/"
+    },
+    {
+      "id": "курчатовская-школа",
+      "name": "Курчатовская школа",
+      "name_normalized": "курчатовская школа",
+      "address_normalized": "ул паршина 39",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Курчатовская школа in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): school-курчатовская-школа=red; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-курчатовская-школа",
+          "name": "Курчатовская школа",
+          "entity": "school",
+          "kind": "blue",
+          "address": "улица Паршина, 39",
+          "lat": 55.78792,
+          "lon": 37.45006,
+          "group": "Курчатовская школа"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "mathex-kurchatov-school",
+          "name": "Курчатовская школа",
+          "address": "улица Паршина, 39",
+          "lat": "55.787923",
+          "lon": "37.450055",
+          "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/",
+          "source": "mathex",
+          "label": "Курчат.",
+          "description": "Курчатовская школа\n\nулица Паршина, 39\nСайт: <a href=\"https://kurchat.mskobr.ru/\">kurchat.mskobr.ru</a>\n<a href=\"https://mathex.ru/shkoly/drugie-top-school/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "from Mathex drugie-top-school page; coords from Yandex Geocoder; org_id from Yandex Maps"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/"
+    },
+    {
+      "id": "силаэдр",
+      "name": "Силаэдр",
+      "name_normalized": "силаэдр",
+      "address_normalized": "долгоруковская ул 7",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "mathex-silaedr",
+          "name": "Силаэдр",
+          "address": "Долгоруковская улица, 7",
+          "lat": "55.773849",
+          "lon": "37.603541",
+          "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/",
+          "source": "mathex",
+          "label": "Силаэдр",
+          "description": "Силаэдр\n\nДолгоруковская улица, 7\nСайт: <a href=\"https://silaedr.ru/\">silaedr.ru</a>\n<a href=\"https://mathex.ru/shkoly/drugie-top-school/\">Страница на Mathex</a>",
+          "status": "geocoded",
+          "notes": "from Mathex drugie-top-school page; coords from Yandex Geocoder; org_id from Yandex Maps"
+        }
+      ],
+      "source": "mathex",
+      "mathex_url": "https://mathex.ru/shkoly/drugie-top-school/"
+    },
+    {
+      "id": "абсолют",
+      "name": "Абсолют",
+      "name_normalized": "абсолют",
+      "address_normalized": "ской округ серпухов д райсеменовское 12а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-low-01",
+          "name": "Абсолют",
+          "address": "Московская область, городской округ Серпухов, деревня Райсеменовское, 12а",
+          "lat": "55.00768",
+          "lon": "37.34965",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Абсолют",
+          "description": "Абсолют\n\nМосковская область, городской округ Серпухов, деревня Райсеменовское, 12а\nСайт: <a href=\"https://absolut-school.ru/\">absolut-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes low segment, year 2014, price None"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "вектор",
+      "name": "Вектор",
+      "name_normalized": "вектор",
+      "address_normalized": "мытищи летная ул 21б",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-low-02",
+          "name": "Вектор",
+          "address": "Московская область, Мытищи, Летная улица, 21б",
+          "lat": "55.909519",
+          "lon": "37.724095",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Вектор",
+          "description": "Вектор\n\nМосковская область, Мытищи, Летная улица, 21б\n320 000 — 540 000 руб/год\nСайт: <a href=\"https://vektor-school.ru/\">vektor-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes low segment, year 1997, price 320 000 — 540 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "колледж-xxi-века",
+      "name": "Колледж XXI века",
+      "name_normalized": "колледж xxi века",
+      "address_normalized": "солнцевский пр 7к3",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-low-03",
+          "name": "Колледж XXI века",
+          "address": "Москва, Солнцевский проспект, 7к3",
+          "lat": "55.648199",
+          "lon": "37.402291",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Колл.XXI",
+          "description": "Колледж XXI века\n\nМосква, Солнцевский проспект, 7к3\n445 000 — 560 000 руб/год\nСайт: <a href=\"https://xxi-college.ru/\">xxi-college.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes low segment, year 1991, price 445 000 — 560 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "лицей-экус",
+      "name": "Лицей ЭКУС",
+      "name_normalized": "лицей экус",
+      "address_normalized": "подольск народная ул 12",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-low-04",
+          "name": "Лицей ЭКУС",
+          "address": "Московская область, Подольск, Народная улица, 12",
+          "lat": "55.417133",
+          "lon": "37.538997",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "ЭКУС",
+          "description": "Лицей ЭКУС\n\nМосковская область, Подольск, Народная улица, 12\n265 500 — 294 300 руб/год\nСайт: <a href=\"https://ecus.ru/\">ecus.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes low segment, year 1991, price 265 500 — 294 300"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "лотос",
+      "name": "Лотос",
+      "name_normalized": "лотос",
+      "address_normalized": "шенкурский проезд 5",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-low-05",
+          "name": "Лотос",
+          "address": "Москва, Шенкурский проезд, 5",
+          "lat": "55.892905",
+          "lon": "37.590093",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Лотос",
+          "description": "Лотос\n\nМосква, Шенкурский проезд, 5\n540 000 — 579 500 руб/год\nСайт: <a href=\"https://lotos-school.ru/\">lotos-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes low segment, year 1992, price 540 000 — 579 500"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "русская-школа",
+      "name": "Русская школа",
+      "name_normalized": "русская школа",
+      "address_normalized": "г видное ул советская дом 16",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-low-06",
+          "name": "Русская школа",
+          "address": "Московская область, г. Видное, ул. Советская, дом 16",
+          "lat": "55.549872",
+          "lon": "37.706272",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Рус.шк.",
+          "description": "Русская школа\n\nМосковская область, г. Видное, ул. Советская, дом 16\n310 000 — 450 000 руб/год\nСайт: <a href=\"https://russchool.ru/\">russchool.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes low segment, year 1997, price 310 000 — 450 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "самсон",
+      "name": "Самсон",
+      "name_normalized": "самсон",
+      "address_normalized": "кленовый бул 7к2",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-low-07",
+          "name": "Самсон",
+          "address": "Москва, Кленовый бульвар, 7к2",
+          "lat": "55.683884",
+          "lon": "37.676798",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Самсон",
+          "description": "Самсон\n\nМосква, Кленовый бульвар, 7к2\n405 000 — 540 000 руб/год\nСайт: <a href=\"https://samson-edu.ru/\">samson-edu.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes low segment, year 1992, price 405 000 — 540 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "солнечный-ветер",
+      "name": "Солнечный ветер",
+      "name_normalized": "солнечный ветер",
+      "address_normalized": "ул академика варги 2а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-low-08",
+          "name": "Солнечный ветер",
+          "address": "Москва, улица Академика Варги, 2а",
+          "lat": "55.631956",
+          "lon": "37.477202",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "С.Ветер",
+          "description": "Солнечный ветер\n\nМосква, улица Академика Варги, 2а\n522 000 руб/год\nСайт: <a href=\"https://solnechnyveter.ru/\">solnechnyveter.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes low segment, year 1996, price 522 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "центр-образования-столичный",
+      "name": "Центр образования «Столичный»",
+      "name_normalized": "центр образования столичный",
+      "address_normalized": "чертановская ул 34а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-low-09",
+          "name": "Центр образования «Столичный»",
+          "address": "Москва, Чертановская улица, 34а",
+          "lat": "55.616681",
+          "lon": "37.588341",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Столичн.",
+          "description": "Центр образования «Столичный»\n\nМосква, Чертановская улица, 34а\n378 000 — 710 500 руб/год\nСайт: <a href=\"https://stolichny-school.ru/\">stolichny-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes low segment, year 1991, price 378 000 — 710 500"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "академическая-гимназия",
+      "name": "Академическая гимназия",
+      "name_normalized": "академическая гимназия",
+      "address_normalized": "новодмитровская ул 2с9",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-01",
+          "name": "Академическая гимназия",
+          "address": "Москва, Новодмитровская улица, 2с9",
+          "lat": "55.805245",
+          "lon": "37.590749",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Акад.гим.",
+          "description": "Академическая гимназия\n\nМосква, Новодмитровская улица, 2с9\n1 000 000 руб/год\nСайт: <a href=\"https://academgym.ru/\">academgym.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1994, price 1 000 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "гимназия-святителя-василия-великого",
+      "name": "Гимназия Святителя Василия Великого",
+      "name_normalized": "гимназия святителя василия великого",
+      "address_normalized": "одинцовский ской округ д зайцево кокошкинское ш 1",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-02",
+          "name": "Гимназия Святителя Василия Великого",
+          "address": "Московская область, Одинцовский городской округ, деревня Зайцево, Кокошкинское шоссе, 1",
+          "lat": "55.621206",
+          "lon": "37.156359",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "ГСВВ",
+          "description": "Гимназия Святителя Василия Великого\n\nМосковская область, Одинцовский городской округ, деревня Зайцево, Кокошкинское шоссе, 1\n909 000 — 1 116 000 руб/год\nСайт: <a href=\"https://vasiliyvelikogo.ru/\">vasiliyvelikogo.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 2006, price 909 000 — 1 116 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "горчаковский-лицей-мгимо",
+      "name": "Горчаковский лицей МГИМО",
+      "name_normalized": "горчаковский лицей мгимо",
+      "address_normalized": "одинцово новоcпортивная ул 3",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-03",
+          "name": "Горчаковский лицей МГИМО",
+          "address": "Московская область, Одинцово, Новоcпортивная улица, 3",
+          "lat": "55.680661",
+          "lon": "37.277371",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "МГИМО",
+          "description": "Горчаковский лицей МГИМО\n\nМосковская область, Одинцово, Новоcпортивная улица, 3\n900 000 — 1 050 000 руб/год\nСайт: <a href=\"https://gorchakov.msk.ru/\">gorchakov.msk.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 2016, price 900 000 — 1 050 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "древо-познаний",
+      "name": "Древо познаний",
+      "name_normalized": "древо познаний",
+      "address_normalized": "жуковский ул калугина 9/1",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-04",
+          "name": "Древо познаний",
+          "address": "Московская область, Жуковский, улица Калугина, 9/1",
+          "lat": "55.588923",
+          "lon": "38.129792",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Древо",
+          "description": "Древо познаний\n\nМосковская область, Жуковский, улица Калугина, 9/1\n605 000 руб/год\nСайт: <a href=\"https://drevoznanij.ru/\">drevoznanij.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 2022, price 605 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "детский-сад-европейской-гимназии-в-сокольниках",
+      "name": "Детский сад Европейской гимназии в Сокольниках",
+      "name_normalized": "детский сад европейской гимназии в сокольниках",
+      "address_normalized": "старослободский пер",
+      "kind": "green",
+      "kind_source": "kindergarten program (places.json @830f792)",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "kindergarten-детский-сад-европейской-гимназии-в-сокольниках",
+          "name": "Детский сад Европейской гимназии в Сокольниках",
+          "entity": "kindergarten",
+          "kind": "green",
+          "address": "Москва, Старослободский переулок",
+          "lat": 55.79114,
+          "lon": 37.66828,
+          "associated_school": "Европейская гимназия",
+          "group": "Европейская гимназия"
+        }
+      ],
+      "parent_id": "европейская-гимназия"
+    },
+    {
+      "id": "европейская-гимназия",
+      "name": "Европейская гимназия",
+      "name_normalized": "европейская гимназия",
+      "address_normalized": "ул сокольнический вал 28",
+      "kind": "blue",
+      "kind_source": "rule:legacy-build_data.py BLUE\\GREEN (Европейская гимназия)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): kindergarten-детский-сад-европейской-гимназии-в-сокольниках=green, school-европейская-гимназия=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-европейская-гимназия",
+          "name": "Европейская гимназия",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, улица Сокольнический Вал, 28",
+          "lat": 55.79107,
+          "lon": 37.66788,
+          "group": "Европейская гимназия"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-05",
+          "name": "Европейская гимназия",
+          "address": "Москва, улица Сокольнический Вал, 28",
+          "lat": "55.791071",
+          "lon": "37.667878",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Евр.гим.",
+          "description": "Европейская гимназия\n\nМосква, улица Сокольнический Вал, 28\n775 000 — 1 143 000 руб/год\nСайт: <a href=\"https://eurogym.ru/\">eurogym.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1992, price 775 000 — 1 143 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "детский-сад-и-начальная-школа-радуга-при-золотом-сечении",
+      "name": "Детский сад и начальная школа «Радуга» при «Золотом сечении»",
+      "name_normalized": "детский сад и начальная школа радуга при золотом сечении",
+      "address_normalized": "ленинский пр",
+      "kind": "green",
+      "kind_source": "kindergarten program (places.json @830f792)",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "kindergarten-детский-сад-и-начальная-школа-радуга-при-золотом-сечении",
+          "name": "Детский сад и начальная школа «Радуга» при «Золотом сечении»",
+          "entity": "kindergarten",
+          "kind": "green",
+          "address": "Москва, Ленинский проспект",
+          "lat": 55.72194,
+          "lon": 37.60358,
+          "associated_school": "Школа «Золотое сечение»",
+          "group": "Школа «Золотое сечение»"
+        }
+      ],
+      "parent_id": "школа-золотое-сечение"
+    },
+    {
+      "id": "школа-золотое-сечение",
+      "name": "Школа «Золотое сечение»",
+      "name_normalized": "школа золотое сечение",
+      "address_normalized": "ленинский пр 13а",
+      "kind": "blue",
+      "kind_source": "rule:legacy-build_data.py BLUE\\GREEN (Золотое сечение)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): kindergarten-детский-сад-и-начальная-школа-радуга-при-золотом-сечении=green, school-школа-золотое-сечение=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-школа-золотое-сечение",
+          "name": "Школа «Золотое сечение»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, Ленинский проспект, 13а",
+          "lat": 55.72194,
+          "lon": 37.60358,
+          "group": "Школа «Золотое сечение»"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-06",
+          "name": "Золотое сечение",
+          "address": "Москва, Ленинский проспект, 13а (5–11-й класс)",
+          "lat": "55.721939",
+          "lon": "37.603577",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Зол.сеч.",
+          "description": "Золотое сечение\n\nМосква, Ленинский проспект, 13а (5–11-й класс)\n1 120 000 — 1 300 000 руб/год\nСайт: <a href=\"https://zolsech.ru/\">zolsech.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1992, price 1 120 000 — 1 300 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "карьера",
+      "name": "Карьера",
+      "name_normalized": "карьера",
+      "address_normalized": "краснодарская ул 11",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-07",
+          "name": "Карьера",
+          "address": "Москва, Краснодарская улица, 11",
+          "lat": "55.677387",
+          "lon": "37.743085",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Карьера",
+          "description": "Карьера\n\nМосква, Краснодарская улица, 11\n650 000 — 730 000 руб/год\nСайт: <a href=\"https://kariera-school.ru/\">kariera-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1998, price 650 000 — 730 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "колибри",
+      "name": "Колибри",
+      "name_normalized": "колибри",
+      "address_normalized": "никитинская ул 24а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-08",
+          "name": "Колибри",
+          "address": "Москва, Никитинская улица, 24а",
+          "lat": "55.80651",
+          "lon": "37.775092",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Колибри",
+          "description": "Колибри\n\nМосква, Никитинская улица, 24а\n700 000 — 720 000 руб/год\nСайт: <a href=\"https://kolibri-school.ru/\">kolibri-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1993, price 700 000 — 720 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "лидер",
+      "name": "Лидер",
+      "name_normalized": "лидер",
+      "address_normalized": "юровская ул 41",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-09",
+          "name": "Лидер",
+          "address": "Москва, Юровская улица, 41",
+          "lat": "55.898922",
+          "lon": "37.375674",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Лидер",
+          "description": "Лидер\n\nМосква, Юровская улица, 41\n525 000 — 740 000 руб/год\nСайт: <a href=\"https://liderschool.ru/\">liderschool.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 2004, price 525 000 — 740 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "лидеры",
+      "name": "Лидеры",
+      "name_normalized": "лидеры",
+      "address_normalized": "одинцовский ской округ село ромашково никольская ул 16к2",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-10",
+          "name": "Лидеры",
+          "address": "Московская область, Одинцовский городской округ, село Ромашково, Никольская улица, 16к2",
+          "lat": "55.72814",
+          "lon": "37.333938",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Лидеры",
+          "description": "Лидеры\n\nМосковская область, Одинцовский городской округ, село Ромашково, Никольская улица, 16к2\n1 140 000 руб/год\nСайт: <a href=\"https://lidery-msk.ru/\">lidery-msk.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 2015, price 1 140 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "лучик",
+      "name": "Лучик",
+      "name_normalized": "лучик",
+      "address_normalized": "ул вучетича 7а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-11",
+          "name": "Лучик",
+          "address": "Москва, улица Вучетича, 7а",
+          "lat": "55.808113",
+          "lon": "37.557502",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Лучик",
+          "description": "Лучик\n\nМосква, улица Вучетича, 7а\n495 000 — 841 000 руб/год\nСайт: <a href=\"https://luchik-school.ru/\">luchik-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1995, price 495 000 — 841 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "москвич",
+      "name": "Москвич",
+      "name_normalized": "москвич",
+      "address_normalized": "ленинский пр 86б",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-12",
+          "name": "Москвич",
+          "address": "Москва, Ленинский проспект, 86б",
+          "lat": "55.678032",
+          "lon": "37.527157",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Москвич",
+          "description": "Москвич\n\nМосква, Ленинский проспект, 86б\n680 000 руб/год\nСайт: <a href=\"https://moskvich-school.ru/\">moskvich-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1991, price 680 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "московский-лицей-ступени",
+      "name": "Московский лицей «Ступени»",
+      "name_normalized": "московский лицей ступени",
+      "address_normalized": "скорняжный пер 3с2",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-13",
+          "name": "Московский лицей «Ступени»",
+          "address": "Москва, Скорняжный переулок, 3с2",
+          "lat": "55.773449",
+          "lon": "37.642752",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Ступени",
+          "description": "Московский лицей «Ступени»\n\nМосква, Скорняжный переулок, 3с2\n798 300 руб/год\nСайт: <a href=\"https://stupeni.ru/\">stupeni.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1990, price 798 300"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "муми-тролль",
+      "name": "Муми-Тролль",
+      "name_normalized": "муми тролль",
+      "address_normalized": "волоколамское ш 1а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-14",
+          "name": "Муми-Тролль",
+          "address": "Москва, Волоколамское шоссе, 1а",
+          "lat": "55.806034",
+          "lon": "37.503747",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Муми",
+          "description": "Муми-Тролль\n\nМосква, Волоколамское шоссе, 1а\nС 753 000 — 890 000 руб/год\nСайт: <a href=\"https://mumitroll.ru/\">mumitroll.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1990, price С 753 000 — 890 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "наследник",
+      "name": "Наследник",
+      "name_normalized": "наследник",
+      "address_normalized": "ул борисовские пруды 19к1",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-15",
+          "name": "Наследник",
+          "address": "Москва, улица Борисовские Пруды, 19к1",
+          "lat": "55.636031",
+          "lon": "37.722163",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Наследн.",
+          "description": "Наследник\n\nМосква, улица Борисовские Пруды, 19к1\n960 400 — 1 395 000 руб/год\nСайт: <a href=\"https://naslednik.ru/\">naslednik.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1992, price 960 400 — 1 395 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "ника",
+      "name": "Ника",
+      "name_normalized": "ника",
+      "address_normalized": "поселение краснопахорское село красное 3а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-16",
+          "name": "Ника",
+          "address": "Москва, поселение Краснопахорское, село Красное, 3а",
+          "lat": "55.423662",
+          "lon": "37.295733",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Ника",
+          "description": "Ника\n\nМосква, поселение Краснопахорское, село Красное, 3а\n942 000 — 991 300 руб/год\nСайт: <a href=\"https://nika-school.ru/\">nika-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1995, price 942 000 — 991 300"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "дошкольное-отделение-новой-школы",
+      "name": "Дошкольное отделение Новой школы",
+      "name_normalized": "дошкольное отделение новой школы",
+      "address_normalized": "мосфильмовская ул 88к5",
+      "kind": "green",
+      "kind_source": "kindergarten program (places.json @830f792)",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "kindergarten-дошкольное-отделение-новой-школы",
+          "name": "Дошкольное отделение Новой школы",
+          "entity": "kindergarten",
+          "kind": "green",
+          "address": "Москва, Мосфильмовская улица, 88к5",
+          "lat": 55.70484,
+          "lon": 37.49031,
+          "associated_school": "Новая школа",
+          "group": "Новая школа"
+        }
+      ],
+      "parent_id": "новая-школа"
+    },
+    {
+      "id": "новая-школа",
+      "name": "Новая школа",
+      "name_normalized": "новая школа",
+      "address_normalized": "мосфильмовская ул 88к5",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Новая школа in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): kindergarten-дошкольное-отделение-новой-школы=green, school-новая-школа=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-новая-школа",
+          "name": "Новая школа",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, Мосфильмовская улица, 88к5",
+          "lat": 55.70484,
+          "lon": 37.49031,
+          "group": "Новая школа"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-17",
+          "name": "Новая школа",
+          "address": "Москва, Мосфильмовская улица, 88к5",
+          "lat": "55.704844",
+          "lon": "37.490308",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Новая",
+          "description": "Новая школа\n\nМосква, Мосфильмовская улица, 88к5\n1 070 000 руб/год\nСайт: <a href=\"https://newschool.ru/\">newschool.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 2017, price 1 070 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "областная-гимназия-е-м-примакова",
+      "name": "Областная гимназия имени Е. М. Примакова",
+      "name_normalized": "областная гимназия е м примакова",
+      "address_normalized": "одинцовский ской округ д раздоры утренняя ул 1",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-18",
+          "name": "Областная гимназия имени Е. М. Примакова",
+          "address": "Московская область, Одинцовский городской округ, деревня Раздоры, Утренняя улица, 1",
+          "lat": "55.757004",
+          "lon": "37.316933",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Примаков.",
+          "description": "Областная гимназия имени Е. М. Примакова\n\nМосковская область, Одинцовский городской округ, деревня Раздоры, Утренняя улица, 1\n990 000 руб/год\nСайт: <a href=\"https://gymnasium-primakova.ru/\">gymnasium-primakova.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 2017, price 990 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "областной-технолицей-в-и-долгих",
+      "name": "Областной технолицей имени В. И. Долгих",
+      "name_normalized": "областной технолицей в и долгих",
+      "address_normalized": "муниципальный округ истра село павловская слобода академическая ул 1",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-19",
+          "name": "Областной технолицей имени В. И. Долгих",
+          "address": "Московская область, муниципальный округ Истра, село Павловская Слобода, Академическая улица, 1",
+          "lat": "55.802381",
+          "lon": "37.066752",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Долгих",
+          "description": "Областной технолицей имени В. И. Долгих\n\nМосковская область, муниципальный округ Истра, село Павловская Слобода, Академическая улица, 1\n990 000 руб/год\nСайт: <a href=\"https://tehnolicey.ru/\">tehnolicey.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 2023, price 990 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "олимп-плюс",
+      "name": "Олимп-Плюс",
+      "name_normalized": "олимп плюс",
+      "address_normalized": "рублевское ш 121",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-20",
+          "name": "Олимп-Плюс",
+          "address": "Москва, Рублевское шоссе, 121",
+          "lat": "55.747439",
+          "lon": "37.411957",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Олимп+",
+          "description": "Олимп-Плюс\n\nМосква, Рублевское шоссе, 121\n923 000 — 1 073 000 руб/год\nСайт: <a href=\"https://olimp-plus.ru/\">olimp-plus.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1998, price 923 000 — 1 073 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "сааш-марина",
+      "name": "СААШ «Марина»",
+      "name_normalized": "сааш марина",
+      "address_normalized": "ул панферова 6к2",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-21",
+          "name": "СААШ «Марина»",
+          "address": "Москва, улица Панферова, 6к2",
+          "lat": "55.682052",
+          "lon": "37.541395",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Марина",
+          "description": "СААШ «Марина»\n\nМосква, улица Панферова, 6к2\n600 000 руб/год\nСайт: <a href=\"https://saash-marina.ru/\">saash-marina.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 1991, price 600 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "феникс",
+      "name": "Феникс",
+      "name_normalized": "феникс",
+      "address_normalized": "профсоюзная ул 27к3",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-mid-22",
+          "name": "Феникс",
+          "address": "Москва, Профсоюзная улица, 27к3",
+          "lat": "55.673367",
+          "lon": "37.562694",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Феникс",
+          "description": "Феникс\n\nМосква, Профсоюзная улица, 27к3\n342 000 — 825 000 руб/год\nСайт: <a href=\"https://feniks-school.ru/\">feniks-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes mid segment, year 2010, price 342 000 — 825 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "британская-международная-школа",
+      "name": "Британская международная школа",
+      "name_normalized": "британская международная школа",
+      "address_normalized": "нахимовский пр 35а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-01",
+          "name": "Британская международная школа",
+          "address": "Москва, Нахимовский проспект, 35а",
+          "lat": "55.672174",
+          "lon": "37.574139",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Brit.Int.",
+          "description": "Британская международная школа\n\nМосква, Нахимовский проспект, 35а\n1 270 000 — 3 476 000 руб/год\nСайт: <a href=\"https://bismoscow.com/\">bismoscow.com</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 1994, price 1 270 000 — 3 476 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "школа-интеграция-xxi-век",
+      "name": "Школа «Интеграция XXI век»",
+      "name_normalized": "школа интеграция xxi век",
+      "address_normalized": "ул маршала катукова 16к1",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Школа «Интеграция XXI век» in schools_content.table @830f792)",
+      "points": [
+        {
+          "id": "school-школа-интеграция-xxi-век",
+          "name": "Школа «Интеграция XXI век»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, улица Маршала Катукова, 16к1",
+          "lat": 55.80719,
+          "lon": 37.40571,
+          "group": "Школа «Интеграция XXI век»"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "forbes-high-02",
+          "name": "Интеграция XXI век",
+          "address": "Москва, улица Маршала Катукова, 16к1",
+          "lat": "55.807193",
+          "lon": "37.405705",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Интегр.",
+          "description": "Интеграция XXI век\n\nМосква, улица Маршала Катукова, 16к1\n950 000 — 1 985 000 руб/год\nСайт: <a href=\"https://integracia21.ru/\">integracia21.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 1996, price 950 000 — 1 985 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "ломоносовская-школа",
+      "name": "Ломоносовская школа",
+      "name_normalized": "ломоносовская школа",
+      "address_normalized": "можайское ш 31к2",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Ломоносовская школа in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): school-ломоносовская-аминьевское=green, school-ломоносовская-кременчугская=green, school-ломоносовская-начальная-москва=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-ломоносовская-начальная-москва",
+          "name": "Ломоносовская школа — начальная городская",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, Можайское шоссе, 31к2",
+          "lat": 55.72432,
+          "lon": 37.47168,
+          "associated_school": "Ломоносовская школа",
+          "source": "https://lomon.ru/school/map/",
+          "group": "Ломоносовская школа"
+        },
+        {
+          "id": "school-ломоносовская-аминьевское",
+          "name": "Ломоносовская школа — основная и старшая",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, Аминьевское шоссе, 18к4",
+          "lat": 55.71447,
+          "lon": 37.456,
+          "associated_school": "Ломоносовская школа",
+          "source": "https://lomon.ru/school/map/",
+          "group": "Ломоносовская школа"
+        },
+        {
+          "id": "school-ломоносовская-кременчугская",
+          "name": "Ломоносовская школа — корпус на Кременчугской",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, улица Кременчугская, 44к5",
+          "lat": 55.7181,
+          "lon": 37.4645,
+          "associated_school": "Ломоносовская школа",
+          "source": "https://lomon.ru/school/map/",
+          "group": "Ломоносовская школа"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "forbes-high-04",
+          "name": "Ломоносовская школа",
+          "address": "Москва, Аминьевское шоссе, 18к4",
+          "lat": "55.71447",
+          "lon": "37.456001",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Ломонос.",
+          "description": "Ломоносовская школа\n\nМосква, Аминьевское шоссе, 18к4\n1 845 000 руб/год\nСайт: <a href=\"https://lomonosov-school.ru/\">lomonosov-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 1993, price 1 845 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "ломоносовская-школа-интек",
+      "name": "Ломоносовская школа «Интек»",
+      "name_normalized": "ломоносовская школа интек",
+      "address_normalized": "муниципальный округ истра д воронино клубный поселок монолит клубная аллея 2",
+      "kind": "red",
+      "kind_source": "manual review 2026-09-25: приём с 1 класса не подтверждён (проверить при развитии)",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-05",
+          "name": "Ломоносовская школа «Интек»",
+          "address": "Московская область, муниципальный округ Истра, деревня Воронино, клубный поселок «Монолит», Клубная аллея, 2",
+          "lat": "55.788738",
+          "lon": "37.009673",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Интек",
+          "description": "Ломоносовская школа «Интек»\n\nМосковская область, муниципальный округ Истра, деревня Воронино, клубный поселок «Монолит», Клубная аллея, 2\n1 845 000 руб/год\nСайт: <a href=\"https://lomonosov-intek.ru/\">lomonosov-intek.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2008, price 1 845 000"
+        }
+      ],
+      "source": "forbes",
+      "kind_review": [
+        "override: manual review 2026-09-25 (владелец)"
+      ]
+    },
+    {
+      "id": "ломоносовская-школа-зеленый-мыс",
+      "name": "Ломоносовская школа — Зеленый мыс",
+      "name_normalized": "ломоносовская школа зеленый мыс",
+      "address_normalized": "ской округ мытищи д подольниха клубная ул 2с1",
+      "kind": "red",
+      "kind_source": "manual review 2026-09-25: приём с 1 класса не подтверждён (проверить при развитии)",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-06",
+          "name": "Ломоносовская школа — Зеленый мыс",
+          "address": "Московская область, городской округ Мытищи, деревня Подольниха, Клубная улица, 2с1",
+          "lat": "56.085008",
+          "lon": "37.63606",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Зел.мыс",
+          "description": "Ломоносовская школа — Зеленый мыс\n\nМосковская область, городской округ Мытищи, деревня Подольниха, Клубная улица, 2с1\n1 485 000 руб/год\nСайт: <a href=\"https://lomonosov-zm.ru/\">lomonosov-zm.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2008, price 1 485 000"
+        }
+      ],
+      "source": "forbes",
+      "kind_review": [
+        "override: manual review 2026-09-25 (владелец)"
+      ]
+    },
+    {
+      "id": "международная-гимназия-сколково",
+      "name": "Международная гимназия «Сколково»",
+      "name_normalized": "международная гимназия сколково",
+      "address_normalized": "территория инновационного центра сколково ул зворыкина 4",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-07",
+          "name": "Международная гимназия «Сколково»",
+          "address": "Москва, территория инновационного центра «Сколково», улица Зворыкина, 4",
+          "lat": "55.691597",
+          "lon": "37.351393",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Сколково",
+          "description": "Международная гимназия «Сколково»\n\nМосква, территория инновационного центра «Сколково», улица Зворыкина, 4\n1 643 000 руб/год\nСайт: <a href=\"https://gymnasium.skolkovo.ru/\">gymnasium.skolkovo.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2015, price 1 643 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "наши-традиции",
+      "name": "Наши традиции",
+      "name_normalized": "наши традиции",
+      "address_normalized": "мичуринский пр 6к4",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-08",
+          "name": "Наши традиции",
+          "address": "Москва, Мичуринский проспект, 6к4",
+          "lat": "55.713791",
+          "lon": "37.525261",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Традиции",
+          "description": "Наши традиции\n\nМосква, Мичуринский проспект, 6к4\n1 320 000 руб/год\nСайт: <a href=\"https://nashi-tradicii.ru/\">nashi-tradicii.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 1996, price 1 320 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "новый-взгляд",
+      "name": "Новый взгляд",
+      "name_normalized": "новый взгляд",
+      "address_normalized": "1-й шибаевский пер 4",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-09",
+          "name": "Новый взгляд",
+          "address": "Москва, 1-й Шибаевский переулок, 4",
+          "lat": "55.72743",
+          "lon": "37.5736",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Взгляд",
+          "description": "Новый взгляд\n\nМосква, 1-й Шибаевский переулок, 4\n1 067 000 — 2 145 000 руб/год\nСайт: <a href=\"https://newlookschool.ru/\">newlookschool.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2021, price 1 067 000 — 2 145 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "павловская-гимназия",
+      "name": "Павловская гимназия",
+      "name_normalized": "павловская гимназия",
+      "address_normalized": "д веледниково живописная ул 136",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Павловская гимназия in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): school-павловская-гимназия=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-павловская-гимназия",
+          "name": "Павловская гимназия",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Московская область, деревня Веледниково, Живописная улица, 136",
+          "lat": 55.80143,
+          "lon": 37.12611,
+          "group": "Павловская гимназия"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "forbes-high-10",
+          "name": "Павловская гимназия",
+          "address": "Московская область, муниципальный округ Истра, деревня Веледниково, Живописная улица, 136",
+          "lat": "55.80143",
+          "lon": "37.126113",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Павловск.",
+          "description": "Павловская гимназия\n\nМосковская область, муниципальный округ Истра, деревня Веледниково, Живописная улица, 136\n1 950 000 — 2 150 000 руб/год\nСайт: <a href=\"https://pavl-gymn.ru/\">pavl-gymn.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2009, price 1 950 000 — 2 150 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "первая-московская-гимназия",
+      "name": "Первая Московская гимназия",
+      "name_normalized": "первая московская гимназия",
+      "address_normalized": "одинцовский ской округ д липки 63а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-11",
+          "name": "Первая Московская гимназия",
+          "address": "Московская область, Одинцовский городской округ, деревня Липки, 63а",
+          "lat": "55.76957",
+          "lon": "36.954858",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "1Моск.гим",
+          "description": "Первая Московская гимназия\n\nМосковская область, Одинцовский городской округ, деревня Липки, 63а\n1 500 000 — 2 200 000 руб/год\nСайт: <a href=\"https://1msg.ru/\">1msg.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2002, price 1 500 000 — 2 200 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "школа-президент",
+      "name": "Школа «Президент»",
+      "name_normalized": "школа президент",
+      "address_normalized": "д жуковка ильинский подъезд 2с1–4",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Школа «Президент» in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): school-школа-президент=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-школа-президент",
+          "name": "Школа «Президент»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Московская область, деревня Жуковка, Ильинский подъезд, 2с1–4",
+          "lat": 55.7363,
+          "lon": 37.22625,
+          "group": "Школа «Президент»"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "forbes-high-12",
+          "name": "Президент",
+          "address": "Московская область, Одинцовский городской округ, деревня Жуковка, Ильинский подъезд, 2с1–4",
+          "lat": "55.736295",
+          "lon": "37.226248",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Презид.",
+          "description": "Президент\n\nМосковская область, Одинцовский городской округ, деревня Жуковка, Ильинский подъезд, 2с1–4\n2 000 000 — 2 300 000 руб/год\nСайт: <a href=\"https://president-school.ru/\">president-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 1993, price 2 000 000 — 2 300 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "сколка",
+      "name": "Сколка",
+      "name_normalized": "сколка",
+      "address_normalized": "территория инновационного центра сколково большой бул 37",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-13",
+          "name": "Сколка",
+          "address": "Москва, территория инновационного центра «Сколково», Большой бульвар, 37",
+          "lat": "55.698148",
+          "lon": "37.364751",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Сколка",
+          "description": "Сколка\n\nМосква, территория инновационного центра «Сколково», Большой бульвар, 37\n1 705 000 — 2 475 000 руб/год\nСайт: <a href=\"https://skolka-school.ru/\">skolka-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2023, price 1 705 000 — 2 475 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "снегири",
+      "name": "Снегири",
+      "name_normalized": "снегири",
+      "address_normalized": "минская ул 2вк2",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-14",
+          "name": "Снегири",
+          "address": "Москва, Минская улица, 2Вк2",
+          "lat": "55.715849",
+          "lon": "37.505723",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Снегири",
+          "description": "Снегири\n\nМосква, Минская улица, 2Вк2\n1 320 000 — 1 920 000 руб/год\nСайт: <a href=\"https://snegiri-school.ru/\">snegiri-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2020, price 1 320 000 — 1 920 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "детский-сад-хорошколы",
+      "name": "Детский сад Хорошколы",
+      "name_normalized": "детский сад хорошколы",
+      "address_normalized": "ул маршала тухачевского 45к2",
+      "kind": "green",
+      "kind_source": "kindergarten program (places.json @830f792)",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "kindergarten-хорошкола",
+          "name": "Детский сад Хорошколы",
+          "entity": "kindergarten",
+          "kind": "green",
+          "address": "Москва, улица Маршала Тухачевского, 45к2",
+          "lat": 55.78402,
+          "lon": 37.4661,
+          "associated_school": "Хорошкола",
+          "source": "https://hi.horoshkola.ru/contacts",
+          "group": "Хорошкола"
+        }
+      ],
+      "parent_id": "хорошкола"
+    },
+    {
+      "id": "хорошкола",
+      "name": "Хорошкола",
+      "name_normalized": "хорошкола",
+      "address_normalized": "ул народного ополчения 7а",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Хорошкола in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): kindergarten-хорошкола=green, school-хорошкола-гимназия=green, school-хорошкола-прогимназия=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-хорошкола-прогимназия",
+          "name": "Хорошкола — прогимназия (1–4 классы)",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, улица Народного Ополчения, 7А",
+          "lat": 55.78936,
+          "lon": 37.48188,
+          "notes": "Отдельное здание прогимназии.",
+          "source": "https://hi.horoshkola.ru/contacts",
+          "group": "Хорошкола"
+        },
+        {
+          "id": "school-хорошкола-гимназия",
+          "name": "Хорошкола — гимназия (5–11 классы)",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, улица Народного Ополчения, 9А",
+          "lat": 55.78949,
+          "lon": 37.48024,
+          "notes": "Отдельное здание гимназии.",
+          "source": "https://hi.horoshkola.ru/contacts",
+          "group": "Хорошкола"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "forbes-high-15",
+          "name": "Хорошкола",
+          "address": "Москва, улица Маршала Тухачевского, 45к2",
+          "lat": "55.784015",
+          "lon": "37.466098",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Хорошкола",
+          "description": "Хорошкола\n\nМосква, улица Маршала Тухачевского, 45к2\n1 490 000 — 1 890 000 руб/год\nСайт: <a href=\"https://horoshkola.ru/\">horoshkola.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2013, price 1 490 000 — 1 890 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "школа-сотрудничества",
+      "name": "Школа Сотрудничества",
+      "name_normalized": "школа сотрудничества",
+      "address_normalized": "ул александра солженицына 9а",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-16",
+          "name": "Школа Сотрудничества",
+          "address": "Москва, улица Александра Солженицына, 9а",
+          "lat": "55.743015",
+          "lon": "37.656568",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Сотрудн.",
+          "description": "Школа Сотрудничества\n\nМосква, улица Александра Солженицына, 9а\n1 332 000 — 1 746 000 руб/год\nСайт: <a href=\"https://schso.ru/\">schso.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 1990, price 1 332 000 — 1 746 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "дошкольные-группы-cambridge-international-school",
+      "name": "Дошкольные группы Cambridge International School",
+      "name_normalized": "дошкольные группы cambridge international school",
+      "address_normalized": "фестивальная ул 7а",
+      "kind": "green",
+      "kind_source": "kindergarten program (places.json @830f792)",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "kindergarten-дошкольные-группы-cambridge-international-school",
+          "name": "Дошкольные группы Cambridge International School",
+          "entity": "kindergarten",
+          "kind": "green",
+          "address": "Москва, Фестивальная улица, 7а",
+          "lat": 55.85576,
+          "lon": 37.47373,
+          "associated_school": "Cambridge International School",
+          "group": "Cambridge International School"
+        }
+      ],
+      "parent_id": "cambridge-international-school"
+    },
+    {
+      "id": "cambridge-international-school",
+      "name": "Cambridge International School",
+      "name_normalized": "cambridge international school",
+      "address_normalized": "фестивальная ул 7а",
+      "kind": "blue",
+      "kind_source": "rule:legacy-build_data.py BLUE\\GREEN (Cambridge International School)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): kindergarten-дошкольные-группы-cambridge-international-school=green, school-cambridge-international-school=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-cambridge-international-school",
+          "name": "Cambridge International School",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, Фестивальная улица, 7а",
+          "lat": 55.85576,
+          "lon": 37.47373,
+          "group": "Cambridge International School"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "forbes-high-17",
+          "name": "Cambridge International School",
+          "address": "Москва, Фестивальная улица, 7а",
+          "lat": "55.85576",
+          "lon": "37.473734",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Cambridge",
+          "description": "Cambridge International School\n\nМосква, Фестивальная улица, 7а\n1 554 000 — 3 389 000 руб/год\nСайт: <a href=\"https://cambridge-school.ru/\">cambridge-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2015, price 1 554 000 — 3 389 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "heritage-international-school",
+      "name": "Heritage International School",
+      "name_normalized": "heritage international school",
+      "address_normalized": "верхняя краснобогатырская ул 90с3",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-18",
+          "name": "Heritage International School",
+          "address": "Москва, Верхняя Краснобогатырская улица, 90с3",
+          "lat": "55.755819",
+          "lon": "37.617644",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Heritage",
+          "description": "Heritage International School\n\nМосква, Верхняя Краснобогатырская улица, 90с3\n1 790 000 — 2 380 000 руб/год\nСайт: <a href=\"https://heritage-school.ru/\">heritage-school.ru</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2020, price 1 790 000 — 2 380 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "russian-international-school",
+      "name": "Russian International School",
+      "name_normalized": "russian international school",
+      "address_normalized": "одинцовский ской округ д барвиха 42",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [],
+      "csv_rows": [
+        {
+          "id": "forbes-high-19",
+          "name": "Russian International School",
+          "address": "Московская область, Одинцовский городской округ, деревня Барвиха, 42",
+          "lat": "55.74075",
+          "lon": "37.275135",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "RIS",
+          "description": "Russian International School\n\nМосковская область, Одинцовский городской округ, деревня Барвиха, 42\n1 320 000 — 2 472 000 руб/год\nСайт: <a href=\"https://russianschool.com/\">russianschool.com</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2008, price 1 320 000 — 2 472 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "wunderpark-international-school",
+      "name": "Wunderpark International School",
+      "name_normalized": "wunderpark international school",
+      "address_normalized": "д борзые 1",
+      "kind": "blue",
+      "kind_source": "rule:legacy-build_data.py BLUE\\GREEN (Wunderpark International School)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): school-wunderpark-international-school=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-wunderpark-international-school",
+          "name": "Wunderpark International School",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Московская область, деревня Борзые, 1",
+          "lat": 55.82214,
+          "lon": 37.05646,
+          "group": "Wunderpark International School"
+        }
+      ],
+      "csv_rows": [
+        {
+          "id": "forbes-high-20",
+          "name": "Wunderpark International School",
+          "address": "Московская область, муниципальный округ Истра, деревня Борзые, 1",
+          "lat": "55.822144",
+          "lon": "37.056458",
+          "mathex_url": "",
+          "source": "forbes",
+          "label": "Wunder.",
+          "description": "Wunderpark International School\n\nМосковская область, муниципальный округ Истра, деревня Борзые, 1\n1 700 000 — 2 100 000 руб/год\nСайт: <a href=\"https://wunderpark.school/\">wunderpark.school</a>",
+          "status": "geocoded",
+          "notes": "forbes high segment, year 2015, price 1 700 000 — 2 100 000"
+        }
+      ],
+      "source": "forbes"
+    },
+    {
+      "id": "школа-548-царицыно",
+      "name": "Школа №548 «Царицыно»",
+      "name_normalized": "школа no 548 царицыно",
+      "address_normalized": "ереванская ул 33",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (Школа №548 «Царицыно» in schools_content.table @830f792)",
+      "points": [
+        {
+          "id": "school-школа-548-царицыно",
+          "name": "Школа №548 «Царицыно»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, Ереванская улица, 33",
+          "lat": 55.62942,
+          "lon": 37.67293,
+          "group": "Школа №548 «Царицыно»"
+        }
+      ],
+      "csv_rows": [],
+      "source": "map-only"
+    },
+    {
+      "id": "лицей-ниу-вшэ",
+      "name": "Лицей НИУ ВШЭ",
+      "name_normalized": "лицей ниу вшэ",
+      "address_normalized": "большой харитоньевский пер 4 стр 1",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [
+        {
+          "id": "school-лицей-ниу-вшэ",
+          "name": "Лицей НИУ ВШЭ",
+          "entity": "school",
+          "kind": "red",
+          "address": "Москва, Большой Харитоньевский переулок, 4, стр. 1",
+          "lat": 55.76364,
+          "lon": 37.64392,
+          "group": "Лицей НИУ ВШЭ"
+        }
+      ],
+      "csv_rows": [],
+      "source": "map-only"
+    },
+    {
+      "id": "сунц-мгу",
+      "name": "СУНЦ МГУ",
+      "name_normalized": "сунц мгу",
+      "address_normalized": "проектируемый 5186-й проезд",
+      "kind": "red",
+      "kind_source": "default: школа из списка (легенда red); сигналов blue нет",
+      "points": [
+        {
+          "id": "school-сунц-мгу",
+          "name": "СУНЦ МГУ",
+          "entity": "school",
+          "kind": "red",
+          "address": "Москва, Проектируемый 5186-й проезд",
+          "lat": 55.71907,
+          "lon": 37.46482,
+          "group": "СУНЦ МГУ"
+        }
+      ],
+      "csv_rows": [],
+      "source": "map-only"
+    },
+    {
+      "id": "brookes-moscow-early-years-pre-nursery-и-nursery",
+      "name": "Brookes Moscow Early Years: Pre-Nursery и Nursery",
+      "name_normalized": "brookes moscow early years: pre nursery и nursery",
+      "address_normalized": "лазоревый проезд 7",
+      "kind": "green",
+      "kind_source": "kindergarten program (places.json @830f792)",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "kindergarten-brookes-moscow-early-years-pre-nursery-и-nursery",
+          "name": "Brookes Moscow Early Years: Pre-Nursery и Nursery",
+          "entity": "kindergarten",
+          "kind": "green",
+          "address": "Москва, Лазоревый проезд, 7",
+          "lat": 55.84806,
+          "lon": 37.63383,
+          "associated_school": "Brookes Moscow International School",
+          "group": "Brookes Moscow International School"
+        }
+      ],
+      "parent_id": "brookes-moscow-international-school"
+    },
+    {
+      "id": "brookes-moscow-international-school",
+      "name": "Brookes Moscow International School",
+      "name_normalized": "brookes moscow international school",
+      "address_normalized": "лазоревый проезд 7",
+      "kind": "blue",
+      "kind_source": "rule:legacy-build_data.py BLUE\\GREEN (Brookes Moscow)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): kindergarten-brookes-moscow-early-years-pre-nursery-и-nursery=green, school-brookes-moscow-international-school=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-brookes-moscow-international-school",
+          "name": "Brookes Moscow International School",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, Лазоревый проезд, 7",
+          "lat": 55.84806,
+          "lon": 37.63383,
+          "group": "Brookes Moscow International School"
+        }
+      ],
+      "csv_rows": [],
+      "source": "map-only"
+    },
+    {
+      "id": "английский-детский-сад-mcs-school",
+      "name": "Английский детский сад MCS School",
+      "name_normalized": "английский детский сад mcs school",
+      "address_normalized": "пер чернышевского 4 стр 1",
+      "kind": "green",
+      "kind_source": "kindergarten program (places.json @830f792)",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "kindergarten-английский-детский-сад-mcs-school",
+          "name": "Английский детский сад MCS School",
+          "entity": "kindergarten",
+          "kind": "green",
+          "address": "Москва, переулок Чернышевского, 4, стр. 1",
+          "lat": 55.7683,
+          "lon": 37.6107,
+          "associated_school": "MCS School / Magic Castle School",
+          "group": "MCS School / Magic Castle School"
+        }
+      ],
+      "parent_id": "mcs-school-magic-castle-school"
+    },
+    {
+      "id": "mcs-school-magic-castle-school",
+      "name": "MCS School / Magic Castle School",
+      "name_normalized": "mcs school magic castle school",
+      "address_normalized": "пер чернышевского 4 стр 1",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (MCS School / Magic Castle School in schools_content.table @830f792)",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): kindergarten-английский-детский-сад-mcs-school=green, school-mcs-polyanka=green, school-mcs-school-magic-castle-school=green; kind сущности — метка для радара"
+      ],
+      "points": [
+        {
+          "id": "school-mcs-school-magic-castle-school",
+          "name": "MCS School / Magic Castle School",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, переулок Чернышевского, 4, стр. 1",
+          "lat": 55.7683,
+          "lon": 37.6107,
+          "group": "MCS School / Magic Castle School"
+        },
+        {
+          "id": "school-mcs-polyanka",
+          "name": "MCS School — Polyanka",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, 1-й Хвостов переулок, 11с1",
+          "lat": 55.7359,
+          "lon": 37.6136,
+          "associated_school": "MCS School / Magic Castle School",
+          "source": "https://mcs-school.ru/",
+          "group": "MCS School — Polyanka"
+        }
+      ],
+      "csv_rows": [],
+      "source": "map-only"
+    },
+    {
+      "id": "тор-it-school",
+      "name": "ТОР IT SCHOOL",
+      "name_normalized": "тор it school",
+      "address_normalized": "ул покрышкина 8 к1",
+      "kind": "blue",
+      "kind_source": "rule:content-admission (ТОР IT SCHOOL in schools_content.table @830f792)",
+      "points": [
+        {
+          "id": "school-тор-it-school",
+          "name": "ТОР IT SCHOOL",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, улица Покрышкина, 8 к1",
+          "lat": 55.6589,
+          "lon": 37.49,
+          "group": "ТОР IT SCHOOL"
+        }
+      ],
+      "csv_rows": [],
+      "source": "map-only"
+    },
+    {
+      "id": "детский-сад-при-французском-лицее-а-дюма",
+      "name": "Детский сад при Французском лицее имени А. Дюма",
+      "name_normalized": "детский сад при французском лицее а дюма",
+      "address_normalized": "милютинский пер 7а",
+      "kind": "green",
+      "kind_source": "kindergarten program (places.json @830f792)",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "kindergarten-детский-сад-при-французском-лицее-имени-а-дюма",
+          "name": "Детский сад при Французском лицее имени А. Дюма",
+          "entity": "kindergarten",
+          "kind": "green",
+          "address": "Москва, Милютинский переулок, 7А",
+          "lat": 55.7653,
+          "lon": 37.63,
+          "associated_school": "Французский лицей имени А. Дюма при Посольстве Франции в Москве (Lycée français Alexandre Dumas)",
+          "group": "Французский лицей имени А. Дюма при Посольстве Франции в Москве (Lycée français Alexandre Dumas)"
+        }
+      ],
+      "parent_id": "французский-лицей-а-дюма-при-посольстве-франции-в-москве-lyc-e-fran-ais-alexandre-dumas"
+    },
+    {
+      "id": "французский-лицей-а-дюма-при-посольстве-франции-в-москве-lyc-e-fran-ais-alexandre-dumas",
+      "name": "Французский лицей имени А. Дюма при Посольстве Франции в Москве (Lycée français Alexandre Dumas)",
+      "name_normalized": "французский лицей а дюма при посольстве франции в москве lycée français alexandre dumas",
+      "address_normalized": "милютинский пер 7а",
+      "kind": "blue",
+      "kind_source": "manual review 2026-09-25: ucheba.ru — свободное поступление с 3 лет, траектория до выпуска",
+      "kind_review": [
+        "точки хранят legacy kind (цвета живой карты): kindergarten-детский-сад-при-французском-лицее-имени-а-дюма=green, school-французский-лицей-имени-а-дюма-при-посольстве-франции-в-москве-lyc-e-fran-ais-alexandre-dumas=green; kind сущности — метка для радара",
+        "override: manual review 2026-09-25 (владелец)"
+      ],
+      "points": [
+        {
+          "id": "school-французский-лицей-имени-а-дюма-при-посольстве-франции-в-москве-lyc-e-fran-ais-alexandre-dumas",
+          "name": "Французский лицей имени А. Дюма при Посольстве Франции в Москве (Lycée français Alexandre Dumas)",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Москва, Милютинский переулок, 7А",
+          "lat": 55.7653,
+          "lon": 37.63,
+          "group": "Французский лицей имени А. Дюма при Посольстве Франции в Москве (Lycée français Alexandre Dumas)"
+        }
+      ],
+      "csv_rows": [],
+      "source": "map-only"
+    },
+    {
+      "id": "школа-67",
+      "name": "Школа №67",
+      "name_normalized": "школа 67",
+      "address_normalized": "поклонная улица, дом 4",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-67",
+          "name": "Школа №67",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Поклонная улица, дом 4",
+          "lat": 55.737362,
+          "lon": 37.532965,
+          "website": "https://sch67.mskobr.ru",
+          "group": "Школа №67"
+        }
+      ]
+    },
+    {
+      "id": "школа-109",
+      "name": "Школа №109",
+      "name_normalized": "школа 109",
+      "address_normalized": "улица академика бакулева, дом 20",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-109",
+          "name": "Школа №109",
+          "entity": "school",
+          "kind": "blue",
+          "address": "улица Академика Бакулева, дом 20",
+          "lat": 55.640701,
+          "lon": 37.475383,
+          "website": "https://co109.mskobr.ru",
+          "group": "Школа №109"
+        }
+      ]
+    },
+    {
+      "id": "школа-152",
+      "name": "Школа №152",
+      "name_normalized": "школа 152",
+      "address_normalized": "аэропортовская улица, дом 1",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-152",
+          "name": "Школа №152",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Аэропортовская улица, дом 1",
+          "lat": 55.800579,
+          "lon": 37.53597,
+          "website": "https://sch152s-new.mskobr.ru",
+          "group": "Школа №152"
+        }
+      ]
+    },
+    {
+      "id": "школа-171",
+      "name": "Школа №171",
+      "name_normalized": "школа 171",
+      "address_normalized": "фрунзенская улица, дом 10",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-171",
+          "name": "Школа №171",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Фрунзенская улица, дом 10",
+          "lat": 55.722592,
+          "lon": 37.583376,
+          "website": "https://sch171c.mskobr.ru",
+          "group": "Школа №171"
+        }
+      ]
+    },
+    {
+      "id": "школа-192",
+      "name": "Школа №192",
+      "name_normalized": "школа 192",
+      "address_normalized": "ленинский проспект, дом 43а",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-192",
+          "name": "Школа №192",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Ленинский проспект, дом 43А",
+          "lat": 55.704777,
+          "lon": 37.577842,
+          "website": "https://sch192uz.mskobr.ru",
+          "group": "Школа №192"
+        }
+      ]
+    },
+    {
+      "id": "школа-218",
+      "name": "Школа №218",
+      "name_normalized": "школа 218",
+      "address_normalized": "тимирязевский, улица костякова, дом 8",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-218",
+          "name": "Школа №218",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Тимирязевский, улица Костякова, дом 8",
+          "lat": 55.808929,
+          "lon": 37.574783,
+          "website": "https://sch218.mskobr.ru",
+          "group": "Школа №218"
+        }
+      ]
+    },
+    {
+      "id": "школа-1158",
+      "name": "Школа №1158",
+      "name_normalized": "школа 1158",
+      "address_normalized": "сумской проезд, дом 12б",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1158",
+          "name": "Школа №1158",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Сумской проезд, дом 12Б",
+          "lat": 55.635191,
+          "lon": 37.607667,
+          "website": "https://sch1158.mskobr.ru",
+          "group": "Школа №1158"
+        }
+      ]
+    },
+    {
+      "id": "школа-1194",
+      "name": "Школа №1194",
+      "name_normalized": "школа 1194",
+      "address_normalized": "российская федерация, город москва, внутригородская территория муниципальный округ крюково, город зеленоград, корпус 1551",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1194",
+          "name": "Школа №1194",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Зеленоград, корпус 1551",
+          "lat": 55.979937,
+          "lon": 37.153715,
+          "website": "https://sch1194zg.mskobr.ru",
+          "group": "Школа №1194"
+        }
+      ]
+    },
+    {
+      "id": "школа-1252-имени-сервантеса",
+      "name": "Школа №1252 «имени Сервантеса»",
+      "name_normalized": "школа 1252 имени сервантеса",
+      "address_normalized": "сокол, улица врубеля, дом 6",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1252-имени-сервантеса",
+          "name": "Школа №1252 «имени Сервантеса»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Сокол, улица Врубеля, дом 6",
+          "lat": 55.804967,
+          "lon": 37.500337,
+          "website": "https://sch1252.mskobr.ru",
+          "group": "Школа №1252 «имени Сервантеса»"
+        }
+      ]
+    },
+    {
+      "id": "школа-1298",
+      "name": "Школа №1298",
+      "name_normalized": "школа 1298",
+      "address_normalized": "юровская улица, дом 97, корпус 1",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1298",
+          "name": "Школа №1298",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Юровская улица, дом 97, корпус 1",
+          "lat": 55.900413,
+          "lon": 37.383836,
+          "website": "https://sch1298sz.mskobr.ru",
+          "group": "Школа №1298"
+        }
+      ]
+    },
+    {
+      "id": "школа-1317",
+      "name": "Школа №1317",
+      "name_normalized": "школа 1317",
+      "address_normalized": "тропарево-никулино, улица академика анохина, дом 4, корпус 5",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1317",
+          "name": "Школа №1317",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Тропарево-Никулино, улица Академика Анохина, дом 4, корпус 5",
+          "lat": 55.661213,
+          "lon": 37.468784,
+          "website": "https://sch1317.mskobr.ru",
+          "group": "Школа №1317"
+        }
+      ]
+    },
+    {
+      "id": "школа-1329",
+      "name": "Школа №1329",
+      "name_normalized": "школа 1329",
+      "address_normalized": "никулинская улица, дом 12, корпус 2",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1329",
+          "name": "Школа №1329",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Никулинская улица, дом 12, корпус 2",
+          "lat": 55.669792,
+          "lon": 37.466281,
+          "website": "https://sch1329.mskobr.ru",
+          "group": "Школа №1329"
+        }
+      ]
+    },
+    {
+      "id": "школа-1359-имени-авиаконструктора-м-л-миля",
+      "name": "Школа №1359 «имени авиаконструктора М.Л. Миля»",
+      "name_normalized": "школа 1359 имени авиаконструктора м л миля",
+      "address_normalized": "хвалынский бульвар, дом 4, корпус 3",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1359-имени-авиаконструктора-м-л-миля",
+          "name": "Школа №1359 «имени авиаконструктора М.Л. Миля»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Хвалынский бульвар, дом 4, корпус 3",
+          "lat": 55.700404,
+          "lon": 37.849445,
+          "website": "https://sch1359uv.mskobr.ru",
+          "group": "Школа №1359 «имени авиаконструктора М.Л. Миля»"
+        }
+      ]
+    },
+    {
+      "id": "школа-1363",
+      "name": "Школа №1363",
+      "name_normalized": "школа 1363",
+      "address_normalized": "сормовская улица, дом 5, корпус 2",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1363",
+          "name": "Школа №1363",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Сормовская улица, дом 5, корпус 2",
+          "lat": 55.699989,
+          "lon": 37.813717,
+          "website": "https://sch1363uv.mskobr.ru",
+          "group": "Школа №1363"
+        }
+      ]
+    },
+    {
+      "id": "школа-1448-шуваловская-школа-1448",
+      "name": "Школа №1448 «Шуваловская школа № 1448»",
+      "name_normalized": "школа 1448 шуваловская школа 1448",
+      "address_normalized": "мичуринский проспект, дом 40",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1448-шуваловская-школа-1448",
+          "name": "Школа №1448 «Шуваловская школа № 1448»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Мичуринский проспект, дом 40",
+          "lat": 55.696637,
+          "lon": 37.493322,
+          "website": "https://sch1448.mskobr.ru",
+          "group": "Школа №1448 «Шуваловская школа № 1448»"
+        }
+      ]
+    },
+    {
+      "id": "школа-1449-имени-героя-советского-союза-м-в-водопьянова",
+      "name": "Школа №1449 «имени Героя Советского Союза М.В. Водопьянова»",
+      "name_normalized": "школа 1449 имени героя советского союза м в водопьянова",
+      "address_normalized": "угличская улица, дом 4, корпус 1",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1449-имени-героя-советского-союза-м-в-водопьянова",
+          "name": "Школа №1449 «имени Героя Советского Союза М.В. Водопьянова»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Угличская улица, дом 4, корпус 1",
+          "lat": 55.893911,
+          "lon": 37.568507,
+          "website": "https://sch1449sv.mskobr.ru",
+          "group": "Школа №1449 «имени Героя Советского Союза М.В. Водопьянова»"
+        }
+      ]
+    },
+    {
+      "id": "школа-1474",
+      "name": "Школа №1474",
+      "name_normalized": "школа 1474",
+      "address_normalized": "клинская улица, дом 24",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1474",
+          "name": "Школа №1474",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Клинская улица, дом 24",
+          "lat": 55.872965,
+          "lon": 37.490468,
+          "website": "https://sch1474s.mskobr.ru",
+          "group": "Школа №1474"
+        }
+      ]
+    },
+    {
+      "id": "школа-1504",
+      "name": "Школа №1504",
+      "name_normalized": "школа 1504",
+      "address_normalized": "ивановское, улица молостовых, дом 9б",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1504",
+          "name": "Школа №1504",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Ивановское, улица Молостовых, дом 9Б",
+          "lat": 55.758801,
+          "lon": 37.836027,
+          "website": "https://gym1504.mskobr.ru",
+          "group": "Школа №1504"
+        }
+      ]
+    },
+    {
+      "id": "школа-1517",
+      "name": "Школа №1517",
+      "name_normalized": "школа 1517",
+      "address_normalized": "хорошево-мневники, проспект маршала жукова, домовладение 43, корпус 4",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1517",
+          "name": "Школа №1517",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Хорошево-Мневники, проспект Маршала Жукова, домовладение 43, корпус 4",
+          "lat": 55.784916,
+          "lon": 37.45283,
+          "website": "https://1517.mskobr.ru",
+          "group": "Школа №1517"
+        }
+      ]
+    },
+    {
+      "id": "школа-1518",
+      "name": "Школа №1518",
+      "name_normalized": "школа 1518",
+      "address_normalized": "останкинский, проспект мира, дом 87",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1518",
+          "name": "Школа №1518",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Останкинский, проспект Мира, дом 87",
+          "lat": 55.81667,
+          "lon": 37.629205,
+          "website": "https://gum1518.mskobr.ru",
+          "group": "Школа №1518"
+        }
+      ]
+    },
+    {
+      "id": "школа-1529-имени-а-с-грибоедова",
+      "name": "Школа №1529 «имени А.С. Грибоедова»",
+      "name_normalized": "школа 1529 имени а с грибоедова",
+      "address_normalized": "обыденский переулок, дом 9",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1529-имени-а-с-грибоедова",
+          "name": "Школа №1529 «имени А.С. Грибоедова»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Обыденский переулок, дом 9",
+          "lat": 55.741459,
+          "lon": 37.603205,
+          "website": "https://gym1529c.mskobr.ru",
+          "group": "Школа №1529 «имени А.С. Грибоедова»"
+        }
+      ]
+    },
+    {
+      "id": "школа-1532",
+      "name": "Школа №1532",
+      "name_normalized": "школа 1532",
+      "address_normalized": "улица тёплый стан, дом 11а",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1532",
+          "name": "Школа №1532",
+          "entity": "school",
+          "kind": "blue",
+          "address": "улица Тёплый Стан, дом 11А",
+          "lat": 55.620416,
+          "lon": 37.492402,
+          "website": "https://sch1532uz.mskobr.ru",
+          "group": "Школа №1532"
+        }
+      ]
+    },
+    {
+      "id": "школа-1534-академическая-школа-1534",
+      "name": "Школа №1534 «Академическая школа № 1534»",
+      "name_normalized": "школа 1534 академическая школа 1534",
+      "address_normalized": "академический, улица кедрова, дом 18, корпус 3",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1534-академическая-школа-1534",
+          "name": "Школа №1534 «Академическая школа № 1534»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Академический, улица Кедрова, дом 18, корпус 3",
+          "lat": 55.682776,
+          "lon": 37.574112,
+          "website": "https://gym1534uz.mskobr.ru",
+          "group": "Школа №1534 «Академическая школа № 1534»"
+        }
+      ]
+    },
+    {
+      "id": "школа-1537",
+      "name": "Школа №1537",
+      "name_normalized": "школа 1537",
+      "address_normalized": "ярославское шоссе, дом 142, корпус 6",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1537",
+          "name": "Школа №1537",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Ярославское шоссе, дом 142, корпус 6",
+          "lat": 55.874278,
+          "lon": 37.719223,
+          "website": "https://lyc1537.mskobr.ru",
+          "group": "Школа №1537"
+        }
+      ]
+    },
+    {
+      "id": "школа-1538",
+      "name": "Школа №1538",
+      "name_normalized": "школа 1538",
+      "address_normalized": "пятницкое шоссе, дом 16, корпус 3",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1538",
+          "name": "Школа №1538",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Пятницкое шоссе, дом 16, корпус 3",
+          "lat": 55.842606,
+          "lon": 37.384501,
+          "website": "https://gym1538sz.mskobr.ru",
+          "group": "Школа №1538"
+        }
+      ]
+    },
+    {
+      "id": "школа-1542",
+      "name": "Школа №1542",
+      "name_normalized": "школа 1542",
+      "address_normalized": "наро-фоминская улица, дом 8",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1542",
+          "name": "Школа №1542",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Наро-Фоминская улица, дом 8",
+          "lat": 55.656637,
+          "lon": 37.390933,
+          "website": "https://gym1542.mskobr.ru",
+          "group": "Школа №1542"
+        }
+      ]
+    },
+    {
+      "id": "школа-1547",
+      "name": "Школа №1547",
+      "name_normalized": "школа 1547",
+      "address_normalized": "перервинский бульвар, дом 5, корпус 3",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1547",
+          "name": "Школа №1547",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Перервинский бульвар, дом 5, корпус 3",
+          "lat": 55.663202,
+          "lon": 37.766114,
+          "website": "https://licuv1547.mskobr.ru",
+          "group": "Школа №1547"
+        }
+      ]
+    },
+    {
+      "id": "школа-1557-имени-петра-леонидовича-капицы",
+      "name": "Школа №1557 «имени Петра Леонидовича Капицы»",
+      "name_normalized": "школа 1557 имени петра леонидовича капицы",
+      "address_normalized": "российская федерация, город москва, внутригородская территория муниципальный округ савелки, город зеленоград, корпус 355а",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1557-имени-петра-леонидовича-капицы",
+          "name": "Школа №1557 «имени Петра Леонидовича Капицы»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Зеленоград, корпус 355А",
+          "lat": 55.994093,
+          "lon": 37.223879,
+          "website": "https://lyc1557zg.mskobr.ru",
+          "group": "Школа №1557 «имени Петра Леонидовича Капицы»"
+        }
+      ]
+    },
+    {
+      "id": "школа-1558-имени-росалии-де-кастро",
+      "name": "Школа №1558 «имени Росалии де Кастро»",
+      "name_normalized": "школа 1558 имени росалии де кастро",
+      "address_normalized": "ленская улица, дом 17, корпус 1",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1558-имени-росалии-де-кастро",
+          "name": "Школа №1558 «имени Росалии де Кастро»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Ленская улица, дом 17, корпус 1",
+          "lat": 55.866804,
+          "lon": 37.661582,
+          "website": "https://gym1558sv.mskobr.ru",
+          "group": "Школа №1558 «имени Росалии де Кастро»"
+        }
+      ]
+    },
+    {
+      "id": "школа-1571",
+      "name": "Школа №1571",
+      "name_normalized": "школа 1571",
+      "address_normalized": "тушино, улица свободы, дом 63, корпус 2",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1571",
+          "name": "Школа №1571",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Тушино, улица Свободы, дом 63, корпус 2",
+          "lat": 55.857666,
+          "lon": 37.447228,
+          "website": "https://lyc1571sz.mskobr.ru",
+          "group": "Школа №1571"
+        }
+      ]
+    },
+    {
+      "id": "школа-1575",
+      "name": "Школа №1575",
+      "name_normalized": "школа 1575",
+      "address_normalized": "планетная улица, дом 23",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1575",
+          "name": "Школа №1575",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Планетная улица, дом 23",
+          "lat": 55.804314,
+          "lon": 37.542971,
+          "website": "https://lyc1575.mskobr.ru",
+          "group": "Школа №1575"
+        }
+      ]
+    },
+    {
+      "id": "школа-1980",
+      "name": "Школа №1980",
+      "name_normalized": "школа 1980",
+      "address_normalized": "чечёрский проезд, дом 122, корпус 4",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-1980",
+          "name": "Школа №1980",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Чечёрский проезд, дом 122, корпус 4",
+          "lat": 55.532187,
+          "lon": 37.528442,
+          "website": "https://sch1980uz.mskobr.ru",
+          "group": "Школа №1980"
+        }
+      ]
+    },
+    {
+      "id": "школа-2007-фмш",
+      "name": "Школа №2007 «ФМШ»",
+      "name_normalized": "школа 2007 фмш",
+      "address_normalized": "чечёрский проезд, дом 6",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-2007-фмш",
+          "name": "Школа №2007 «ФМШ»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Чечёрский проезд, дом 6",
+          "lat": 55.533064,
+          "lon": 37.533619,
+          "website": "https://schuuz2007.mskobr.ru",
+          "group": "Школа №2007 «ФМШ»"
+        }
+      ]
+    },
+    {
+      "id": "школа-2048",
+      "name": "Школа №2048",
+      "name_normalized": "школа 2048",
+      "address_normalized": "улица липчанского, дом 6а",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-2048",
+          "name": "Школа №2048",
+          "entity": "school",
+          "kind": "blue",
+          "address": "улица Липчанского, дом 6А",
+          "lat": 55.75931,
+          "lon": 37.517635,
+          "website": "https://2048.mskobr.ru",
+          "group": "Школа №2048"
+        }
+      ]
+    },
+    {
+      "id": "школа-2083",
+      "name": "Школа №2083",
+      "name_normalized": "школа 2083",
+      "address_normalized": "щербинка, улица логинова, дом 8",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-2083",
+          "name": "Школа №2083",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Щербинка, улица Логинова, дом 8",
+          "lat": 55.496368,
+          "lon": 37.514114,
+          "website": "https://sch2083.mskobr.ru",
+          "group": "Школа №2083"
+        }
+      ]
+    },
+    {
+      "id": "школа-2098-имени-героя-советского-союза-л-м-доватора",
+      "name": "Школа №2098 «имени Героя Советского Союза Л.М. Доватора»",
+      "name_normalized": "школа 2098 имени героя советского союза л м доватора",
+      "address_normalized": "базовская улица, дом 15, корпус 12",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-2098-имени-героя-советского-союза-л-м-доватора",
+          "name": "Школа №2098 «имени Героя Советского Союза Л.М. Доватора»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Базовская улица, дом 15, корпус 12",
+          "lat": 55.877436,
+          "lon": 37.507005,
+          "website": "https://sch2098s.mskobr.ru",
+          "group": "Школа №2098 «имени Героя Советского Союза Л.М. Доватора»"
+        }
+      ]
+    },
+    {
+      "id": "школа-2107",
+      "name": "Школа №2107",
+      "name_normalized": "школа 2107",
+      "address_normalized": "трифоновская улица, дом 45а, строение 1",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-2107",
+          "name": "Школа №2107",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Трифоновская улица, дом 45А, строение 1",
+          "lat": 55.787048,
+          "lon": 37.624248,
+          "website": "https://sch2107.mskobr.ru",
+          "group": "Школа №2107"
+        }
+      ]
+    },
+    {
+      "id": "школа-2123-имени-мигеля-эрнандеса",
+      "name": "Школа №2123 «имени Мигеля Эрнандеса»",
+      "name_normalized": "школа 2123 имени мигеля эрнандеса",
+      "address_normalized": "козихинский переулок, дом 5, строение 2",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-2123-имени-мигеля-эрнандеса",
+          "name": "Школа №2123 «имени Мигеля Эрнандеса»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Козихинский переулок, дом 5, строение 2",
+          "lat": 55.761815,
+          "lon": 37.59843,
+          "website": "https://2123.mskobr.ru",
+          "group": "Школа №2123 «имени Мигеля Эрнандеса»"
+        }
+      ]
+    },
+    {
+      "id": "школа-2127",
+      "name": "Школа №2127",
+      "name_normalized": "школа 2127",
+      "address_normalized": "салтыковская улица, дом 5б",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-2127",
+          "name": "Школа №2127",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Салтыковская улица, дом 5Б",
+          "lat": 55.733691,
+          "lon": 37.859708,
+          "website": "https://2127.mskobr.ru",
+          "group": "Школа №2127"
+        }
+      ]
+    },
+    {
+      "id": "школа-воробьевы-горы",
+      "name": "Школа «Воробьевы горы»",
+      "name_normalized": "школа воробьевы горы",
+      "address_normalized": "улица косыгина, 17",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-воробьевы-горы",
+          "name": "Школа «Воробьевы горы»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "улица Косыгина, 17",
+          "lat": 55.702156,
+          "lon": 37.55268,
+          "website": "",
+          "group": "Школа «Воробьевы горы»"
+        }
+      ]
+    },
+    {
+      "id": "школа-марьина-роща-имени-в-ф-орлова",
+      "name": "Школа Марьина Роща имени В.Ф. Орлова",
+      "name_normalized": "школа марьина роща имени в ф орлова",
+      "address_normalized": "улица двинцев, 10",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-марьина-роща-имени-в-ф-орлова",
+          "name": "Школа Марьина Роща имени В.Ф. Орлова",
+          "entity": "school",
+          "kind": "blue",
+          "address": "улица Двинцев, 10",
+          "lat": 55.795437,
+          "lon": 37.600346,
+          "website": "",
+          "group": "Школа Марьина Роща имени В.Ф. Орлова"
+        }
+      ]
+    },
+    {
+      "id": "предуниверситарий-нияу-мифи",
+      "name": "Предуниверситарий НИЯУ МИФИ",
+      "name_normalized": "предуниверситарий нияу мифи",
+      "address_normalized": "каширское шоссе, 31",
+      "kind": "red",
+      "kind_source": "portal 08.10.26: red — набора с 1 класса нет (лицей/пансион при вузе, приём в 5–10 классы); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-предуниверситарий-нияу-мифи",
+          "name": "Предуниверситарий НИЯУ МИФИ",
+          "entity": "school",
+          "kind": "red",
+          "address": "Каширское шоссе, 31",
+          "lat": 55.650451,
+          "lon": 37.6658,
+          "website": "",
+          "group": "Предуниверситарий НИЯУ МИФИ"
+        }
+      ]
+    },
+    {
+      "id": "пансион-воспитанниц-мо-рф",
+      "name": "Пансион воспитанниц МО РФ",
+      "name_normalized": "пансион воспитанниц мо рф",
+      "address_normalized": "улица поликарпова, 21",
+      "kind": "red",
+      "kind_source": "portal 08.10.26: red — набора с 1 класса нет (лицей/пансион при вузе, приём в 5–10 классы); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-пансион-воспитанниц-мо-рф",
+          "name": "Пансион воспитанниц МО РФ",
+          "entity": "school",
+          "kind": "red",
+          "address": "улица Поликарпова, 21",
+          "lat": 55.777801,
+          "lon": 37.543819,
+          "website": "",
+          "group": "Пансион воспитанниц МО РФ"
+        }
+      ]
+    },
+    {
+      "id": "школа-покровский-квартал",
+      "name": "Школа «Покровский квартал»",
+      "name_normalized": "школа покровский квартал",
+      "address_normalized": "покровский бульвар, 11, строение 6",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-покровский-квартал",
+          "name": "Школа «Покровский квартал»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "Покровский бульвар, 11, строение 6",
+          "lat": 55.754027,
+          "lon": 37.650169,
+          "website": "",
+          "group": "Школа «Покровский квартал»"
+        }
+      ]
+    },
+    {
+      "id": "школа-на-проспекте-вернадского",
+      "name": "Школа на проспекте Вернадского",
+      "name_normalized": "школа на проспекте вернадского",
+      "address_normalized": "проспект вернадского, 127, корпус 2",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-на-проспекте-вернадского",
+          "name": "Школа на проспекте Вернадского",
+          "entity": "school",
+          "kind": "blue",
+          "address": "проспект Вернадского, 127, корпус 2",
+          "lat": 55.665095,
+          "lon": 37.475225,
+          "website": "",
+          "group": "Школа на проспекте Вернадского"
+        }
+      ]
+    },
+    {
+      "id": "образовательный-центр-протон",
+      "name": "Образовательный центр «Протон»",
+      "name_normalized": "образовательный центр протон",
+      "address_normalized": "улица большая филёвская, 15",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-образовательный-центр-протон",
+          "name": "Образовательный центр «Протон»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "улица Большая Филёвская, 15",
+          "lat": 55.747606,
+          "lon": 37.498559,
+          "website": "",
+          "group": "Образовательный центр «Протон»"
+        }
+      ]
+    },
+    {
+      "id": "школа-технологии-обучения",
+      "name": "Школа «Технологии обучения»",
+      "name_normalized": "школа технологии обучения",
+      "address_normalized": "6-й можайский переулок",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-технологии-обучения",
+          "name": "Школа «Технологии обучения»",
+          "entity": "school",
+          "kind": "blue",
+          "address": "6-й Можайский переулок",
+          "lat": 55.741143,
+          "lon": 37.550254,
+          "website": "",
+          "group": "Школа «Технологии обучения»"
+        }
+      ]
+    },
+    {
+      "id": "финансовый-университет-при-правительстве-рф",
+      "name": "Финансовый университет при Правительстве РФ",
+      "name_normalized": "финансовый университет при правительстве рф",
+      "address_normalized": "ленинградский проспект, 49",
+      "kind": "red",
+      "kind_source": "portal 08.10.26: red — набора с 1 класса нет (лицей/пансион при вузе, приём в 5–10 классы); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-финансовый-университет-при-правительстве-рф",
+          "name": "Финансовый университет при Правительстве РФ",
+          "entity": "school",
+          "kind": "red",
+          "address": "Ленинградский проспект, 49",
+          "lat": 55.80035,
+          "lon": 37.528859,
+          "website": "",
+          "group": "Финансовый университет при Правительстве РФ"
+        }
+      ]
+    },
+    {
+      "id": "школа-на-юго-востоке-имени-маршала-в-и-чуйкова",
+      "name": "Школа на Юго-Востоке имени Маршала В.И. Чуйкова",
+      "name_normalized": "школа на юго востоке имени маршала в и чуйкова",
+      "address_normalized": "улица зеленодольская, 32, корпус 6",
+      "kind": "blue",
+      "kind_source": "portal 08.10.26: blue — муниципальная школа, территориальный приём в 1 класс (законный дефолт; решение владельца для фильтра «приём с 1 класса»); справка в работе",
+      "source": "map-only",
+      "csv_rows": [],
+      "points": [
+        {
+          "id": "school-школа-на-юго-востоке-имени-маршала-в-и-чуйкова",
+          "name": "Школа на Юго-Востоке имени Маршала В.И. Чуйкова",
+          "entity": "school",
+          "kind": "blue",
+          "address": "улица Зеленодольская, 32, корпус 6",
+          "lat": 55.711848,
+          "lon": 37.766807,
+          "website": "",
+          "group": "Школа на Юго-Востоке имени Маршала В.И. Чуйкова"
+        }
+      ]
+    }
+  ]
+}
