@@ -323,6 +323,8 @@ function toggleAnalytics(){
   document.getElementById('anaArrow').textContent = collapsed ? '▲' : '▼';
 }
 
+document.getElementById('anaTab').addEventListener('click', toggleAnalytics);
+
 document.getElementById('minutes').addEventListener('change', render);
 document.getElementById('mode').addEventListener('change', render);
 document.getElementById('showLobes').addEventListener('change', render);
