@@ -265,7 +265,7 @@ function renderInter(){
     acc = turf.intersect(acc, c.feats[0]);
   });
   if (!acc) { info.innerHTML = `<span class="empty">пересечение пусто (${accNames.length} областей)</span>`; return; }
-  L.geoJSON(acc, {style: {color: '#111', weight: 2.5, fillColor: '#111', fillOpacity: 0.28, dashArray: '6 3'}})
+  L.geoJSON(acc, {style: {color: '#8b4513', weight: 2.5, fillColor: '#8b4513', fillOpacity: 0.3, dashArray: '6 3'}})
     .addTo(interLayer);
   const area = turf.area(acc) / 1e6;
   const inside = Object.entries(ADDRS)
