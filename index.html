@@ -159,7 +159,7 @@ function updateSchoolMarkers(){
 
 function selectSchool(sid){
   currentSchool = sid;
-  schoolInput.value = sid === 'all' ? '' : SCHOOLS[sid].name;
+  schoolInput.value = (sid === 'all' || sid === 'none') ? '' : SCHOOLS[sid].name;
   schoolList.style.display = 'none';
   updateSchoolMarkers();
   render();
@@ -169,7 +169,8 @@ function showSchoolList(q){
   const query = (q || '').trim().toLowerCase();
   schoolList.innerHTML = '';
   let shown = 0;
-  [['all', '— все школы —'], ...Object.entries(SCHOOLS).map(([sid, s]) => [sid, s.name])].forEach(([sid, name]) => {
+  [['all', '— все школы —'], ['none', 'очистить (только метро)'],
+   ...Object.entries(SCHOOLS).map(([sid, s]) => [sid, s.name])].forEach(([sid, name]) => {
     if (query && !name.toLowerCase().includes(query)) return;
     const d = document.createElement('div');
     d.className = 'sitem';
@@ -243,6 +244,12 @@ function render(){
   const mode = document.getElementById('mode').value, showLobes = document.getElementById('showLobes').checked;
   zoneLayer.clearLayers(); lobeLayer.clearLayers();
   let zc = 0, lc = 0; const bounds = L.latLngBounds();
+
+  if (sid === 'none') {  // «очистить»: зоны и лепестки убраны, метро остаётся
+    document.getElementById('info').textContent = 'зон: 0, лепестков: 0';
+    renderInter();
+    return;
+  }
 
   const zds = ZONES[mode] || {features: []};
   zds.features.forEach(f => {
