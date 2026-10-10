@@ -36,7 +36,9 @@ def main():
         run(["git", "reset", "--soft", "FETCH_HEAD"], cwd=tmp)
 
     (tmp / "index.html").write_bytes((ROOT / "data" / "out" / "zones_viewer.html").read_bytes())
-    for f in ("pt_zones.geojson", "lobes_pt.geojson"):
+    for f in ("pt_zones.geojson", "lobes_pt.geojson", "car_zones.geojson", "lobes_car.geojson",
+              "addresses.geojson", "address_zones_pt.geojson", "address_zones_car.geojson",
+              "metro_lines.geojson"):
         src = ROOT / "data" / "out" / f
         if src.exists():
             (tmp / f).write_bytes(src.read_bytes())

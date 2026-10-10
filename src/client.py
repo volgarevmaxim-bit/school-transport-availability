@@ -183,9 +183,11 @@ def _check_budget(service: str) -> int:
 
 
 _last_call: dict[str, float] = {}
-_PACING = {"routing": 1.5, "public_transport": 1.5, "distance_matrix": 1.5,
+_PACING = {"routing": 1.5, "public_transport": 3.0, "distance_matrix": 1.5,
            "isochrone": 0.3, "geocoder": 0.15, "static_maps": 0.3}
 # Лимит демо-ключа: ~50 запросов/мин на routing-семейство (поймано 429 после 50, 08.10) — пейсинг обязателен.
+# pt 3.0с (≈20/мин): 09.10 пойман 429 после 24 pt подряд за ~38с (пейсинг 1.5с) — короткое окно ~25/мин.
+# Через ~4 мин запросы снова проходили → это НЕ суточный лимит, а per-minute; суточный (50/день) — отдельно.
 
 
 def _request(service: str, url_no_key: str, body_no_key: str = "", binary: bool = False, timeout: int = 60):

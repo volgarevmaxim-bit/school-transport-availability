@@ -1,10 +1,13 @@
-"""Стадия 6 (ОТ): детекция лепестков доступности по радиальным профилям.
+"""Стадия 6: детекция лепестков доступности по радиальным профилям (локально, 0 запросов API).
 
-Локально, 0 запросов API. Для каждого полигона: радиальный профиль r(θ) (сектора 5°),
-порог медиана + k·MAD (k из config). Лепесток = связная группа секторов выше порога
-(допуск разрыва 1 сектор), шириной ≥2 секторов. Метрики: азимут центра (взвешенный по r),
-ширина, r_max, площадь клина, вытянутость. Выход: lobes_pt.csv, lobes_pt.geojson, полярные
-графики reports/plots/profiles_pt/.
+Для каждого полигона: радиальный профиль r(θ) (сектора 5°), порог медиана + k·MAD (k из config).
+Лепесток = связная группа секторов выше порога (допуск разрыва 1 сектор), шириной ≥2 секторов.
+Метрики: азимут центра (взвешенный по r), ширина, r_max, площадь клина, вытянутость.
+
+Аргументы: zones_geojson [out_prefix] [mode_label] [profiles_dir]
+  дефолт: data/out/pt_zones.geojson lobes_pt public_transport profiles_pt
+Выход: <prefix>.csv, <prefix>.geojson, полярные графики reports/plots/<profiles_dir>/.
+Минуты произвольные (20/25/30/35/40) — сетка графиков 2 колонки × N строк.
 """
 import csv
 import json
@@ -24,7 +27,14 @@ ROOT = Path(__file__).resolve().parent.parent
 CFG = yaml.safe_load((ROOT / "config" / "experiment.yaml").read_text(encoding="utf-8"))
 K_MAD = CFG["lobes"]["k_mad"]
 SECTOR = CFG["lobes"]["sector_deg"]
-ZONES = json.loads((ROOT / "data" / "out" / "pt_zones.geojson").read_text(encoding="utf-8"))
+
+ZONES_PATH = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "data/out/pt_zones.geojson")
+PREFIX = sys.argv[2] if len(sys.argv) > 2 else "lobes_pt"
+MODE = sys.argv[3] if len(sys.argv) > 3 else "public_transport"
+PROF_NAME = sys.argv[4] if len(sys.argv) > 4 else "profiles_pt"
+MODE_LABEL = "ОТ" if MODE == "public_transport" else "авто"
+
+ZONES = json.loads(ZONES_PATH.read_text(encoding="utf-8"))
 
 schools = {}
 with open(ROOT / "config" / "schools.csv", encoding="utf-8-sig") as f:
@@ -32,7 +42,7 @@ with open(ROOT / "config" / "schools.csv", encoding="utf-8-sig") as f:
         if r["selected"] == "1":
             schools[r["entity_id"]] = (float(r["lat"]), float(r["lon"]))
 
-PROF_DIR = ROOT / "reports" / "plots" / "profiles_pt"
+PROF_DIR = ROOT / "reports" / "plots" / PROF_NAME
 PROF_DIR.mkdir(parents=True, exist_ok=True)
 
 KMX = 111.32  # км/градус по долготе на широте (для метрик км)
@@ -129,7 +139,7 @@ def lobe_metrics(poly, wedge, lat):
 
 
 rows, feats = [], []
-per_school = {sid: {"20": None, "40": None} for sid in schools}
+per_school = {}  # sid -> {str(minutes): (prof, prof_s, poly, spt, lat)}
 
 for feat in ZONES["features"]:
     p = feat["properties"]
@@ -141,7 +151,7 @@ for feat in ZONES["features"]:
     poly = from_geojson(json.dumps(feat["geometry"]))
     prof = radial_profile(poly, spt)
     prof_s = smooth_profile(prof)
-    per_school[sid][str(minutes)] = (prof, prof_s, poly, spt, lat)
+    per_school.setdefault(sid, {})[str(minutes)] = (prof, prof_s, poly, spt, lat)
 
     lobes = lobes_from_profile(prof_s)
     zone_area_km2 = poly.area * KMX * KMX * math.cos(math.radians(lat))
@@ -151,8 +161,8 @@ for feat in ZONES["features"]:
         wedge = lobe_wedge(spt, prof, lb["angles"])
         area, elong, width_km = lobe_metrics(poly, wedge, lat)
         rows.append({
-            "lobe_id": f"{sid[:20]}-pt{minutes}-{i+1}", "school_id": sid,
-            "mode": "public_transport", "min": minutes,
+            "lobe_id": f"{sid[:20]}-{MODE[:3]}{minutes}-{i+1}", "school_id": sid,
+            "mode": MODE, "min": minutes,
             "azimuth": round(lb["azimuth"], 1), "width_deg": lb["width_deg"],
             "r_max_km": round(raw_rmax * KMX, 2), "area_km2": round(area, 2),
             "elongation": round(elong, 1),
@@ -162,13 +172,15 @@ for feat in ZONES["features"]:
         feats.append({"type": "Feature", "properties": rows[-1],
                       "geometry": json.loads(json.dumps(poly.intersection(wedge).__geo_interface__))})
 
-# полярные графики по школам
+# полярные графики по школам (сетка 2 колонки × ceil(minutes/2) строк)
 for sid, d in per_school.items():
-    fig, axes = plt.subplots(1, 2, subplot_kw={"projection": "polar"}, figsize=(10, 5.2))
-    for ax, minutes in zip(axes, (20, 40)):
-        if d[str(minutes)] is None:
-            continue
-        prof, prof_s, poly, spt, lat = d[str(minutes)]
+    mins = sorted(d, key=int)
+    n = len(mins)
+    fig, axes = plt.subplots((n + 1) // 2, 2, subplot_kw={"projection": "polar"},
+                             figsize=(10, 2.8 * ((n + 1) // 2) + 1.2))
+    axes = axes.flatten() if n > 2 else ([axes] if n == 1 else list(axes))
+    for ax, mkey in zip(axes, mins):
+        prof, prof_s, poly, spt, lat = d[mkey]
         ang = [math.radians(a) for a in sorted(prof)]
         vals = [prof[a] * KMX for a in sorted(prof)]
         vals_s = [prof_s[a] * KMX for a in sorted(prof)]
@@ -181,28 +193,30 @@ for sid, d in per_school.items():
             aa = [math.radians(a) for a in lb["angles"]]
             vv = [prof[a] * KMX for a in lb["angles"]]
             ax.fill_between(aa, 0, vv, alpha=0.35, color="#ee6600")
-        ax.set_title(f"{minutes} мин, порог {thr:.1f} км", fontsize=9)
+        ax.set_title(f"{mkey} мин, порог {thr:.1f} км", fontsize=9)
         ax.set_theta_zero_location("N")
-    fig.suptitle(f"{sid[:40]} — ОТ, радиальный профиль (оранж = лепестки)", fontsize=10)
+    for ax in axes[len(mins):]:
+        ax.set_visible(False)
+    fig.suptitle(f"{sid[:40]} — {MODE_LABEL}, радиальный профиль (оранж = лепестки)", fontsize=10)
     fig.tight_layout()
     fig.savefig(PROF_DIR / f"{sid[:60]}.png", dpi=100)
     plt.close(fig)
 
-out_csv = ROOT / "data" / "out" / "lobes_pt.csv"
+out_csv = ROOT / "data" / "out" / f"{PREFIX}.csv"
 with open(out_csv, "w", newline="", encoding="utf-8-sig") as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else ["lobe_id"])
     w.writeheader()
     w.writerows(rows)
-out_geo = ROOT / "data" / "out" / "lobes_pt.geojson"
+out_geo = ROOT / "data" / "out" / f"{PREFIX}.geojson"
 out_geo.write_text(json.dumps({"type": "FeatureCollection", "features": feats}, ensure_ascii=False), encoding="utf-8")
 
-print(f"лепестков: {len(rows)}")
+print(f"{MODE_LABEL}: лепестков {len(rows)}")
 by_min = {}
 for r in rows:
     by_min.setdefault(r["min"], []).append(r)
 for m, rs in sorted(by_min.items()):
     print(f"  {m}-мин зоны: {len(rs)} лепестков")
-print("топ-12 по вытянутости:")
+print(f"топ-12 по вытянутости ({MODE_LABEL}):")
 for r in sorted(rows, key=lambda x: -x["elongation"])[:12]:
     print(f"  {r['lobe_id']:32} аз={r['azimuth']:6.1f}° ш={r['width_deg']:3}° r={r['r_max_km']:5.2f}км "
           f"выт={r['elongation']:5.1f} доля={r['zone_share']:.3f}")
