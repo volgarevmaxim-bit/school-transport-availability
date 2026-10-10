@@ -101,6 +101,9 @@ border:1px solid #ccc;border-radius:4px;max-height:260px;overflow:auto;z-index:1
 box-shadow:0 2px 8px rgba(0,0,0,.25);display:none}
 .sitem{padding:4px 8px;cursor:pointer;font-size:13px;white-space:nowrap}
 .sitem:hover{background:#eef3fb}
+#clearBtn{position:absolute;right:4px;top:50%;transform:translateY(-50%);cursor:pointer;color:#aaa;font-size:18px;line-height:1;padding:0 5px;display:none;z-index:1001;-webkit-user-select:none;user-select:none}
+#clearBtn:hover{color:#555}
+#clearBtn.visible{display:block}
 @media (max-width: 640px){
   #schoolWrap{margin-left:16pt}
   #school{width:170px}
@@ -131,7 +134,7 @@ border-radius:6px;box-shadow:0 1px 5px rgba(0,0,0,.3);font-size:12px;line-height
 </style></head><body>
 <div id="wrap">
 <div id="bar">
-Школа <span id="schoolWrap"><input id="school" placeholder="все школы — начните набирать" autocomplete="off"><div id="schoolList"></div></span>
+Школа <span id="schoolWrap"><input id="school" placeholder="все школы — начните набирать" autocomplete="off"><span id="clearBtn">×</span><div id="schoolList"></div></span>
 Время <select id="minutes">
 <option value="20">20 мин</option><option value="25">25 мин</option>
 <option value="30">30 мин</option><option value="35">35 мин</option>
@@ -199,6 +202,7 @@ document.getElementById('showMetro').addEventListener('change', e => {
 let currentSchool = 'all';
 const schoolInput = document.getElementById('school');
 const schoolList = document.getElementById('schoolList');
+const clearBtn = document.getElementById('clearBtn');
 
 function selectedSchoolIds(){
   return new Set([...document.querySelectorAll('.ichk:checked')]
@@ -237,6 +241,7 @@ function updateSchoolMarkers(){
 function selectSchool(sid){
   currentSchool = sid;
   schoolInput.value = (sid === 'all' || sid === 'none') ? '' : SCHOOLS[sid].name;
+  clearBtn.classList.toggle('visible', schoolInput.value !== '');
   schoolList.style.display = 'none';
   updateSchoolMarkers();
   render();
@@ -259,14 +264,24 @@ function showSchoolList(q){
   schoolList.style.display = shown ? 'block' : 'none';
 }
 
-schoolInput.addEventListener('input', () => showSchoolList(schoolInput.value));
-schoolInput.addEventListener('focus', () => showSchoolList(schoolInput.value));
+schoolInput.addEventListener('input', () => { showSchoolList(schoolInput.value); clearBtn.classList.toggle('visible', schoolInput.value !== ''); });
+schoolInput.addEventListener('focus', () => {
+  if (currentSchool !== 'all' && schoolInput.value === (SCHOOLS[currentSchool]?.name || '')) {
+    setTimeout(() => schoolInput.select(), 0);
+  }
+  showSchoolList(schoolInput.value);
+});
 schoolInput.addEventListener('keydown', e => {
   if (e.key === 'Enter') {
     const first = schoolList.querySelector('.sitem');
     if (first) first.dispatchEvent(new MouseEvent('mousedown', {bubbles: true}));
   }
   if (e.key === 'Escape') schoolList.style.display = 'none';
+});
+clearBtn.addEventListener('mousedown', e => {
+  e.preventDefault();
+  selectSchool('all');
+  schoolInput.focus();
 });
 document.addEventListener('mousedown', e => {
   if (e.target !== schoolInput && !schoolList.contains(e.target)) schoolList.style.display = 'none';
