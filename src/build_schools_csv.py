@@ -1,8 +1,8 @@
 """Стадия 1: config/schools.csv из канона school-portal (upstream-снапшот).
 
-Школа = сущность kind blue/red с точкой entity=='school'. Для многофилиальных берётся главное
-здание (первая school-точка). coord_quality: verified (не заглушка) | stub (kind_source 'portal 08.10').
-Поле selected отмечает черновик 20 для Гейта 1 (Л2Ш + ЮЗАО/ЗАО).
+Школа = сущность kind blue/red с точкой entity=='school'. База: сущность.isochrone_base
+(решение владельца о заменах баз) → иначе первая school-точка. coord_quality: verified
+(не заглушка) | stub (kind_source 'portal 08.10'). Поле selected — черновик 20 (Гейт 1).
 """
 import csv
 import json
@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-UPSTREAM = next((ROOT / "data" / "upstream").glob("entities_*.json"))
+UPSTREAM = max((ROOT / "data" / "upstream").glob("entities_*.json"))  # самый свежий снапшот
 
 data = json.loads(UPSTREAM.read_text(encoding="utf-8"))
 entities = data["entities"]
@@ -36,7 +36,14 @@ for e in entities:
     pts = [p for p in e.get("points", []) if p.get("entity") == "school"]
     if not pts:
         continue
-    p = pts[0]
+    # база: явное решение владельца (isochrone_base) → иначе первая school-точка
+    iso_base = e.get("isochrone_base") or {}
+    base_pid = iso_base.get("point_id")
+    p = next((x for x in pts if x.get("id") == base_pid), None) if base_pid else None
+    if p is None:
+        p = pts[0]
+        if base_pid:
+            print(f"!! {e['id']}: isochrone_base {base_pid} не найден среди точек — беру первую", file=sys.stderr)
     ks = str(e.get("kind_source", ""))
     rows.append({
         "entity_id": e["id"],
