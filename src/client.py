@@ -319,17 +319,18 @@ def distance_matrix(points: list[dict], sources: list[int], targets: list[int],
     return _request("distance_matrix", f"{BASE_URLS['distance_matrix']}?version=2.0", json.dumps(body, sort_keys=True))
 
 
-def static_map(center_latlon: str, zoom: int, size: str = "800x600", markers: str | None = None,
-               polylines: str | None = None, polygons: str | None = None):
+def static_map(center_latlon: str, zoom: int, size: str = "800x600", markers=None,
+               polylines=None, polygons=None):
     """GET /2.0. Параметры: s, c (lat,lon), z, pt (маркеры), ls (линии), pn (ПОЛИГОНЫ), key.
-    Полигоны ПОДДЕРЖИВАЮТСЯ (pn) — Стадия 7 может рисовать зоны нативно."""
-    params = {"s": size, "c": center_latlon, "z": zoom, "locale": "ru_RU"}
-    if markers:
-        params["pt"] = markers
-    if polylines:
-        params["ls"] = polylines
-    if polygons:
-        params["pn"] = polygons
+    markers/polylines/polygons — строка ИЛИ СПИСОК строк → повторные pt=/ls=/pn= параметры
+    (стиль задаётся после координат ВНУТРИ одного значения; для разных стилей — отдельные
+    параметры; порядок pn = порядок отрисовки, первый — нижний)."""
+    params = [("s", size), ("c", center_latlon), ("z", str(zoom)), ("locale", "ru_RU")]
+    for key, val in (("pt", markers), ("ls", polylines), ("pn", polygons)):
+        if not val:
+            continue
+        items = val if isinstance(val, (list, tuple)) else [val]
+        params += [(key, v) for v in items]
     return _request("static_maps", f"{BASE_URLS['static_maps']}?{urllib.parse.urlencode(params)}", binary=True)
 
 
