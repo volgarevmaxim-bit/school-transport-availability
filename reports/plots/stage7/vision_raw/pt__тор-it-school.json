@@ -1,0 +1,10 @@
+{
+ "status": "ok",
+ "raw": "{\"markers\":[{\"num\":1,\"dir_deg\":250,\"direction_ru\":\"юго-запад\",\"r_km_est\":20,\"landmark\":\"Одинцово\"}],\"zone_shape\":\"вытянутая с запада на восток, асимметричная\",\"corridors\":[{\"kind\":\"автомагистраль\",\"name_or_hint\":\"МКАД\",\"direction_ru\":\"запад\"},{\"kind\":\"шоссе\",\"name_or_hint\":\"\",\"direction_ru\":\"юго-запад\"}],\"anomalies\":\"далёкий лепесток в сторону Одинцово, зона выходит за МКАД\",\"school_area\":\"Тёплый Стан, рядом с метро Тёплый Стан\"}",
+ "key": "pt__тор-it-school",
+ "frame": "pt\\тор-it-school.png",
+ "school_id": "тор-it-school",
+ "mode": "pt",
+ "lobes_manifest": "[{\"number\": 1, \"lobe_id\": \"тор-it-school-pub20-1\", \"azimuth\": \"37.6\", \"r_max_km\": \"6.51\", \"min\": \"20\"}]",
+ "utc": "2026-10-13 14:18:20"
+}

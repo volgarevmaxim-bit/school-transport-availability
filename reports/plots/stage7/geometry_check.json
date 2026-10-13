@@ -1,0 +1,2123 @@
+{
+ "car__лицей-вторая-школа-в-ф-овчинникова": {
+  "z": 10,
+  "cx": 37.457392999999996,
+  "cy": 55.7214925,
+  "green_px": [
+   471.5,
+   329.5
+  ],
+  "school_px_pred": [
+   472.1238243555598,
+   330.3862005822899
+  ],
+  "school_dpx": 1.1,
+  "lobes": [
+   {
+    "lobe_id": "лицей-вторая-школа-в-dri20-1",
+    "number": 1,
+    "az_csv": 9.9,
+    "bearing_compass": 80.1,
+    "px": [
+     601,
+     290
+    ],
+    "sig": {
+     "white": 297,
+     "blue": 71,
+     "ring_white": 195
+    },
+    "on_frame": true,
+    "nearest_marker_px": 299.0
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-dri30-1",
+    "number": 2,
+    "az_csv": 170.2,
+    "bearing_compass": 279.8,
+    "px": [
+     264,
+     267
+    ],
+    "sig": {
+     "white": 347,
+     "blue": 46,
+     "ring_white": 249
+    },
+    "on_frame": true,
+    "nearest_marker_px": 36.7
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-dri25-1",
+    "number": 3,
+    "az_csv": 172.4,
+    "bearing_compass": 277.6,
+    "px": [
+     302,
+     290
+    ],
+    "sig": {
+     "white": 285,
+     "blue": 59,
+     "ring_white": 192
+    },
+    "on_frame": true,
+    "nearest_marker_px": 44.4
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-dri35-1",
+    "number": 4,
+    "az_csv": 173.1,
+    "bearing_compass": 276.9,
+    "px": [
+     229,
+     278
+    ],
+    "sig": {
+     "white": 362,
+     "blue": 44,
+     "ring_white": 260
+    },
+    "on_frame": true,
+    "nearest_marker_px": 36.7
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-dri40-1",
+    "number": 5,
+    "az_csv": 180.6,
+    "bearing_compass": 269.4,
+    "px": [
+     171,
+     336
+    ],
+    "sig": {
+     "white": 326,
+     "blue": 47,
+     "ring_white": 234
+    },
+    "on_frame": true,
+    "nearest_marker_px": 82.0
+   }
+  ]
+ },
+ "car__школа-2007-фмш": {
+  "z": 10,
+  "cx": 37.4129615,
+  "cy": 55.564568,
+  "green_px": [
+   486.5586206896552,
+   339.4758620689655
+  ],
+  "school_px_pred": [
+   487.86011022222226,
+   340.5684168179058
+  ],
+  "school_dpx": 1.7,
+  "lobes": [
+   {
+    "lobe_id": "школа-2007-фмш-dri40-1",
+    "number": 1,
+    "az_csv": 153.4,
+    "bearing_compass": 296.6,
+    "px": [
+     251,
+     130
+    ],
+    "sig": {
+     "white": 307,
+     "blue": 44,
+     "ring_white": 202
+    },
+    "on_frame": true,
+    "nearest_marker_px": 162.0
+   },
+   {
+    "lobe_id": "школа-2007-фмш-dri20-1",
+    "number": 2,
+    "az_csv": 157.4,
+    "bearing_compass": 292.6,
+    "px": [
+     362,
+     248
+    ],
+    "sig": {
+     "white": 273,
+     "blue": 73,
+     "ring_white": 180
+    },
+    "on_frame": true,
+    "nearest_marker_px": 162.0
+   }
+  ]
+ },
+ "car__школа-1532": {
+  "z": 10,
+  "cx": 37.4027725,
+  "cy": 55.6581625,
+  "green_px": [
+   464.5,
+   347.5
+  ],
+  "school_px_pred": [
+   465.26621013333397,
+   348.72317638299523
+  ],
+  "school_dpx": 1.4,
+  "lobes": [
+   {
+    "lobe_id": "школа-1532-dri20-1",
+    "number": 1,
+    "az_csv": 142.5,
+    "bearing_compass": 307.5,
+    "px": [
+     392,
+     249
+    ],
+    "sig": {
+     "white": 321,
+     "blue": 51,
+     "ring_white": 210
+    },
+    "on_frame": true,
+    "nearest_marker_px": 205.9
+   },
+   {
+    "lobe_id": "школа-1532-dri40-1",
+    "number": 2,
+    "az_csv": 175.3,
+    "bearing_compass": 274.7,
+    "px": [
+     195,
+     309
+    ],
+    "sig": {
+     "white": 329,
+     "blue": 44,
+     "ring_white": 228
+    },
+    "on_frame": true,
+    "nearest_marker_px": 205.9
+   },
+   {
+    "lobe_id": "школа-1532-dri20-2",
+    "number": 3,
+    "az_csv": 224.9,
+    "bearing_compass": 225.1,
+    "px": [
+     399,
+     466
+    ],
+    "sig": {
+     "white": 290,
+     "blue": 70,
+     "ring_white": 196
+    },
+    "on_frame": true,
+    "nearest_marker_px": 217.1
+   }
+  ]
+ },
+ "car__школа-1158": {
+  "z": 10,
+  "cx": 37.564852,
+  "cy": 55.592363,
+  "green_px": [
+   430.5,
+   243.5
+  ],
+  "school_px_pred": [
+   431.17693155555367,
+   244.81035494887504
+  ],
+  "school_dpx": 1.5,
+  "lobes": [
+   {
+    "lobe_id": "школа-1158-dri40-1",
+    "number": 1,
+    "az_csv": 157.6,
+    "bearing_compass": 292.4,
+    "px": [
+     228,
+     97
+    ],
+    "sig": {
+     "white": 338,
+     "blue": 44,
+     "ring_white": 233
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "car__школа-109": {
+  "z": 10,
+  "cx": 37.3887905,
+  "cy": 55.6872985,
+  "green_px": [
+   462.5,
+   359.5
+  ],
+  "school_px_pred": [
+   463.05473422222354,
+   360.1928547278557
+  ],
+  "school_dpx": 0.9,
+  "lobes": [
+   {
+    "lobe_id": "школа-109-dri40-1",
+    "number": 1,
+    "az_csv": 175.1,
+    "bearing_compass": 274.9,
+    "px": [
+     191,
+     319
+    ],
+    "sig": {
+     "white": 329,
+     "blue": 44,
+     "ring_white": 221
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "car__бауманская-инженерная-школа-1580": {
+  "z": 10,
+  "cx": 37.549372,
+  "cy": 55.594423500000005,
+  "green_px": [
+   445.5,
+   238.5
+  ],
+  "school_px_pred": [
+   446.38346808889054,
+   239.29374403589892
+  ],
+  "school_dpx": 1.2,
+  "lobes": [
+   {
+    "lobe_id": "бауманская-инженерна-dri40-1",
+    "number": 1,
+    "az_csv": 160.2,
+    "bearing_compass": 289.8,
+    "px": [
+     224,
+     98
+    ],
+    "sig": {
+     "white": 348,
+     "blue": 44,
+     "ring_white": 233
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "car__московская-гимназия-на-юго-западе-1543-ю-в-завельского": {
+  "z": 10,
+  "cx": 37.424951500000006,
+  "cy": 55.685100000000006,
+  "green_px": [
+   443.5,
+   336.5
+  ],
+  "school_px_pred": [
+   444.58523306666046,
+   337.5106439209256
+  ],
+  "school_dpx": 1.5,
+  "lobes": [
+   {
+    "lobe_id": "московская-гимназия--dri40-1",
+    "number": 1,
+    "az_csv": 175.3,
+    "bearing_compass": 274.7,
+    "px": [
+     199,
+     302
+    ],
+    "sig": {
+     "white": 342,
+     "blue": 52,
+     "ring_white": 239
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "car__тор-it-school": {
+  "z": 10,
+  "cx": 37.418684999999996,
+  "cy": 55.684974,
+  "green_px": [
+   450.5,
+   332.5
+  ],
+  "school_px_pred": [
+   451.9299982222263,
+   333.67938630643664
+  ],
+  "school_dpx": 1.9,
+  "lobes": [
+   {
+    "lobe_id": "тор-it-school-dri40-1",
+    "number": 1,
+    "az_csv": 175.2,
+    "bearing_compass": 274.8,
+    "px": [
+     210,
+     298
+    ],
+    "sig": {
+     "white": 345,
+     "blue": 47,
+     "ring_white": 238
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "car__школа-на-проспекте-вернадского": {
+  "z": 10,
+  "cx": 37.3886095,
+  "cy": 55.700965,
+  "green_px": [
+   462.5,
+   345.5
+  ],
+  "school_px_pred": [
+   463.07148231111154,
+   346.3516848174516
+  ],
+  "school_dpx": 1.0,
+  "lobes": [
+   {
+    "lobe_id": "школа-на-проспекте-в-dri40-1",
+    "number": 1,
+    "az_csv": 180.1,
+    "bearing_compass": 269.9,
+    "px": [
+     222,
+     347
+    ],
+    "sig": {
+     "white": 307,
+     "blue": 56,
+     "ring_white": 205
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "car__школа-1329": {
+  "z": 10,
+  "cx": 37.358813999999995,
+  "cy": 55.710699500000004,
+  "green_px": [
+   477.5,
+   351.5
+  ],
+  "school_px_pred": [
+   478.25508124444946,
+   352.87437871468194
+  ],
+  "school_dpx": 1.6,
+  "lobes": [
+   {
+    "lobe_id": "школа-1329-dri40-1",
+    "number": 1,
+    "az_csv": 185.0,
+    "bearing_compass": 265.0,
+    "px": [
+     206,
+     395
+    ],
+    "sig": {
+     "white": 346,
+     "blue": 51,
+     "ring_white": 234
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "car__школа-1534-академическая-школа-1534": {
+  "z": 10,
+  "cx": 37.461962,
+  "cy": 55.703374499999995,
+  "green_px": [
+   480.5,
+   322.5
+  ],
+  "school_px_pred": [
+   481.82169599999776,
+   323.6263430704616
+  ],
+  "school_dpx": 1.7,
+  "lobes": [
+   {
+    "lobe_id": "школа-1534-академиче-dri40-1",
+    "number": 1,
+    "az_csv": 168.5,
+    "bearing_compass": 281.5,
+    "px": [
+     199,
+     221
+    ],
+    "sig": {
+     "white": 380,
+     "blue": 45,
+     "ring_white": 270
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "car__лицей-1533-лит": {
+  "z": 10,
+  "cx": 37.4449905,
+  "cy": 55.7202295,
+  "green_px": [
+   470.5,
+   335.5
+  ],
+  "school_px_pred": [
+   471.8780643555543,
+   336.1086668946413
+  ],
+  "school_dpx": 1.5,
+  "lobes": [
+   {
+    "lobe_id": "лицей-1533-лит-dri40-1",
+    "number": 1,
+    "az_csv": 180.3,
+    "bearing_compass": 269.7,
+    "px": [
+     177,
+     339
+    ],
+    "sig": {
+     "white": 336,
+     "blue": 47,
+     "ring_white": 227
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "car__школа-1448-шуваловская-школа-1448": {
+  "z": 10,
+  "cx": 37.37198600000001,
+  "cy": 55.725673,
+  "green_px": [
+   487.5,
+   336.5
+  ],
+  "school_px_pred": [
+   488.3541788444389,
+   337.5444390685026
+  ],
+  "school_dpx": 1.3,
+  "lobes": [
+   {
+    "lobe_id": "школа-1448-шуваловск-dri20-1",
+    "number": 1,
+    "az_csv": 14.9,
+    "bearing_compass": 75.1,
+    "px": [
+     577,
+     296
+    ],
+    "sig": {
+     "white": 337,
+     "blue": 47,
+     "ring_white": 227
+    },
+    "on_frame": true,
+    "nearest_marker_px": 181.0
+   },
+   {
+    "lobe_id": "школа-1448-шуваловск-dri20-2",
+    "number": 2,
+    "az_csv": 165.0,
+    "bearing_compass": 285.0,
+    "px": [
+     396,
+     294
+    ],
+    "sig": {
+     "white": 276,
+     "blue": 56,
+     "ring_white": 183
+    },
+    "on_frame": true,
+    "nearest_marker_px": 181.0
+   },
+   {
+    "lobe_id": "школа-1448-шуваловск-dri40-1",
+    "number": 3,
+    "az_csv": 183.0,
+    "bearing_compass": 267.0,
+    "px": [
+     193,
+     365
+    ],
+    "sig": {
+     "white": 351,
+     "blue": 44,
+     "ring_white": 250
+    },
+    "on_frame": true,
+    "nearest_marker_px": 215.1
+   }
+  ]
+ },
+ "car__университетская-гимназия-мгу": {
+  "z": 10,
+  "cx": 37.3691585,
+  "cy": 55.729186999999996,
+  "green_px": [
+   508.5,
+   335.5
+  ],
+  "school_px_pred": [
+   509.4760675555561,
+   336.963315754125
+  ],
+  "school_dpx": 1.8,
+  "lobes": [
+   {
+    "lobe_id": "университетская-гимн-dri20-1",
+    "number": 1,
+    "az_csv": 167.5,
+    "bearing_compass": 282.5,
+    "px": [
+     388,
+     289
+    ],
+    "sig": {
+     "white": 282,
+     "blue": 51,
+     "ring_white": 180
+    },
+    "on_frame": true,
+    "nearest_marker_px": 208.5
+   },
+   {
+    "lobe_id": "университетская-гимн-dri40-1",
+    "number": 2,
+    "az_csv": 183.2,
+    "bearing_compass": 266.8,
+    "px": [
+     195,
+     368
+    ],
+    "sig": {
+     "white": 352,
+     "blue": 44,
+     "ring_white": 250
+    },
+    "on_frame": true,
+    "nearest_marker_px": 208.5
+   }
+  ]
+ },
+ "car__школа-192": {
+  "z": 10,
+  "cx": 37.424651,
+  "cy": 55.7288035,
+  "green_px": [
+   510.5,
+   330.5
+  ],
+  "school_px_pred": [
+   511.5502819555553,
+   331.069492808648
+  ],
+  "school_dpx": 1.2,
+  "lobes": [
+   {
+    "lobe_id": "школа-192-dri40-1",
+    "number": 1,
+    "az_csv": 182.8,
+    "bearing_compass": 267.2,
+    "px": [
+     157,
+     362
+    ],
+    "sig": {
+     "white": 379,
+     "blue": 44,
+     "ring_white": 267
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "car__новая-школа": {
+  "z": 10,
+  "cx": 37.3739075,
+  "cy": 55.7298585,
+  "green_px": [
+   483.5,
+   331.5
+  ],
+  "school_px_pred": [
+   484.76171377777746,
+   332.35315634899473
+  ],
+  "school_dpx": 1.5,
+  "lobes": [
+   {
+    "lobe_id": "новая-школа-dri20-1",
+    "number": 1,
+    "az_csv": 15.4,
+    "bearing_compass": 74.6,
+    "px": [
+     568,
+     292
+    ],
+    "sig": {
+     "white": 321,
+     "blue": 44,
+     "ring_white": 211
+    },
+    "on_frame": true,
+    "nearest_marker_px": 176.6
+   },
+   {
+    "lobe_id": "новая-школа-dri20-2",
+    "number": 2,
+    "az_csv": 179.7,
+    "bearing_compass": 270.3,
+    "px": [
+     396,
+     332
+    ],
+    "sig": {
+     "white": 283,
+     "blue": 64,
+     "ring_white": 190
+    },
+    "on_frame": true,
+    "nearest_marker_px": 176.6
+   },
+   {
+    "lobe_id": "новая-школа-dri40-1",
+    "number": 3,
+    "az_csv": 185.5,
+    "bearing_compass": 264.5,
+    "px": [
+     195,
+     382
+    ],
+    "sig": {
+     "white": 365,
+     "blue": 44,
+     "ring_white": 261
+    },
+    "on_frame": true,
+    "nearest_marker_px": 207.1
+   }
+  ]
+ },
+ "car__ломоносовская-школа": {
+  "z": 10,
+  "cx": 37.367281500000004,
+  "cy": 55.7344155,
+  "green_px": [
+   475.5,
+   312.5
+  ],
+  "school_px_pred": [
+   476.0206677333297,
+   313.0567148297676
+  ],
+  "school_dpx": 0.8,
+  "lobes": [
+   {
+    "lobe_id": "ломоносовская-школа-dri40-1",
+    "number": 1,
+    "az_csv": 7.5,
+    "bearing_compass": 82.5,
+    "px": [
+     650,
+     272
+    ],
+    "sig": {
+     "white": 371,
+     "blue": 54,
+     "ring_white": 261
+    },
+    "on_frame": true,
+    "nearest_marker_px": 91.0
+   },
+   {
+    "lobe_id": "ломоносовская-школа-dri20-1",
+    "number": 2,
+    "az_csv": 14.9,
+    "bearing_compass": 75.1,
+    "px": [
+     559,
+     274
+    ],
+    "sig": {
+     "white": 287,
+     "blue": 65,
+     "ring_white": 190
+    },
+    "on_frame": true,
+    "nearest_marker_px": 91.0
+   },
+   {
+    "lobe_id": "ломоносовская-школа-dri20-2",
+    "number": 3,
+    "az_csv": 159.9,
+    "bearing_compass": 290.1,
+    "px": [
+     395,
+     261
+    ],
+    "sig": {
+     "white": 279,
+     "blue": 72,
+     "ring_white": 186
+    },
+    "on_frame": true,
+    "nearest_marker_px": 164.5
+   },
+   {
+    "lobe_id": "ломоносовская-школа-dri40-2",
+    "number": 4,
+    "az_csv": 190.3,
+    "bearing_compass": 259.7,
+    "px": [
+     143,
+     420
+    ],
+    "sig": {
+     "white": 279,
+     "blue": 45,
+     "ring_white": 186
+    },
+    "on_frame": true,
+    "nearest_marker_px": 298.0
+   }
+  ]
+ },
+ "car__школа-67": {
+  "z": 10,
+  "cx": 37.2983165,
+  "cy": 55.7164095,
+  "green_px": [
+   569.5,
+   271.5
+  ],
+  "school_px_pred": [
+   570.8658232888879,
+   272.9141999879404
+  ],
+  "school_dpx": 2.0,
+  "lobes": [
+   {
+    "lobe_id": "школа-67-dri20-1",
+    "number": 1,
+    "az_csv": 15.0,
+    "bearing_compass": 75.0,
+    "px": [
+     645,
+     238
+    ],
+    "sig": {
+     "white": 325,
+     "blue": 63,
+     "ring_white": 215
+    },
+    "on_frame": true,
+    "nearest_marker_px": 294.3
+   },
+   {
+    "lobe_id": "школа-67-dri20-2",
+    "number": 2,
+    "az_csv": 182.3,
+    "bearing_compass": 267.7,
+    "px": [
+     355,
+     288
+    ],
+    "sig": {
+     "white": 312,
+     "blue": 44,
+     "ring_white": 207
+    },
+    "on_frame": true,
+    "nearest_marker_px": 239.4
+   },
+   {
+    "lobe_id": "школа-67-dri40-1",
+    "number": 3,
+    "az_csv": 192.7,
+    "bearing_compass": 257.3,
+    "px": [
+     166,
+     435
+    ],
+    "sig": {
+     "white": 341,
+     "blue": 62,
+     "ring_white": 245
+    },
+    "on_frame": true,
+    "nearest_marker_px": 239.4
+   }
+  ]
+ },
+ "car__образовательный-центр-протон": {
+  "z": 10,
+  "cx": 37.3385685,
+  "cy": 55.725319999999996,
+  "green_px": [
+   515.5,
+   270.5
+  ],
+  "school_px_pred": [
+   516.501526755555,
+   271.1837785879899
+  ],
+  "school_dpx": 1.2,
+  "lobes": [
+   {
+    "lobe_id": "образовательный-цент-dri20-1",
+    "number": 1,
+    "az_csv": 2.5,
+    "bearing_compass": 87.5,
+    "px": [
+     611,
+     264
+    ],
+    "sig": {
+     "white": 307,
+     "blue": 59,
+     "ring_white": 204
+    },
+    "on_frame": true,
+    "nearest_marker_px": 230.7
+   },
+   {
+    "lobe_id": "образовательный-цент-dri20-2",
+    "number": 2,
+    "az_csv": 185.1,
+    "bearing_compass": 264.9,
+    "px": [
+     382,
+     292
+    ],
+    "sig": {
+     "white": 274,
+     "blue": 51,
+     "ring_white": 181
+    },
+    "on_frame": true,
+    "nearest_marker_px": 210.9
+   },
+   {
+    "lobe_id": "образовательный-цент-dri40-1",
+    "number": 3,
+    "az_csv": 194.7,
+    "bearing_compass": 255.3,
+    "px": [
+     210,
+     414
+    ],
+    "sig": {
+     "white": 313,
+     "blue": 62,
+     "ring_white": 220
+    },
+    "on_frame": true,
+    "nearest_marker_px": 210.9
+   }
+  ]
+ },
+ "pt__школа-2007-фмш": {
+  "z": 11,
+  "cx": 37.528310000000005,
+  "cy": 55.5516655,
+  "green_px": [
+   406.5,
+   346.5
+  ],
+  "school_px_pred": [
+   407.7317916444399,
+   347.8914200450793
+  ],
+  "school_dpx": 1.9,
+  "lobes": [
+   {
+    "lobe_id": "школа-2007-фмш-pub40-1",
+    "number": 1,
+    "az_csv": 42.4,
+    "bearing_compass": 47.6,
+    "px": [
+     510,
+     184
+    ],
+    "sig": {
+     "white": 380,
+     "blue": 44,
+     "ring_white": 265
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "pt__школа-1532": {
+  "z": 11,
+  "cx": 37.487374,
+  "cy": 55.605202500000004,
+  "green_px": [
+   406.56028368794324,
+   259.4822695035461
+  ],
+  "school_px_pred": [
+   407.32255573332725,
+   260.77787948832963
+  ],
+  "school_dpx": 1.5,
+  "lobes": [
+   {
+    "lobe_id": "школа-1532-pub40-1",
+    "number": 1,
+    "az_csv": 33.1,
+    "bearing_compass": 56.9,
+    "px": [
+     594,
+     45
+    ],
+    "sig": {
+     "white": 379,
+     "blue": 44,
+     "ring_white": 264
+    },
+    "on_frame": true,
+    "nearest_marker_px": 404.1
+   },
+   {
+    "lobe_id": "школа-1532-pub40-2",
+    "number": 2,
+    "az_csv": 219.9,
+    "bearing_compass": 230.1,
+    "px": [
+     206,
+     558
+    ],
+    "sig": {
+     "white": 328,
+     "blue": 44,
+     "ring_white": 226
+    },
+    "on_frame": true,
+    "nearest_marker_px": 240.2
+   },
+   {
+    "lobe_id": "школа-1532-pub20-1",
+    "number": 3,
+    "az_csv": 237.5,
+    "bearing_compass": 212.5,
+    "px": [
+     365,
+     378
+    ],
+    "sig": {
+     "white": 295,
+     "blue": 45,
+     "ring_white": 202
+    },
+    "on_frame": true,
+    "nearest_marker_px": 240.2
+   }
+  ]
+ },
+ "pt__школа-1158": {
+  "z": 11,
+  "cx": 37.591114000000005,
+  "cy": 55.628224,
+  "green_px": [
+   423.5,
+   281.5
+  ],
+  "school_px_pred": [
+   424.1070535111034,
+   282.0277375604753
+  ],
+  "school_dpx": 0.8,
+  "lobes": [
+   {
+    "lobe_id": "школа-1158-pub40-1",
+    "number": 1,
+    "az_csv": 157.6,
+    "bearing_compass": 292.4,
+    "px": [
+     199,
+     118
+    ],
+    "sig": {
+     "white": 374,
+     "blue": 44,
+     "ring_white": 259
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "pt__школа-109": {
+  "z": 11,
+  "cx": 37.4561785,
+  "cy": 55.655770000000004,
+  "green_px": [
+   426.5,
+   337.5
+  ],
+  "school_px_pred": [
+   427.96858026666774,
+   338.89974833162995
+  ],
+  "school_dpx": 2.0,
+  "lobes": [
+   {
+    "lobe_id": "школа-109-pub20-1",
+    "number": 1,
+    "az_csv": 56.5,
+    "bearing_compass": 33.5,
+    "px": [
+     468,
+     232
+    ],
+    "sig": {
+     "white": 286,
+     "blue": 46,
+     "ring_white": 184
+    },
+    "on_frame": true,
+    "nearest_marker_px": 187.6
+   },
+   {
+    "lobe_id": "школа-109-pub40-1",
+    "number": 2,
+    "az_csv": 192.5,
+    "bearing_compass": 257.5,
+    "px": [
+     119,
+     460
+    ],
+    "sig": {
+     "white": 386,
+     "blue": 44,
+     "ring_white": 280
+    },
+    "on_frame": true,
+    "nearest_marker_px": 244.5
+   },
+   {
+    "lobe_id": "школа-109-pub20-2",
+    "number": 3,
+    "az_csv": 195.2,
+    "bearing_compass": 254.8,
+    "px": [
+     349,
+     377
+    ],
+    "sig": {
+     "white": 278,
+     "blue": 58,
+     "ring_white": 184
+    },
+    "on_frame": true,
+    "nearest_marker_px": 187.6
+   }
+  ]
+ },
+ "pt__бауманская-инженерная-школа-1580": {
+  "z": 11,
+  "cx": 37.599512,
+  "cy": 55.6289465,
+  "green_px": [
+   418.5,
+   266.5
+  ],
+  "school_px_pred": [
+   419.745268622227,
+   267.5386631463349
+  ],
+  "school_dpx": 1.6,
+  "lobes": [
+   {
+    "lobe_id": "бауманская-инженерна-pub40-1",
+    "number": 1,
+    "az_csv": 157.6,
+    "bearing_compass": 292.4,
+    "px": [
+     175,
+     89
+    ],
+    "sig": {
+     "white": 324,
+     "blue": 58,
+     "ring_white": 220
+    },
+    "on_frame": true,
+    "nearest_marker_px": 205.1
+   },
+   {
+    "lobe_id": "бауманская-инженерна-pub20-1",
+    "number": 2,
+    "az_csv": 170.0,
+    "bearing_compass": 280.0,
+    "px": [
+     318,
+     236
+    ],
+    "sig": {
+     "white": 295,
+     "blue": 47,
+     "ring_white": 200
+    },
+    "on_frame": true,
+    "nearest_marker_px": 195.4
+   },
+   {
+    "lobe_id": "бауманская-инженерна-pub20-2",
+    "number": 3,
+    "az_csv": 252.6,
+    "bearing_compass": 197.4,
+    "px": [
+     394,
+     416
+    ],
+    "sig": {
+     "white": 275,
+     "blue": 44,
+     "ring_white": 182
+    },
+    "on_frame": true,
+    "nearest_marker_px": 195.4
+   }
+  ]
+ },
+ "pt__московская-гимназия-на-юго-западе-1543-ю-в-завельского": {
+  "z": 11,
+  "cx": 37.4822185,
+  "cy": 55.659730499999995,
+  "green_px": [
+   404.5,
+   308.5
+  ],
+  "school_px_pred": [
+   405.7693525333268,
+   309.47614124205427
+  ],
+  "school_dpx": 1.6,
+  "lobes": [
+   {
+    "lobe_id": "московская-гимназия--pub20-1",
+    "number": 1,
+    "az_csv": 15.2,
+    "bearing_compass": 74.8,
+    "px": [
+     448,
+     289
+    ],
+    "sig": {
+     "white": 282,
+     "blue": 50,
+     "ring_white": 180
+    },
+    "on_frame": true,
+    "nearest_marker_px": 45.0
+   },
+   {
+    "lobe_id": "московская-гимназия--pub40-1",
+    "number": 2,
+    "az_csv": 25.0,
+    "bearing_compass": 65.0,
+    "px": [
+     623,
+     130
+    ],
+    "sig": {
+     "white": 338,
+     "blue": 44,
+     "ring_white": 237
+    },
+    "on_frame": true,
+    "nearest_marker_px": 236.4
+   },
+   {
+    "lobe_id": "московская-гимназия--pub20-2",
+    "number": 3,
+    "az_csv": 219.8,
+    "bearing_compass": 230.2,
+    "px": [
+     376,
+     353
+    ],
+    "sig": {
+     "white": 272,
+     "blue": 46,
+     "ring_white": 180
+    },
+    "on_frame": true,
+    "nearest_marker_px": 75.4
+   },
+   {
+    "lobe_id": "московская-гимназия--pub20-3",
+    "number": 4,
+    "az_csv": 342.1,
+    "bearing_compass": 107.9,
+    "px": [
+     449,
+     334
+    ],
+    "sig": {
+     "white": 273,
+     "blue": 48,
+     "ring_white": 180
+    },
+    "on_frame": true,
+    "nearest_marker_px": 45.0
+   }
+  ]
+ },
+ "pt__тор-it-school": {
+  "z": 11,
+  "cx": 37.4905115,
+  "cy": 55.664444,
+  "green_px": [
+   398.44055944055947,
+   313.5174825174825
+  ],
+  "school_px_pred": [
+   399.2550741333411,
+   314.31468576812387
+  ],
+  "school_dpx": 1.1,
+  "lobes": [
+   {
+    "lobe_id": "тор-it-school-pub20-1",
+    "number": 1,
+    "az_csv": 37.6,
+    "bearing_compass": 52.4,
+    "px": [
+     467,
+     222
+    ],
+    "sig": {
+     "white": 310,
+     "blue": 45,
+     "ring_white": 204
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "pt__школа-1514": {
+  "z": 11,
+  "cx": 37.560561,
+  "cy": 55.672779500000004,
+  "green_px": [
+   358.5174825174825,
+   323.55944055944053
+  ],
+  "school_px_pred": [
+   359.4099143111147,
+   324.894626650078
+  ],
+  "school_dpx": 1.6,
+  "lobes": [
+   {
+    "lobe_id": "школа-1514-pub40-1",
+    "number": 1,
+    "az_csv": 9.9,
+    "bearing_compass": 80.1,
+    "px": [
+     647,
+     236
+    ],
+    "sig": {
+     "white": 366,
+     "blue": 44,
+     "ring_white": 253
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "pt__школа-на-проспекте-вернадского": {
+  "z": 11,
+  "cx": 37.473538500000004,
+  "cy": 55.664463999999995,
+  "green_px": [
+   401.5,
+   297.5
+  ],
+  "school_px_pred": [
+   402.45614364444174,
+   298.37074831607504
+  ],
+  "school_dpx": 1.3,
+  "lobes": [
+   {
+    "lobe_id": "школа-на-проспекте-в-pub40-1",
+    "number": 1,
+    "az_csv": 18.7,
+    "bearing_compass": 71.3,
+    "px": [
+     632,
+     160
+    ],
+    "sig": {
+     "white": 388,
+     "blue": 44,
+     "ring_white": 273
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "pt__школа-1329": {
+  "z": 11,
+  "cx": 37.453124,
+  "cy": 55.660979,
+  "green_px": [
+   418.5,
+   276.5
+  ],
+  "school_px_pred": [
+   419.16127004444394,
+   277.24672481688987
+  ],
+  "school_dpx": 1.0,
+  "lobes": [
+   {
+    "lobe_id": "школа-1329-pub40-1",
+    "number": 1,
+    "az_csv": 25.0,
+    "bearing_compass": 65.0,
+    "px": [
+     638,
+     96
+    ],
+    "sig": {
+     "white": 370,
+     "blue": 44,
+     "ring_white": 260
+    },
+    "on_frame": true,
+    "nearest_marker_px": 562.5
+   },
+   {
+    "lobe_id": "школа-1329-pub40-2",
+    "number": 2,
+    "az_csv": 197.5,
+    "bearing_compass": 252.5,
+    "px": [
+     174,
+     414
+    ],
+    "sig": {
+     "white": 387,
+     "blue": 44,
+     "ring_white": 281
+    },
+    "on_frame": true,
+    "nearest_marker_px": 562.5
+   }
+  ]
+ },
+ "pt__школа-1534-академическая-школа-1534": {
+  "z": 11,
+  "cx": 37.600514000000004,
+  "cy": 55.690469,
+  "green_px": [
+   360.5,
+   312.5
+  ],
+  "school_px_pred": [
+   361.86241706665606,
+   313.89272921266814
+  ],
+  "school_dpx": 1.9,
+  "lobes": [
+   {
+    "lobe_id": "школа-1534-академиче-pub20-1",
+    "number": 1,
+    "az_csv": 217.4,
+    "bearing_compass": 232.6,
+    "px": [
+     290,
+     411
+    ],
+    "sig": {
+     "white": 297,
+     "blue": 46,
+     "ring_white": 194
+    },
+    "on_frame": true,
+    "nearest_marker_px": 999
+   }
+  ]
+ },
+ "pt__лицей-1533-лит": {
+  "z": 11,
+  "cx": 37.521133,
+  "cy": 55.6687725,
+  "green_px": [
+   431.5,
+   238.5
+  ],
+  "school_px_pred": [
+   432.8655758222255,
+   239.2449453086882
+  ],
+  "school_dpx": 1.6,
+  "lobes": [
+   {
+    "lobe_id": "лицей-1533-лит-pub20-1",
+    "number": 1,
+    "az_csv": 155.0,
+    "bearing_compass": 295.0,
+    "px": [
+     372,
+     189
+    ],
+    "sig": {
+     "white": 289,
+     "blue": 45,
+     "ring_white": 187
+    },
+    "on_frame": true,
+    "nearest_marker_px": 121.0
+   },
+   {
+    "lobe_id": "лицей-1533-лит-pub20-2",
+    "number": 2,
+    "az_csv": 202.4,
+    "bearing_compass": 247.6,
+    "px": [
+     341,
+     306
+    ],
+    "sig": {
+     "white": 277,
+     "blue": 44,
+     "ring_white": 184
+    },
+    "on_frame": true,
+    "nearest_marker_px": 121.0
+   }
+  ]
+ },
+ "pt__школа-1448-шуваловская-школа-1448": {
+  "z": 11,
+  "cx": 37.4637675,
+  "cy": 55.699908,
+  "green_px": [
+   442.5174825174825,
+   307.55944055944053
+  ],
+  "school_px_pred": [
+   443.04186026666105,
+   308.4534296471282
+  ],
+  "school_dpx": 1.0,
+  "lobes": [
+   {
+    "lobe_id": "школа-1448-шуваловск-pub20-1",
+    "number": 1,
+    "az_csv": 22.5,
+    "bearing_compass": 67.5,
+    "px": [
+     492,
+     273
+    ],
+    "sig": {
+     "white": 298,
+     "blue": 44,
+     "ring_white": 194
+    },
+    "on_frame": true,
+    "nearest_marker_px": 256.0
+   },
+   {
+    "lobe_id": "школа-1448-шуваловск-pub40-1",
+    "number": 2,
+    "az_csv": 27.1,
+    "bearing_compass": 62.9,
+    "px": [
+     681,
+     92
+    ],
+    "sig": {
+     "white": 358,
+     "blue": 45,
+     "ring_white": 258
+    },
+    "on_frame": true,
+    "nearest_marker_px": 261.7
+   },
+   {
+    "lobe_id": "школа-1448-шуваловск-pub40-2",
+    "number": 3,
+    "az_csv": 202.3,
+    "bearing_compass": 247.7,
+    "px": [
+     155,
+     518
+    ],
+    "sig": {
+     "white": 364,
+     "blue": 58,
+     "ring_white": 266
+    },
+    "on_frame": true,
+    "nearest_marker_px": 160.6
+   },
+   {
+    "lobe_id": "школа-1448-шуваловск-pub20-2",
+    "number": 4,
+    "az_csv": 209.0,
+    "bearing_compass": 241.0,
+    "px": [
+     300,
+     449
+    ],
+    "sig": {
+     "white": 296,
+     "blue": 60,
+     "ring_white": 203
+    },
+    "on_frame": true,
+    "nearest_marker_px": 160.6
+   },
+   {
+    "lobe_id": "школа-1448-шуваловск-pub40-3",
+    "number": 5,
+    "az_csv": 340.1,
+    "bearing_compass": 109.9,
+    "px": [
+     672,
+     455
+    ],
+    "sig": {
+     "white": 368,
+     "blue": 44,
+     "ring_white": 268
+    },
+    "on_frame": true,
+    "nearest_marker_px": 256.0
+   }
+  ]
+ },
+ "pt__лицей-вторая-школа-в-ф-овчинникова": {
+  "z": 11,
+  "cx": 37.5785105,
+  "cy": 55.671368,
+  "green_px": [
+   366.55944055944053,
+   230.4825174825175
+  ],
+  "school_px_pred": [
+   367.85750471111385,
+   231.24945881371087
+  ],
+  "school_dpx": 1.5,
+  "lobes": [
+   {
+    "lobe_id": "лицей-вторая-школа-в-pub20-1",
+    "number": 1,
+    "az_csv": 23.0,
+    "bearing_compass": 67.0,
+    "px": [
+     439,
+     178
+    ],
+    "sig": {
+     "white": 282,
+     "blue": 47,
+     "ring_white": 180
+    },
+    "on_frame": true,
+    "nearest_marker_px": 47.4
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-pub30-1",
+    "number": 2,
+    "az_csv": 24.7,
+    "bearing_compass": 65.3,
+    "px": [
+     490,
+     132
+    ],
+    "sig": {
+     "white": 333,
+     "blue": 46,
+     "ring_white": 232
+    },
+    "on_frame": true,
+    "nearest_marker_px": 29.3
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-pub25-1",
+    "number": 3,
+    "az_csv": 29.9,
+    "bearing_compass": 60.1,
+    "px": [
+     461,
+     136
+    ],
+    "sig": {
+     "white": 275,
+     "blue": 48,
+     "ring_white": 183
+    },
+    "on_frame": true,
+    "nearest_marker_px": 29.3
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-pub35-1",
+    "number": 4,
+    "az_csv": 30.2,
+    "bearing_compass": 59.8,
+    "px": [
+     518,
+     76
+    ],
+    "sig": {
+     "white": 362,
+     "blue": 58,
+     "ring_white": 263
+    },
+    "on_frame": true,
+    "nearest_marker_px": 62.6
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-pub20-2",
+    "number": 5,
+    "az_csv": 215.0,
+    "bearing_compass": 235.0,
+    "px": [
+     324,
+     286
+    ],
+    "sig": {
+     "white": 270,
+     "blue": 49,
+     "ring_white": 180
+    },
+    "on_frame": true,
+    "nearest_marker_px": 67.1
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-pub25-2",
+    "number": 6,
+    "az_csv": 217.8,
+    "bearing_compass": 232.2,
+    "px": [
+     287,
+     342
+    ],
+    "sig": {
+     "white": 269,
+     "blue": 45,
+     "ring_white": 180
+    },
+    "on_frame": true,
+    "nearest_marker_px": 63.0
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-pub30-2",
+    "number": 7,
+    "az_csv": 217.9,
+    "bearing_compass": 232.1,
+    "px": [
+     250,
+     393
+    ],
+    "sig": {
+     "white": 295,
+     "blue": 46,
+     "ring_white": 196
+    },
+    "on_frame": true,
+    "nearest_marker_px": 23.0
+   },
+   {
+    "lobe_id": "лицей-вторая-школа-в-pub35-2",
+    "number": 8,
+    "az_csv": 221.5,
+    "bearing_compass": 228.5,
+    "px": [
+     250,
+     416
+    ],
+    "sig": {
+     "white": 306,
+     "blue": 68,
+     "ring_white": 223
+    },
+    "on_frame": true,
+    "nearest_marker_px": 23.0
+   }
+  ]
+ },
+ "pt__университетская-гимназия-мгу": {
+  "z": 11,
+  "cx": 37.49974,
+  "cy": 55.683651,
+  "green_px": [
+   427.5,
+   255.5
+  ],
+  "school_px_pred": [
+   428.77904213332675,
+   256.2082041542503
+  ],
+  "school_dpx": 1.5,
+  "lobes": [
+   {
+    "lobe_id": "университетская-гимн-pub40-1",
+    "number": 1,
+    "az_csv": 25.0,
+    "bearing_compass": 65.0,
+    "px": [
+     589,
+     123
+    ],
+    "sig": {
+     "white": 339,
+     "blue": 44,
+     "ring_white": 233
+    },
+    "on_frame": true,
+    "nearest_marker_px": 520.8
+   },
+   {
+    "lobe_id": "университетская-гимн-pub40-2",
+    "number": 2,
+    "az_csv": 209.3,
+    "bearing_compass": 240.7,
+    "px": [
+     207,
+     477
+    ],
+    "sig": {
+     "white": 294,
+     "blue": 46,
+     "ring_white": 198
+    },
+    "on_frame": true,
+    "nearest_marker_px": 520.8
+   }
+  ]
+ },
+ "pt__школа-192": {
+  "z": 11,
+  "cx": 37.622265999999996,
+  "cy": 55.7102315,
+  "green_px": [
+   334.5,
+   313.5
+  ],
+  "school_px_pred": [
+   335.30286080000093,
+   314.100096266451
+  ],
+  "school_dpx": 1.0,
+  "lobes": [
+   {
+    "lobe_id": "школа-192-pub40-1",
+    "number": 1,
+    "az_csv": 15.0,
+    "bearing_compass": 75.0,
+    "px": [
+     571,
+     202
+    ],
+    "sig": {
+     "white": 344,
+     "blue": 46,
+     "ring_white": 237
+    },
+    "on_frame": true,
+    "nearest_marker_px": 348.0
+   },
+   {
+    "lobe_id": "школа-192-pub20-1",
+    "number": 2,
+    "az_csv": 207.5,
+    "bearing_compass": 242.5,
+    "px": [
+     269,
+     375
+    ],
+    "sig": {
+     "white": 278,
+     "blue": 44,
+     "ring_white": 183
+    },
+    "on_frame": true,
+    "nearest_marker_px": 348.0
+   }
+  ]
+ },
+ "pt__новая-школа": {
+  "z": 11,
+  "cx": 37.477599,
+  "cy": 55.700321,
+  "green_px": [
+   417.55944055944053,
+   287.4825174825175
+  ],
+  "school_px_pred": [
+   418.5117354666711,
+   288.3211702098437
+  ],
+  "school_dpx": 1.3,
+  "lobes": [
+   {
+    "lobe_id": "новая-школа-pub40-1",
+    "number": 1,
+    "az_csv": 207.6,
+    "bearing_compass": 242.4,
+    "px": [
+     218,
+     474
+    ],
+    "sig": {
+     "white": 367,
+     "blue": 44,
+     "ring_white": 252
+    },
+    "on_frame": true,
+    "nearest_marker_px": 367.6
+   },
+   {
+    "lobe_id": "новая-школа-pub40-2",
+    "number": 2,
+    "az_csv": 335.0,
+    "bearing_compass": 115.0,
+    "px": [
+     582,
+     423
+    ],
+    "sig": {
+     "white": 369,
+     "blue": 44,
+     "ring_white": 268
+    },
+    "on_frame": true,
+    "nearest_marker_px": 367.6
+   }
+  ]
+ },
+ "pt__ломоносовская-школа": {
+  "z": 11,
+  "cx": 37.472832499999996,
+  "cy": 55.75222599999999,
+  "green_px": [
+   397.5,
+   371.5
+  ],
+  "school_px_pred": [
+   398.32155022222753,
+   372.2157452617904
+  ],
+  "school_dpx": 1.1,
+  "lobes": [
+   {
+    "lobe_id": "ломоносовская-школа-pub40-1",
+    "number": 1,
+    "az_csv": 9.8,
+    "bearing_compass": 80.2,
+    "px": [
+     684,
+     285
+    ],
+    "sig": {
+     "white": 392,
+     "blue": 44,
+     "ring_white": 281
+    },
+    "on_frame": true,
+    "nearest_marker_px": 213.8
+   },
+   {
+    "lobe_id": "ломоносовская-школа-pub20-1",
+    "number": 2,
+    "az_csv": 17.2,
+    "bearing_compass": 72.8,
+    "px": [
+     475,
+     330
+    ],
+    "sig": {
+     "white": 313,
+     "blue": 49,
+     "ring_white": 210
+    },
+    "on_frame": true,
+    "nearest_marker_px": 161.0
+   },
+   {
+    "lobe_id": "ломоносовская-школа-pub20-2",
+    "number": 3,
+    "az_csv": 184.8,
+    "bearing_compass": 265.2,
+    "px": [
+     323,
+     383
+    ],
+    "sig": {
+     "white": 276,
+     "blue": 44,
+     "ring_white": 184
+    },
+    "on_frame": true,
+    "nearest_marker_px": 161.0
+   }
+  ]
+ },
+ "pt__образовательный-центр-протон": {
+  "z": 11,
+  "cx": 37.516538,
+  "cy": 55.754494,
+  "green_px": [
+   372.5,
+   316.5
+  ],
+  "school_px_pred": [
+   373.81618346667125,
+   317.82595056514805
+  ],
+  "school_dpx": 1.9,
+  "lobes": [
+   {
+    "lobe_id": "образовательный-цент-pub40-1",
+    "number": 1,
+    "az_csv": 7.1,
+    "bearing_compass": 82.9,
+    "px": [
+     566,
+     275
+    ],
+    "sig": {
+     "white": 382,
+     "blue": 46,
+     "ring_white": 267
+    },
+    "on_frame": true,
+    "nearest_marker_px": 116.0
+   },
+   {
+    "lobe_id": "образовательный-цент-pub20-1",
+    "number": 2,
+    "az_csv": 15.2,
+    "bearing_compass": 74.8,
+    "px": [
+     421,
+     295
+    ],
+    "sig": {
+     "white": 303,
+     "blue": 45,
+     "ring_white": 205
+    },
+    "on_frame": true,
+    "nearest_marker_px": 52.0
+   },
+   {
+    "lobe_id": "образовательный-цент-pub40-2",
+    "number": 3,
+    "az_csv": 192.5,
+    "bearing_compass": 257.5,
+    "px": [
+     226,
+     376
+    ],
+    "sig": {
+     "white": 312,
+     "blue": 44,
+     "ring_white": 217
+    },
+    "on_frame": true,
+    "nearest_marker_px": 101.5
+   },
+   {
+    "lobe_id": "образовательный-цент-pub20-2",
+    "number": 4,
+    "az_csv": 197.4,
+    "bearing_compass": 252.6,
+    "px": [
+     323,
+     346
+    ],
+    "sig": {
+     "white": 275,
+     "blue": 44,
+     "ring_white": 182
+    },
+    "on_frame": true,
+    "nearest_marker_px": 101.5
+   },
+   {
+    "lobe_id": "образовательный-цент-pub40-3",
+    "number": 5,
+    "az_csv": 347.9,
+    "bearing_compass": 102.1,
+    "px": [
+     566,
+     391
+    ],
+    "sig": {
+     "white": 357,
+     "blue": 44,
+     "ring_white": 259
+    },
+    "on_frame": true,
+    "nearest_marker_px": 116.0
+   },
+   {
+    "lobe_id": "образовательный-цент-pub20-3",
+    "number": 6,
+    "az_csv": 350.2,
+    "bearing_compass": 99.8,
+    "px": [
+     447,
+     340
+    ],
+    "sig": {
+     "white": 292,
+     "blue": 44,
+     "ring_white": 198
+    },
+    "on_frame": true,
+    "nearest_marker_px": 52.0
+   }
+  ]
+ }
+}
