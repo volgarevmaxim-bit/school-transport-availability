@@ -269,6 +269,7 @@ const lobeLayer = L.layerGroup().addTo(map);
 const interLayer = L.layerGroup().addTo(map);
 
 function esc(s){return String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function compassAz(az){return Math.round((((90 - parseFloat(az)) % 360) + 360) % 360);}
 
 function render(){
   const sid = currentSchool, mins = document.getElementById('minutes').value;
@@ -303,7 +304,7 @@ function render(){
       if (mins !== 'both' && p.min != mins) return;
       L.geoJSON(f, {style: {color: '#d62728', weight: 2, fillColor: '#d62728', fillOpacity: 0.35, dashArray: '4 2'},
         onEachFeature: (ft, lyr) => lyr.bindPopup(
-          `<b>Лепесток · ${esc(p.school_id.slice(0, 24))}</b><br>${p.min} мин · азимут ${p.azimuth}°<br>` +
+          `<b>Лепесток · ${esc(p.school_id.slice(0, 24))}</b><br>${p.min} мин · бэринг ${compassAz(p.azimuth)}°<br>` +
           `дальность ${p.r_max_km} км · вытянутость ${p.elongation}<br>площадь ${p.area_km2} км² (${(p.zone_share*100).toFixed(1)}% зоны)`)})
         .addTo(lobeLayer);
       bounds.extend(L.geoJSON(f).getBounds()); lc++;
