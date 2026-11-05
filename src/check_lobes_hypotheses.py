@@ -275,7 +275,7 @@ def main() -> int:
                 utc_unix = client.msk_to_unix(date, departure)
                 resp = client.directions_driving(f"{lon},{lat}", f"{elon},{elat}", utc_unix)
         except client.QuotaExhaustedError as e:
-            print(f"[stop] суточный лимит/429: {e}")
+            print(f"[stop] лимит/429: {e}")
             break
         except Exception as e:  # сетевые сбои — сохраняем, ретрай в следующий запуск
             row["status"] = "ERR"
@@ -308,10 +308,10 @@ def main() -> int:
               f"status={row['status']} dur={row['duration_sec']} ratio={row['ratio']} "
               f"verdict={row['verdict']}")
 
-        # глобальная пауза 1.2с ПОВЕРХ per-service пейсинга клиента (3с) — страховка
-        # против накопления к per-minute окну ~25/мин на routing-семействе
+        # пауза 0.5с ПОВЕРХ per-service пейсинга клиента (4.5с) → ~5с/запрос ≈ 12/мин.
+        # Так держимся ниже окна ~20/мин, сработавшего 05.11 на 3.0с+1.2с.
         import time as _t
-        _t.sleep(1.2)
+        _t.sleep(0.5)
 
         if args.limit and new_requests >= args.limit:
             print(f"[stop] достигнут --limit {args.limit}")

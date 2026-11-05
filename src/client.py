@@ -173,6 +173,13 @@ def _check_daily(service: str) -> None:
     return spent
 
 
+def _daily_room(service: str) -> bool:
+    """Есть ли ещё место по суточному счётчику группы (без резерва)."""
+    group = SERVICE_GROUPS.get(service, service)
+    cfg = _daily_config().get(group, {"limit": 50, "reserve": 5})
+    return _daily_spent(group) + 1 <= cfg["limit"] - cfg["reserve"]
+
+
 def _check_budget(service: str) -> int:
     remaining = BUDGET_LIMIT - _spent(service)
     if remaining - 1 < RESERVE:
@@ -183,13 +190,17 @@ def _check_budget(service: str) -> int:
 
 
 _last_call: dict[str, float] = {}
-_PACING = {"routing": 3.0, "public_transport": 3.0, "distance_matrix": 1.5,
+_PACING = {"routing": 4.5, "public_transport": 4.5, "distance_matrix": 1.5,
            "isochrone": 0.3, "geocoder": 0.15, "static_maps": 0.3}
-# Лимит демо-ключа: ~25 запросов/мин на routing-семейство (routing+pt ОБЩЕЕ окно).
+# Лимит демо-ключа: ~20 запросов/мин на routing-семейство (routing+pt ОБЩЕЕ окно).
 # Подтверждено 12.10: routing 25×200 за 37с (пейсинг 1.5с+0.6с скрипт → 40/мин) → 429 на 26-м.
 # 09.10 pt: 24×200 за 38с → 429. 08.10: серия 48 за 16с → 429 (первым выжило ~25).
-# → пейсинг routing поднят 1.5→3.0с (≈20/мин, запас против окна ~25/мин).
-# Через ~4 мин окно восстанавливается → это per-minute, НЕ суточный лимит (суточный 50 — отдельно).
+# 05.11: пейсинг 3.0с (20/мин) — 429 на 18-м запросе подряд; при этом 04.11 после 429 в 11:26
+# в 11:33 в ТЕ ЖЕ UTC-сутки прошли ещё 7 запросов.
+# → окно per-minute (восстанавливается за ~5 мин), НЕ суточный лимит (суточный 50 — отдельно).
+# → пейсинг routing/pt поднят 3.0→4.5с (13/мин, запас 35%), а 429 повторяется после паузы.
+RATE_RETRIES = 2   # повторов на 429 (окно восстанавливается за ~5 мин)
+RATE_WAIT_S = 90   # пауза перед 1-м повтором; перед 2-м — вдвое дольше
 
 
 def _request(service: str, url_no_key: str, body_no_key: str = "", binary: bool = False, timeout: int = 60):
@@ -213,32 +224,45 @@ def _request(service: str, url_no_key: str, body_no_key: str = "", binary: bool 
     sep = "&" if "?" in url_no_key else "?"
     url = f"{url_no_key}{sep}key={urllib.parse.quote(key)}"
 
-    # пейсинг (защита от burst-лимитов)
+    # пейсинг + повторы на 429. Доказано 05.11: при 3.0с (20/мин) 429 на 18-м запросе, но после
+    # паузы окно восстанавливается, а суточный счётчик (45 из 50 с резервом) остаётся невыбранным —
+    # поэтому 429 → пауза и повтор того же запроса, а не остановка всего прогона.
     import time as _time
-    wait = _PACING.get(service, 0.2) - (_time.time() - _last_call.get(service, 0))
-    if wait > 0:
-        _time.sleep(wait)
-    _last_call[service] = _time.time()
-
     headers = {"User-Agent": "school-transport/0.1"}
     if body_no_key:
         headers["Content-Type"] = "application/json"
     req = urllib.request.Request(url, data=body_no_key.encode("utf-8") if body_no_key else None, headers=headers)
 
-    # БЕЗ повторов (решение владельца 08.10): ошибка лимита сохраняется как есть и останавливает работу
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            status, payload = r.status, r.read()
-    except urllib.error.HTTPError as e:
-        status, payload = e.code, e.read()
-    except Exception as e:  # сетевые сбои — тоже сохраняем
-        status, payload = "ERR", f"{type(e).__name__}: {e}".encode("utf-8")
+    status, payload = "ERR", b""
+    attempt = 0
+    for attempt in range(RATE_RETRIES + 1):
+        wait = _PACING.get(service, 0.2) - (_time.time() - _last_call.get(service, 0))
+        if wait > 0:
+            _time.sleep(wait)
+        _last_call[service] = _time.time()
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                status, payload = r.status, r.read()
+        except urllib.error.HTTPError as e:
+            status, payload = e.code, e.read()
+        except Exception as e:  # сетевые сбои — тоже сохраняем
+            status, payload = "ERR", f"{type(e).__name__}: {e}".encode("utf-8")
+        _log_request(service, h, url_no_key, status, cached=False)
+        if status != 429 or attempt == RATE_RETRIES:
+            break
+        if not _daily_room(service):
+            print(f"[retry] 429 {service}: суточный счётчик группы уже выбран — повторы отменены")
+            break
+        pause = RATE_WAIT_S * (attempt + 1)
+        print(f"[retry] 429 {service}: окно per-minute, пауза {pause}с и повтор "
+              f"({attempt + 1}/{RATE_RETRIES}; суточный счётчик ещё не выбран)")
+        _time.sleep(pause)
 
     RAW.joinpath(service).mkdir(parents=True, exist_ok=True)
     meta = {"service": service, "request_no_key": url_no_key, "body_no_key": body_no_key,
             "request_hash": h, "status": status,
             "utc_time": datetime.now(timezone.utc).isoformat(), "method_version": METHOD_VERSION,
-            "remaining_before": remaining}
+            "remaining_before": remaining, "attempts": attempt + 1}
     if binary:
         cp.write_bytes(payload)
         cp.with_suffix(".json").write_text(json.dumps({**meta, "size": len(payload)}, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -250,11 +274,11 @@ def _request(service: str, url_no_key: str, body_no_key: str = "", binary: bool 
             parsed = payload.decode("utf-8", errors="replace")[:2000]
         cp.write_text(json.dumps({**meta, "response": parsed}, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    _log_request(service, h, url_no_key, status, cached=False)
     if status == 429:
         raise QuotaExhaustedError(
-            f"HTTP 429 «too many requests» по сервису {service} (группа {SERVICE_GROUPS.get(service, service)}). "
-            f"Ответ сохранён в data/raw. Работа остановлена без повторов — продолжить в следующие UTC-сутки."
+            f"HTTP 429 «too many requests» по сервису {service} (группа {SERVICE_GROUPS.get(service, service)}) "
+            f"после {attempt + 1} попыток с паузами {RATE_WAIT_S}с. Ответ сохранён в data/raw. "
+            f"Прогон остановлен; если суточный счётчик не выбран — повторить позже."
         )
     return {"cached": False, "status": status, "data": payload if binary else parsed, "meta": meta,
             "request_hash": h, "remaining_before": remaining}
