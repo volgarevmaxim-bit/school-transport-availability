@@ -29,8 +29,8 @@ def main() -> None:
     ok = [r for r in rows if r["status"] == "200"]
     errs = [r for r in rows if r["status"] != "200"]
 
-    pt = [r for r in ok if r["mode"] == "public_transport"]
-    car = [r for r in ok if r["mode"] == "driving"]
+    pt = [r for r in done if r["mode"] == "public_transport"]
+    car = [r for r in done if r["mode"] == "driving"]
 
     def verdict_stats(rows_subset):
         c = Counter()
@@ -59,7 +59,7 @@ def main() -> None:
     cpt = verdict_stats(pt)
     ccar = verdict_stats(car)
     L += ["## Сводка", "",
-          f"| Режим | Всего 200 | ✅ | 🟡 | ❌ | 204/без вердикта |",
+          f"| Режим | Всего | ✅ | 🟡 | ❌ | 204/без вердикта |",
           f"|---|---|---|---|---|---|",
           f"| ОТ | {len(pt)} | {cpt.get('подтверждено',0)} | {cpt.get('частично',0)} | "
           f"{cpt.get('противоречит',0)} | {cpt.get('без вердикта',0)} |",
@@ -82,7 +82,7 @@ def main() -> None:
     good = [r for r in pt if r["verdict"] == "подтверждено"]
     bad_car = [r for r in car if r["verdict"] == "противоречит (caveat авто)"]
     mid_car = [r for r in car if r["verdict"] == "частично"]
-    no_route = [r for r in ok if r["status"] == "204"]
+    no_route = [r for r in done if r["status"] == "204"]
 
     L += block("❌ ОТ — противоречат зоне (кандидаты на исключение из этапа цен)", bad)
     L += block("🟡 ОТ — частично (на грани допуска)", mid)
